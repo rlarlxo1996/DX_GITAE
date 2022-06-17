@@ -1,0 +1,9 @@
+﻿  SolarSystemScene.cpp
+C:\Users\user\Desktop\DX_GITAE\DX_GITAE\Scene\SolarSystemScene.cpp(21,45): warning C4305: '*=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\user\Desktop\DX_GITAE\DX_GITAE\Scene\SolarSystemScene.cpp(22,45): warning C4305: '*=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\user\Desktop\DX_GITAE\DX_GITAE\Scene\SolarSystemScene.cpp(42,55): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\DX_GITAE\DX_GITAE\Scene\SolarSystemScene.cpp(43,57): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\DX_GITAE\DX_GITAE\Scene\SolarSystemScene.cpp(44,56): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\DX_GITAE\DX_GITAE\Scene\SolarSystemScene.cpp(46,42): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\DX_GITAE\DX_GITAE\Scene\SolarSystemScene.cpp(47,44): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  DX_GITAE.vcxproj -> C:\Users\user\Desktop\DX_GITAE\x64\Debug\DX_GITAE.exe
