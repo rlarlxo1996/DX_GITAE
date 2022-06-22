@@ -4,7 +4,7 @@
 CollisionScene::CollisionScene()
 {
 	_rectCollider1 = make_shared<RectCollider>(Vector2(50,50));
-	_rectCollider2 = make_shared<RectCollider>(Vector2(100,100));
+	_rectCollider2 = make_shared<RectCollider>(Vector2(100,50));
 	_rectCollider2->GetPos() = { WIN_WIDTH * 0.5f, WIN_HEIGHT * 0.5f };
 }
 
@@ -16,6 +16,15 @@ void CollisionScene::Update()
 {
 	_rectCollider1->Update();
 	_rectCollider2->Update();
+
+	if (_rectCollider1->GetHalfSize()._x >= _rectCollider2->GetHalfSize()._x)
+	{
+		_rectCollider2->SetColorRed();
+	}
+	else
+	{
+		_rectCollider2->SetColorGreen();
+	}
 }
 
 void CollisionScene::Render()

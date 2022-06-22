@@ -14,6 +14,8 @@ public:
 	void Render();
 
 	Vector2& GetPos() { return _transform->GetPos(); }
+	Vector2& GetHalfSize() { return _halfSize; }
+
 
 	void SetColorRed() { _colorBuffer->SetColor(RED); }
 	void SetColorGreen() { _colorBuffer->SetColor(GREEN); }
