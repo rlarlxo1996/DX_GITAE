@@ -34,6 +34,11 @@ using namespace std;
 // DirectXTeX
 #include "../DirectXTex/DirectXTex.h"
 
+// ImGui
+#include "../ImGui/imgui.h"
+#include "../ImGui/imgui_impl_dx11.h"
+#include "../ImGui/imgui_impl_win32.h"
+
 // Device
 #include "Framework/Device/Device.h"
 
@@ -66,6 +71,12 @@ using namespace std;
 
 // Object
 #include "Object/Texture.h"
+#include "Object/Aim.h"
+
+// Dungreed
+#include "Object/Dungreed/Player.h"
+#include "Object/Dungreed/Gun.h"
+#include "Object/Dungreed/Bullet.h"
 
 // Scene
 #include "Scene/Scene.h"

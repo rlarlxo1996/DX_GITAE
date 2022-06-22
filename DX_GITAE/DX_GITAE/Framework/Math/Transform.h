@@ -15,17 +15,18 @@ public:
 	XMMATRIX* GetRMatrix() { return &_rotationM; }
 	XMMATRIX* GetTMatrix() { return &_translateM; }
 
-	XMFLOAT2& GetScale() { return _scale; }
+	Vector2& GetScale() { return _scale; }
 	float& GetAngle() { return _angle; }
-	XMFLOAT2& GetPos() { return _pos; }
+	Vector2& GetPos() { return _pos; }
+	Vector2 GetWorldPos();
 
 	void SetParent(XMMATRIX* matrix) { _parentMatrix = matrix; }
 	void SeparateParent() { _parentMatrix = nullptr; }
 
 private:
-	XMFLOAT2 _scale = { 1.0f,1.0f };
+	Vector2 _scale = { 1.0f,1.0f };
 	float _angle = { 0.0f };
-	XMFLOAT2 _pos = { 0.0f, 0.0f };
+	Vector2 _pos = { 0.0f, 0.0f };
 
 	XMMATRIX _scaleM = XMMatrixIdentity();
 	XMMATRIX _rotationM = XMMatrixIdentity();

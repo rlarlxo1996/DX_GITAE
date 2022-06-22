@@ -89,7 +89,7 @@ float Vector2::Distance(const Vector2& value)
     return sqrtf(x * x + y * y);
 }
 
-float Vector2::Length()
+float Vector2::Length() const
 {
     return sqrtf(_x * _x + _y * _y);
 }
@@ -120,4 +120,15 @@ bool Vector2::IsBetween(const Vector2& value1, const Vector2& value2)
 int Vector2::Manhattan(const Vector2 value) const
 {
     return (value._x - _x) + (value._y - _y);
+}
+
+float Vector2::Angle(const Vector2& value)
+{
+    float dot = this->Dot(value);
+    float aDis = abs(this->Length());
+    float bDis = abs(value.Length());
+
+    float cos = dot / (aDis * bDis);
+
+    return acos(cos);
 }

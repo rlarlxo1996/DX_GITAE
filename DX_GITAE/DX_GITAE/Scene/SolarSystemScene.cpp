@@ -14,16 +14,16 @@ SolarSystemScene::SolarSystemScene()
 	_earthOrbit->SetParent(_sunOrbit->GetMatrix());
 	_moon->GetTransform()->SetParent(_earthOrbit->GetMatrix());
 
-	_earth->GetTransform()->GetPos().x += 200;
+	_earth->GetTransform()->GetPos()._x += 200;
 	_earthOrbit->GetPos() = _earth->GetTransform()->GetPos();
-	_moon->GetTransform()->GetPos().x += 160;
+	_moon->GetTransform()->GetPos()._x += 160;
 
-	_earth->GetTransform()->GetScale().x *= 0.4;
-	_earth->GetTransform()->GetScale().y *= 0.4;
+	_earth->GetTransform()->GetScale()._x *= 0.4;
+	_earth->GetTransform()->GetScale()._y *= 0.4;
 	_earthOrbit->GetScale() = _earth->GetTransform()->GetScale();
 
-	_moon->GetTransform()->GetScale().x *= 0.5;
-	_moon->GetTransform()->GetScale().y *= 0.5;
+	_moon->GetTransform()->GetScale()._x *= 0.5;
+	_moon->GetTransform()->GetScale()._y *= 0.5;
 }
 
 SolarSystemScene::~SolarSystemScene()
@@ -46,8 +46,8 @@ void SolarSystemScene::Update()
 		_sunOrbit->GetAngle() += 2 * DELTA_TIME;
 		_earthOrbit->GetAngle() += 3 * DELTA_TIME;
 
-		_sun->GetTransform()->GetPos().x = MOUSE_POS._x;
-		_sun->GetTransform()->GetPos().y = MOUSE_POS._y;
+		_sun->GetTransform()->GetPos()._x = MOUSE_POS._x;
+		_sun->GetTransform()->GetPos()._y = MOUSE_POS._y;
 
 		_sunOrbit->GetPos() = _sun->GetTransform()->GetPos();
 	}
@@ -62,8 +62,6 @@ void SolarSystemScene::Update()
 
 void SolarSystemScene::Render()
 {
-	ALPHA_STATE->SetState();
-
 	_sun->Render();
 	_earth->Render();
 	_moon->Render();

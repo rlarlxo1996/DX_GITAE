@@ -22,7 +22,7 @@ public:
 	void Normalize();
 
 	float Distance(const Vector2& value);
-	float Length();
+	float Length() const;
 
 	// ³»Àû
 	float Dot(const Vector2& value);
@@ -30,6 +30,9 @@ public:
 
 	bool IsBetween(const Vector2& value1, const Vector2& value2);
 	int Manhattan(const Vector2 value) const;
+
+	float Angle() { return atan2(_y, _x); }
+	float Angle(const Vector2& value);
 
 public:
 	float _x;

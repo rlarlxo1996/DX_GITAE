@@ -13,9 +13,9 @@ Transform::~Transform()
 void Transform::UpdateWorld()
 {
     // SRT Matrix ¼³Á¤
-    _scaleM = XMMatrixScaling(_scale.x, _scale.y, 0);
+    _scaleM = XMMatrixScaling(_scale._x, _scale._y, 0);
     _rotationM = XMMatrixRotationZ(_angle);
-    _translateM = XMMatrixTranslation(_pos.x, _pos.y, 0);
+    _translateM = XMMatrixTranslation(_pos._x, _pos._y, 0);
 
     _srtMatrix = _scaleM * _rotationM * _translateM;
 
@@ -31,4 +31,12 @@ void Transform::UpdateWorld()
 void Transform::SetWorldBuffer(UINT slot)
 {
     _worldBuffer->SetVSBuffer(slot);
+}
+
+Vector2 Transform::GetWorldPos()
+{
+    XMFLOAT4X4 matrix;
+    XMStoreFloat4x4(&matrix, _srtMatrix);
+
+    return Vector2(matrix._41, matrix._42);
 }

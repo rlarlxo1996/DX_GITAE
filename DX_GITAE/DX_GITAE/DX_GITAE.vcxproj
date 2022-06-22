@@ -151,6 +151,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Object\Dungreed\Bullet.h" />
+    <ClInclude Include="Object\Aim.h" />
+    <ClInclude Include="Object\Dungreed\Gun.h" />
+    <ClInclude Include="Object\Dungreed\Player.h" />
+    <ClInclude Include="Scene\DungreedScene.h" />
     <ClInclude Include="Framework\State\BlendState.h" />
     <ClInclude Include="DX_GITAE.h" />
     <ClInclude Include="framework.h" />
@@ -180,6 +185,11 @@
     <ClInclude Include="TypeDef.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Object\Dungreed\Bullet.cpp" />
+    <ClCompile Include="Object\Aim.cpp" />
+    <ClCompile Include="Object\Dungreed\Gun.cpp" />
+    <ClCompile Include="Object\Dungreed\Player.cpp" />
+    <ClCompile Include="Scene\DungreedScene.cpp" />
     <ClCompile Include="Framework\State\BlendState.cpp" />
     <ClCompile Include="DX_GITAE.cpp" />
     <ClCompile Include="framework.cpp">
@@ -213,10 +223,14 @@
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
+    <Image Include="Resource\Aim.png" />
     <Image Include="Resource\BlackShadow.png" />
+    <Image Include="Resource\Bullet.png" />
     <Image Include="Resource\Dia.png" />
     <Image Include="Resource\Earth.png" />
+    <Image Include="Resource\Gun.png" />
     <Image Include="Resource\Moon.png" />
+    <Image Include="Resource\Player.png" />
     <Image Include="Resource\Sun.png" />
     <Image Include="small.ico" />
   </ItemGroup>
@@ -267,6 +281,9 @@
   <ItemGroup>
     <ProjectReference Include="..\DirectXTex\DirectXTex_Desktop_2019_Win10.vcxproj">
       <Project>{371b9fa9-4c90-4ac6-a123-aced756d6c77}</Project>
+    </ProjectReference>
+    <ProjectReference Include="..\ImGui\ImGui.vcxproj">
+      <Project>{21784c08-def6-476a-aad4-07c873ddbca0}</Project>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
