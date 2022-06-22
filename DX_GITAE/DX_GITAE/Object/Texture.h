@@ -15,7 +15,7 @@ public:
 private:
 	shared_ptr<Transform> _transform;
 
-	vector<Vertex> _vertices;
+	vector<VertexUV> _vertices;
 	vector<UINT> _indices;
 
 	shared_ptr<VertexBuffer>	_vertexBuffer;

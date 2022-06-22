@@ -4,7 +4,7 @@
 Texture::Texture(wstring file)
 {
     CreateVertices();
-    _vertexBuffer = make_shared<VertexBuffer>(_vertices.data(),sizeof(Vertex),_vertices.size());
+    _vertexBuffer = make_shared<VertexBuffer>(_vertices.data(),sizeof(VertexUV),_vertices.size());
     _indexBuffer = make_shared<IndexBuffer>(_indices.data(), _indices.size());
 
     _vertexShader = make_shared<VertexShader>(L"Shader/TextureVertexShader.hlsl");
@@ -46,7 +46,7 @@ void Texture::CreateVertices()
 {
     _vertices.reserve(4);
 
-    Vertex v;
+    VertexUV v;
     // ¿ÞÂÊ À§
     v.pos = { -100, 100, 0.0f };
     v.uv = { 0.0f, 0.0f };

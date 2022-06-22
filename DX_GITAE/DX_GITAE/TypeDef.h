@@ -4,6 +4,12 @@
 #define WIN_WIDTH 1280
 #define WIN_HEIGHT 720
 
+#define RED			XMFLOAT4(1,0,0,1)
+#define GREEN		XMFLOAT4(0,1,0,1)
+#define BLUE		XMFLOAT4(0,0,1,1)
+#define WHITE		XMFLOAT4(1,1,1,1)
+#define BLACK		XMFLOAT4(0,0,0,1)
+
 #define DEVICE Device::GetInstance()->GetDevice()
 #define DEVICE_CONTEXT Device::GetInstance()->GetDeviceContext()
 

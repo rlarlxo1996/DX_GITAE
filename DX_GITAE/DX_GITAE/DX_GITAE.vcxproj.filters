@@ -103,6 +103,8 @@
     <ClInclude Include="Object\Dungreed\Gun.h" />
     <ClInclude Include="Object\Aim.h" />
     <ClInclude Include="Object\Dungreed\Bullet.h" />
+    <ClInclude Include="Scene\CollisionScene.h" />
+    <ClInclude Include="Framework\Collider\RectCollider.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -189,6 +191,8 @@
     <ClCompile Include="Object\Dungreed\Gun.cpp" />
     <ClCompile Include="Object\Aim.cpp" />
     <ClCompile Include="Object\Dungreed\Bullet.cpp" />
+    <ClCompile Include="Scene\CollisionScene.cpp" />
+    <ClCompile Include="Framework\Collider\RectCollider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -203,5 +207,7 @@
     <FxCompile Include="Shader\TutorialShader.hlsl">
       <Filter>Shader</Filter>
     </FxCompile>
+    <FxCompile Include="Shader\ColliderShader\ColliderVertexShader.hlsl" />
+    <FxCompile Include="Shader\ColliderShader\ColliderPixelShader.hlsl" />
   </ItemGroup>
 </Project>

@@ -69,6 +69,9 @@ using namespace std;
 #include "Framework/Utility/Timer.h"
 #include "Framework/Utility/InputManager.h"
 
+// Collider
+#include "Framework/Collider/RectCollider.h"
+
 // Object
 #include "Object/Texture.h"
 #include "Object/Aim.h"

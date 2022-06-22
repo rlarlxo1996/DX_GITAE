@@ -4,6 +4,7 @@
 #include "../Scene/WVPScene.h"
 #include "../Scene/SolarSystemScene.h"
 #include "../Scene/DungreedScene.h"
+#include "../Scene/CollisionScene.h"
 
 Program::Program()
 {
@@ -15,7 +16,7 @@ Program::Program()
 	_projectionBuffer->Set(projectionM);
 	_projectionBuffer->Update();
 
-	_scene = make_shared<DungreedScene>();
+	_scene = make_shared<CollisionScene>();
 }
 
 Program::~Program()
@@ -40,10 +41,15 @@ void Program::Render()
 	_viewBuffer->SetVSBuffer(1);
 	_projectionBuffer->SetVSBuffer(2);
 
-	ImGui::Text("FPS : %d", Timer::GetInstance()->GetFPS());
 
 	ALPHA_STATE->SetState();
+
+	_scene->PreRender();
+
 	_scene->Render();
+
+	ImGui::Text("FPS : %d", Timer::GetInstance()->GetFPS());
+	_scene->PostRender();
 
 	ImGui::Render();
 	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());
