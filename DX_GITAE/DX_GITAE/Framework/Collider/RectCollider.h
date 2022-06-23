@@ -16,6 +16,12 @@ public:
 	Vector2& GetPos() { return _transform->GetPos(); }
 	Vector2& GetHalfSize() { return _halfSize; }
 
+	float Left() { return _center._x - _halfSize._x; }
+	float Top() { return _center._y - _halfSize._y; }
+	float Right() { return _center._x + _halfSize._x; }
+	float Bottom() { return _center._y + _halfSize._y; }
+
+	bool IsCollision(shared_ptr<RectCollider> col);
 
 	void SetColorRed() { _colorBuffer->SetColor(RED); }
 	void SetColorGreen() { _colorBuffer->SetColor(GREEN); }

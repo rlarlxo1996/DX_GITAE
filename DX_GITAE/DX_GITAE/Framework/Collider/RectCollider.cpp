@@ -74,3 +74,17 @@ void RectCollider::Render()
 
 	DEVICE_CONTEXT->Draw(_vertices.size(), 0);
 }
+
+bool RectCollider::IsCollision(shared_ptr<RectCollider> col)
+{
+	// 사각 사각
+	if (Right() < col->Left())
+		return false;
+	if (Bottom() < col->Top())
+		return false;
+	if (Left() > col->Right())
+		return false;
+	if (Top() > col->Bottom())
+		return false;
+	return true;
+}

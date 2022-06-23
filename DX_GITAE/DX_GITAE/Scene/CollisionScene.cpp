@@ -17,14 +17,10 @@ void CollisionScene::Update()
 	_rectCollider1->Update();
 	_rectCollider2->Update();
 
-	if (_rectCollider1->GetHalfSize()._x >= _rectCollider2->GetHalfSize()._x)
-	{
+	if (_rectCollider1->IsCollision(_rectCollider2))
 		_rectCollider2->SetColorRed();
-	}
 	else
-	{
 		_rectCollider2->SetColorGreen();
-	}
 }
 
 void CollisionScene::Render()
