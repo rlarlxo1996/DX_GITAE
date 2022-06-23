@@ -4,6 +4,8 @@
 #define WIN_WIDTH 1280
 #define WIN_HEIGHT 720
 
+#define PI 3.141592
+
 #define RED			XMFLOAT4(1,0,0,1)
 #define GREEN		XMFLOAT4(0,1,0,1)
 #define BLUE		XMFLOAT4(0,0,1,1)

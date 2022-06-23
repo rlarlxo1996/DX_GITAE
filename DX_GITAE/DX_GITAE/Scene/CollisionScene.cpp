@@ -17,22 +17,19 @@ void CollisionScene::Update()
 	_rectCollider1->Update();
 	_rectCollider2->Update();
 
-	if (_rectCollider1->IsCollision(_rectCollider2))
-		_rectCollider2->SetColorRed();
-	else
-		_rectCollider2->SetColorGreen();
+	_rectCollider1->IsCollision(_rectCollider2, true);
 }
 
 void CollisionScene::Render()
 {
 	_rectCollider1->Render();
 	_rectCollider2->Render();
-
-
 }
 
 void CollisionScene::PostRender()
 {
 	ImGui::SliderFloat("rect1PosX", &_rectCollider1->GetPos()._x, 0, WIN_WIDTH);
 	ImGui::SliderFloat("rect1PosY", &_rectCollider1->GetPos()._y, 0, WIN_HEIGHT);
+	ImGui::SliderFloat("rect1Angle", &_rectCollider1->GetAngle(), 0, 2*PI);
+	ImGui::SliderFloat("rect2Angle", &_rectCollider2->GetAngle(), 0, 2*PI);
 }
