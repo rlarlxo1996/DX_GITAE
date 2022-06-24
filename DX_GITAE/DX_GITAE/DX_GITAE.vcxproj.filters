@@ -105,6 +105,7 @@
     <ClInclude Include="Object\Dungreed\Bullet.h" />
     <ClInclude Include="Scene\CollisionScene.h" />
     <ClInclude Include="Framework\Collider\RectCollider.h" />
+    <ClInclude Include="Framework\Collider\CircleCollider.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -193,6 +194,7 @@
     <ClCompile Include="Object\Dungreed\Bullet.cpp" />
     <ClCompile Include="Scene\CollisionScene.cpp" />
     <ClCompile Include="Framework\Collider\RectCollider.cpp" />
+    <ClCompile Include="Framework\Collider\CircleCollider.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

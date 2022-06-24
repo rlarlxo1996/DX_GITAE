@@ -18,7 +18,7 @@ public:
 	Vector2& GetScale() { return _scale; }
 	float& GetAngle() { return _angle; }
 	Vector2& GetPos() { return _pos; }
-	Vector2 GetWorldPos();
+	const Vector2& GetWorldPos();
 
 	void SetParent(XMMATRIX* matrix) { _parentMatrix = matrix; }
 	void SeparateParent() { _parentMatrix = nullptr; }

@@ -23,17 +23,17 @@ Vector2::~Vector2()
 {
 }
 
-Vector2 Vector2::operator+(const Vector2& value)
+Vector2 Vector2::operator+(const Vector2& value) const
 {
     return Vector2(_x + value._x, _y+value._y);
 }
 
-Vector2 Vector2::operator-(const Vector2& value)
+Vector2 Vector2::operator-(const Vector2& value) const
 {
     return Vector2(_x - value._x, _y - value._y);
 }
 
-Vector2 Vector2::operator*(const float& value)
+Vector2 Vector2::operator*(const float& value) const
 {
     return Vector2(_x * value, _y * value);
 }
@@ -46,7 +46,7 @@ Vector2& Vector2::operator+=(const Vector2& value)
     return *this;
 }
 
-bool Vector2::operator==(const Vector2& value)
+bool Vector2::operator==(const Vector2& value) const
 {
     if (_x == value._x && _y == value._y)
         return true;
@@ -54,7 +54,7 @@ bool Vector2::operator==(const Vector2& value)
     return false;
 }
 
-bool Vector2::operator!=(const Vector2& value)
+bool Vector2::operator!=(const Vector2& value) const
 {
     return !(*this == value);
 }

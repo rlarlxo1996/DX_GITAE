@@ -7,14 +7,14 @@ public:
 	Vector2(int x, int y);
 	~Vector2();
 
-	Vector2 operator+(const Vector2& value);
-	Vector2 operator-(const Vector2& value);
-	Vector2 operator*(const float& value);
+	Vector2 operator+(const Vector2& value) const;
+	Vector2 operator-(const Vector2& value) const;
+	Vector2 operator*(const float& value) const;
 
 	Vector2& operator+=(const Vector2& value);
 
-	bool operator==(const Vector2& value);
-	bool operator!=(const Vector2& value);
+	bool operator==(const Vector2& value) const;
+	bool operator!=(const Vector2& value) const;
 	bool operator<(const Vector2& value) const;
 
 	Vector2& operator=(const Vector2& value);
