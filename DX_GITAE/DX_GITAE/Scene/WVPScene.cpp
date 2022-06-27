@@ -6,7 +6,7 @@ WVPScene::WVPScene()
 	_texture = make_shared<Texture>(L"Resource/Dia.png");
 	_texture2 = make_shared<Texture>(L"Resource/Dia.png");
 
-	_texture->GetTransform()->SetParent(_texture2->GetTransform()->GetMatrix());
+	_texture->GetTransform()->SetParent(_texture2->GetTransform());
 
 	_worldBuffer = make_shared<MatrixBuffer>();
 	_viewBuffer = make_shared<MatrixBuffer>();

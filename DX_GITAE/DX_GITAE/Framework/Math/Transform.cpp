@@ -19,9 +19,9 @@ void Transform::UpdateWorld()
 
     _srtMatrix = _scaleM * _rotationM * _translateM;
 
-    if (_parentMatrix != nullptr)
+    if (_parent != nullptr)
     {
-        _srtMatrix *= (*_parentMatrix);
+        _srtMatrix *= (*_parent->GetMatrix());
     }
 
     _worldBuffer->Set(_srtMatrix);
@@ -39,4 +39,16 @@ const Vector2& Transform::GetWorldPos()
     XMStoreFloat4x4(&matrix, _srtMatrix);
 
     return Vector2(matrix._41, matrix._42);
+}
+
+const Vector2& Transform::GetWorldScale()
+{
+    Vector2 result = _scale;
+    if (_parent)
+    {
+        result._x *= _parent->GetWorldScale()._x;
+        result._x *= _parent->GetWorldScale()._y;
+    }
+
+    return result;
 }

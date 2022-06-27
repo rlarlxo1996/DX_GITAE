@@ -16,7 +16,7 @@ Program::Program()
 	_projectionBuffer->Set(projectionM);
 	_projectionBuffer->Update();
 
-	_scene = make_shared<CollisionScene>();
+	_scene = make_shared<DungreedScene>();
 }
 
 Program::~Program()

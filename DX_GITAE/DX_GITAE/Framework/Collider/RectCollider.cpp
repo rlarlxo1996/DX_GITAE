@@ -4,23 +4,15 @@
 RectCollider::RectCollider(const Vector2& halfSize)
 : _halfSize(halfSize)
 {
+	_type = Collider::Type::RECT;
+
 	_vertices.reserve(5);
 
 	CreateVertices();
-
-	_colorBuffer = make_shared<ColorBuffer>();
-	_colorBuffer->SetColor(XMFLOAT4(0, 1, 0, 1));
-
-	_pixelShader = make_shared<PixelShader>(L"Shader/ColliderShader/ColliderPixelShader.hlsl");
-	_vertexShader = make_shared<VertexShader>(L"Shader/ColliderShader/ColliderVertexShader.hlsl");
-
-	_transform = make_shared<Transform>();
-	_parent = nullptr;
 }
 
 RectCollider::~RectCollider()
 {
-	_parent = nullptr;
 }
 
 void RectCollider::CreateVertices()
@@ -47,30 +39,18 @@ void RectCollider::CreateVertices()
 	_vertices.push_back(v);
 
 	_vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexPos), _vertices.size());
+
+	Collider::CreateData();
 }
 
 void RectCollider::Update()
 {
-	_transform->UpdateWorld();
+	Collider::Update();
 }
 
 void RectCollider::Render()
 {
-	_transform->SetWorldBuffer(0);
-
-	_vertexBuffer->IASetVertexBuffer(0);
-
-	_colorBuffer->Update();
-	_colorBuffer->SetPSBuffer(0);
-	
-	DEVICE_CONTEXT->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP);
-
-	_vertexShader->SetIAInputLayOut();
-	_vertexShader->SetVertexShader();
-
-	_pixelShader->SetPixelShader();
-
-	DEVICE_CONTEXT->Draw(_vertices.size(), 0);
+	Collider::Render();
 }
 
 bool RectCollider::IsCollision(shared_ptr<RectCollider> rect, bool isObb)
@@ -222,8 +202,8 @@ RectCollider::ObbDesc RectCollider::GetOBB()
 
 	obbDesc._position = GetPos();
 
-	obbDesc._length[0] = _halfSize._x;
-	obbDesc._length[1] = _halfSize._y;
+	obbDesc._length[0] = _halfSize._x * _transform->GetWorldScale()._x;
+	obbDesc._length[1] = _halfSize._y * _transform->GetWorldScale()._y;
 
 	XMFLOAT4X4 world;
 	XMStoreFloat4x4(&world, *(_transform->GetMatrix()));
@@ -237,7 +217,7 @@ RectCollider::ObbDesc RectCollider::GetOBB()
 	return obbDesc;
 }
 
-bool RectCollider::IsCollision(Vector2 pos)
+bool RectCollider::IsCollision(const Vector2& pos)
 {
 	if (pos._x < Left() || pos._x > Right())
 		return false;

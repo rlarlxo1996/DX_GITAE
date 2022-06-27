@@ -16,6 +16,7 @@ public:
 
 private:
 	shared_ptr<Texture> _texture;
+	shared_ptr<Collider> _col;
 	
 	shared_ptr<Transform> _gunParent;
 	shared_ptr<class Gun> _gun;

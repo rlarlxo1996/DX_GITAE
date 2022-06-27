@@ -10,9 +10,9 @@ SolarSystemScene::SolarSystemScene()
 	_sunOrbit = make_shared<Transform>();
 	_earthOrbit = make_shared<Transform>();
 
-	_earth->GetTransform()->SetParent(_sunOrbit->GetMatrix());
-	_earthOrbit->SetParent(_sunOrbit->GetMatrix());
-	_moon->GetTransform()->SetParent(_earthOrbit->GetMatrix());
+	_earth->GetTransform()->SetParent(_sunOrbit);
+	_earthOrbit->SetParent(_sunOrbit);
+	_moon->GetTransform()->SetParent(_earthOrbit);
 
 	_earth->GetTransform()->GetPos()._x += 200;
 	_earthOrbit->GetPos() = _earth->GetTransform()->GetPos();

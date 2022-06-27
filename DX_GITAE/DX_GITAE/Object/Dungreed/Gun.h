@@ -9,7 +9,7 @@ public:
 	void Render();
 
 	shared_ptr<Transform> GetTransform() { return _texture->GetTransform(); }
-	void SetPlayer(shared_ptr<Transform> transform) { _texture->GetTransform()->SetParent(transform->GetMatrix()); }
+	void SetPlayer(shared_ptr<Transform> transform) { _texture->GetTransform()->SetParent(transform); }
 
 private:
 	shared_ptr<Texture> _texture;

@@ -4,18 +4,10 @@
 CircleCollider::CircleCollider(const float& radius)
 : _radius(radius)
 {
+	_type = Collider::Type::CIRCLE;
 	_vertices.reserve(5);
 
 	CreateVertices();
-
-	_colorBuffer = make_shared<ColorBuffer>();
-	_colorBuffer->SetColor(XMFLOAT4(0, 1, 0, 1));
-
-	_pixelShader = make_shared<PixelShader>(L"Shader/ColliderShader/ColliderPixelShader.hlsl");
-	_vertexShader = make_shared<VertexShader>(L"Shader/ColliderShader/ColliderVertexShader.hlsl");
-
-	_transform = make_shared<Transform>();
-	_parent = nullptr;
 }
 
 CircleCollider::~CircleCollider()
@@ -35,39 +27,27 @@ void CircleCollider::CreateVertices()
 		v.pos.z = 0;
 		_vertices.push_back(v);
 	}
-	_vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexPos), _vertices.size());
+	_vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexPos), _vertices.size()); \
+
+		Collider::CreateData();
 }
 
 void CircleCollider::Update()
 {
-	_transform->UpdateWorld();
+	Collider::Update();
 }
 
 void CircleCollider::Render()
 {
-	_transform->SetWorldBuffer(0);
-
-	_vertexBuffer->IASetVertexBuffer(0);
-
-	_colorBuffer->Update();
-	_colorBuffer->SetPSBuffer(0);
-
-	DEVICE_CONTEXT->IASetPrimitiveTopology(D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP);
-
-	_vertexShader->SetIAInputLayOut();
-	_vertexShader->SetVertexShader();
-
-	_pixelShader->SetPixelShader();
-
-	DEVICE_CONTEXT->Draw(_vertices.size(), 0);
+	Collider::Render();
 }
 
-bool CircleCollider::IsCollision(Vector2 pos)
+bool CircleCollider::IsCollision(const Vector2& pos)
 {
 	return (pos - GetWorldPos()).Length() < GetRadius();
 }
 
-bool CircleCollider::IsCollision(shared_ptr<CircleCollider> other)
+bool CircleCollider::IsCollision(shared_ptr<CircleCollider> other, bool isObb)
 {
 	Vector2 otherPos = other->GetWorldPos();
 	Vector2 mine = GetWorldPos();

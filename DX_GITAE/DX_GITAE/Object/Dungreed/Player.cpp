@@ -8,7 +8,7 @@ Player::Player()
 
 	// Gun Setting
 	_gunParent = make_shared<Transform>();
-	_gunParent->SetParent(_texture->GetTransform()->GetMatrix());
+	_gunParent->SetParent(_texture->GetTransform());
 	_gunParent->GetPos()._x = 80.0f;
 
 	_gun = make_shared<Gun>();
@@ -22,6 +22,9 @@ Player::Player()
 
 		_bullets.emplace_back(bullet);
 	}
+
+	_col = make_shared<RectCollider>(Vector2(100, 100));
+	_col->SetParent(_texture->GetTransform());
 }
 
 Player::~Player()
@@ -37,6 +40,7 @@ void Player::Update()
 	_texture->Update();
 	_gunParent->UpdateWorld();
 	_gun->Update();
+	_col->Update();
 
 	for(auto& bullet : _bullets)
 		bullet->Update();
@@ -46,6 +50,7 @@ void Player::Render()
 {
 	_texture->Render();
 	_gun->Render();
+	_col->Render();
 
 	for(auto& bullet : _bullets)
 		bullet->Render();

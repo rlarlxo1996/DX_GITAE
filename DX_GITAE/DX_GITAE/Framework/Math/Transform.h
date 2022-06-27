@@ -19,9 +19,9 @@ public:
 	float& GetAngle() { return _angle; }
 	Vector2& GetPos() { return _pos; }
 	const Vector2& GetWorldPos();
+	const Vector2& GetWorldScale();
 
-	void SetParent(XMMATRIX* matrix) { _parentMatrix = matrix; }
-	void SeparateParent() { _parentMatrix = nullptr; }
+	void SetParent(shared_ptr<Transform> transform) { _parent = transform; }
 
 private:
 	Vector2 _scale = { 1.0f,1.0f };
@@ -35,6 +35,6 @@ private:
 	XMMATRIX _srtMatrix = XMMatrixIdentity();
 	shared_ptr<MatrixBuffer> _worldBuffer;
 
-	XMMATRIX* _parentMatrix = nullptr;
+	shared_ptr<Transform> _parent = nullptr;
 };
 

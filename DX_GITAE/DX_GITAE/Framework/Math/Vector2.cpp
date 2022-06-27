@@ -82,7 +82,7 @@ void Vector2::Normalize()
     _y = _y / length;
 }
 
-float Vector2::Distance(const Vector2& value)
+float Vector2::Distance(const Vector2& value) const
 {
     float x = value._x - _x;
     float y = value._y - _y;

@@ -21,7 +21,7 @@ public:
 
 	void Normalize();
 
-	float Distance(const Vector2& value);
+	float Distance(const Vector2& value) const;
 	float Length() const;
 
 	// ³»Àû

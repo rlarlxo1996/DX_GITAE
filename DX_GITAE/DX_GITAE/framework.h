@@ -70,6 +70,7 @@ using namespace std;
 #include "Framework/Utility/InputManager.h"
 
 // Collider
+#include "Framework/Collider/Collider.h"
 #include "Framework/Collider/CircleCollider.h"
 #include "Framework/Collider/RectCollider.h"
 
