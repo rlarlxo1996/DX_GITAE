@@ -107,6 +107,7 @@
     <ClInclude Include="Framework\Collider\RectCollider.h" />
     <ClInclude Include="Framework\Collider\CircleCollider.h" />
     <ClInclude Include="Framework\Collider\Collider.h" />
+    <ClInclude Include="Object\Dungreed\Boss.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -197,6 +198,7 @@
     <ClCompile Include="Framework\Collider\RectCollider.cpp" />
     <ClCompile Include="Framework\Collider\CircleCollider.cpp" />
     <ClCompile Include="Framework\Collider\Collider.cpp" />
+    <ClCompile Include="Object\Dungreed\Boss.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

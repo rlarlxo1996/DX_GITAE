@@ -13,6 +13,8 @@ public:
 	void Fire();
 
 	shared_ptr<Transform> GetTransform() { return _texture->GetTransform(); }
+	vector<shared_ptr<class Bullet>>& GetBullet() { return _bullets; }
+	shared_ptr<Collider> GetCollider() { return _col; }
 
 private:
 	shared_ptr<Texture> _texture;

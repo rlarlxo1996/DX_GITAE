@@ -33,7 +33,7 @@ void Transform::SetWorldBuffer(UINT slot)
     _worldBuffer->SetVSBuffer(slot);
 }
 
-const Vector2& Transform::GetWorldPos()
+Vector2 Transform::GetWorldPos()
 {
     XMFLOAT4X4 matrix;
     XMStoreFloat4x4(&matrix, _srtMatrix);
@@ -41,7 +41,7 @@ const Vector2& Transform::GetWorldPos()
     return Vector2(matrix._41, matrix._42);
 }
 
-const Vector2& Transform::GetWorldScale()
+Vector2 Transform::GetWorldScale()
 {
     Vector2 result = _scale;
     if (_parent)

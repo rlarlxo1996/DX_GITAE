@@ -9,6 +9,7 @@ public:
 	void Render();
 
 	shared_ptr<Transform> GetTransform() { return _texture->GetTransform(); }
+	shared_ptr<Collider>& GetCollider() { return _col; }
 
 	void SetDirection(const Vector2& direction);
 

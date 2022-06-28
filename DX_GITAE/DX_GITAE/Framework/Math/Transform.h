@@ -18,8 +18,8 @@ public:
 	Vector2& GetScale() { return _scale; }
 	float& GetAngle() { return _angle; }
 	Vector2& GetPos() { return _pos; }
-	const Vector2& GetWorldPos();
-	const Vector2& GetWorldScale();
+	Vector2 GetWorldPos();
+	Vector2 GetWorldScale();
 
 	void SetParent(shared_ptr<Transform> transform) { _parent = transform; }
 

@@ -80,6 +80,7 @@ using namespace std;
 
 // Dungreed
 #include "Object/Dungreed/Player.h"
+#include "Object/Dungreed/Boss.h"
 #include "Object/Dungreed/Gun.h"
 #include "Object/Dungreed/Bullet.h"
 
