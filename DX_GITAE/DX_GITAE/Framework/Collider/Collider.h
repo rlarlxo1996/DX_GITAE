@@ -22,7 +22,7 @@ public:
 	virtual void Render();
 
 	Vector2& GetPos() { return _transform->GetPos(); }
-	const Vector2& GetWorldPos() { return _transform->GetWorldPos(); }
+	Vector2 GetWorldPos() { return _transform->GetWorldPos(); }
 	float& GetAngle() { return _transform->GetAngle(); }
 	shared_ptr<Transform> GetTransform() { return _transform; }
 

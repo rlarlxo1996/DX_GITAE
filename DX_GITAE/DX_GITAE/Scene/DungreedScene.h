@@ -12,8 +12,7 @@ public:
 
 private:
 	shared_ptr<Player> _player;
-	shared_ptr<Boss> _boss;
-
+	shared_ptr<Monster> _monster;
 	shared_ptr<Aim> _aim;
 };
 

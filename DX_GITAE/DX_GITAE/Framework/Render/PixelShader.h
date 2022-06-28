@@ -1,5 +1,7 @@
 #pragma once
-class PixelShader
+class Shader;
+
+class PixelShader : public Shader
 {
 public:
 	PixelShader(std::wstring file);
@@ -8,10 +10,9 @@ public:
 	void CreatePixelblob(std::wstring file);
 	void CreatePixelShader();
 
-	void SetPixelShader();
+	virtual void Set() override;
 
 private:
 	Microsoft::WRL::ComPtr<ID3D11PixelShader> _pixelShader;
-	Microsoft::WRL::ComPtr<ID3DBlob> _pixelblob;
 };
 

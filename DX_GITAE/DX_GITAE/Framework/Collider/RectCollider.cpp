@@ -181,8 +181,10 @@ bool RectCollider::IsAABB(shared_ptr<CircleCollider> circle)
 	float radius = circle->GetRadius();
 
 	if (left - radius < circleCenter._x && right + radius > circleCenter._x)
-		if (top > circleCenter._y - radius && bottom > circleCenter._y + radius)
+	{
+		if (top + radius > circleCenter._y && bottom - radius < circleCenter._y)
 			return true;
+	}
 
 	if (circle->IsCollision(Vector2(Right(), Top())))
 		return true;

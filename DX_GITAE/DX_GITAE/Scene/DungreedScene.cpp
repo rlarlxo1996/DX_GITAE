@@ -4,9 +4,11 @@
 DungreedScene::DungreedScene()
 {
 	_player = make_shared<Player>();
+	_monster = make_shared<Monster>();
+	_monster->GetTransform()->GetPos() = Vector2(WIN_WIDTH, WIN_HEIGHT) * 0.7f;
+
 	_aim = make_shared<Aim>();
 
-	_boss = make_shared<Boss>();
 }
 
 DungreedScene::~DungreedScene()
@@ -15,27 +17,30 @@ DungreedScene::~DungreedScene()
 
 void DungreedScene::Update()
 {
-	for (auto& bullet : _player->GetBullet())
-	{
-		if (bullet->GetCollider()->IsCollision(_boss->GetCollider()))
-		{
-			bullet->_isActive = false;
-			_boss->_isActive = false;
-		}
-	}
 
 	_player->Update();
 	_aim->Update();
+	_monster->Update();
 
-	_boss->Update();
+	for (auto& bullet : _player->GetBullet())
+	{
+		if (bullet->GetCollider()->IsCollision(_monster->GetCollider()))
+		{
+			_monster->GetCollider()->SetColorRed();
+			break;
+		}
+		else
+		{
+			_monster->GetCollider()->SetColorGreen();
+		}
+	}
 }
 
 void DungreedScene::Render()
 {
 	_player->Render();
 	_aim->Render();
-
-	_boss->Render();
+	_monster->Render();
 }
 
 void DungreedScene::PostRender()

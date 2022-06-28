@@ -17,6 +17,7 @@
 
 #include <vector>
 #include <map>
+#include <unordered_map>
 #include <algorithm>
 #include <string>
 
@@ -55,8 +56,10 @@ using namespace std;
 #include "Framework/Render/ConstantBuffer.h"
 #include "Framework/Render/GlobalBuffer.h"
 #include "Framework/Render/IndexBuffer.h"
+#include "Framework/Render/Shader.h"
 #include "Framework/Render/VertexShader.h"
 #include "Framework/Render/PixelShader.h"
+#include "Framework/Render/ShaderManager.h"
 #include "Framework/Render/VertexBuffer.h"
 #include "Framework/Render/SRV.h"
 
@@ -80,9 +83,9 @@ using namespace std;
 
 // Dungreed
 #include "Object/Dungreed/Player.h"
-#include "Object/Dungreed/Boss.h"
 #include "Object/Dungreed/Gun.h"
 #include "Object/Dungreed/Bullet.h"
+#include "Object/Dungreed/Monster.h"
 
 // Scene
 #include "Scene/Scene.h"

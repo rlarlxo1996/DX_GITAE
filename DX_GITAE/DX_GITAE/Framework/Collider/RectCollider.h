@@ -17,10 +17,10 @@ public:
 	virtual void Update() override;
 	virtual void Render() override;
 
-	float Top() { return GetWorldPos()._y + _halfSize._y * _transform->GetScale()._y; }
-	float Bottom() { return GetWorldPos()._y - _halfSize._y * _transform->GetScale()._y; }
-	float Right() { return GetWorldPos()._x + _halfSize._x * _transform->GetScale()._x; }
-	float Left() { return GetWorldPos()._x - _halfSize._x * _transform->GetScale()._x; }
+	float Top() { return GetWorldPos()._y + (_halfSize._y * _transform->GetWorldScale()._y); }
+	float Bottom() { return GetWorldPos()._y - (_halfSize._y * _transform->GetWorldScale()._y); }
+	float Right() { return GetWorldPos()._x + (_halfSize._x * _transform->GetWorldScale()._x); }
+	float Left() { return GetWorldPos()._x - (_halfSize._x * _transform->GetWorldScale()._x); }
 
 
 	virtual bool IsCollision(const Vector2& pos) override;
