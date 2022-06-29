@@ -3,10 +3,10 @@
 
 WVPScene::WVPScene()
 {
-	_texture = make_shared<Texture>(L"Resource/Dia.png");
-	_texture2 = make_shared<Texture>(L"Resource/Dia.png");
+	_quad = make_shared<Quad>(L"Resource/Dia.png");
+	_quad2 = make_shared<Quad>(L"Resource/Dia.png");
 
-	_texture->GetTransform()->SetParent(_texture2->GetTransform());
+	_quad->GetTransform()->SetParent(_quad2->GetTransform());
 
 	_worldBuffer = make_shared<MatrixBuffer>();
 	_viewBuffer = make_shared<MatrixBuffer>();
@@ -46,13 +46,13 @@ void WVPScene::Update()
 	_viewBuffer->Update();
 
 	// Texture
-	_texture->GetTransform()->GetAngle() += 0.001;
-	_texture->GetTransform()->GetPos()._x = 300.0f;
+	_quad->GetTransform()->GetAngle() += 0.001;
+	_quad->GetTransform()->GetPos()._x = 300.0f;
 
-	_texture2->GetTransform()->GetPos()._x -= 0.01;
+	_quad2->GetTransform()->GetPos()._x -= 0.01;
 
-	_texture->Update();
-	_texture2->Update();
+	_quad->Update();
+	_quad2->Update();
 }
 
 void WVPScene::Render()
@@ -61,6 +61,6 @@ void WVPScene::Render()
 	_viewBuffer->SetVSBuffer(1);
 	_projectionBuffer->SetVSBuffer(2);
 
-	_texture->Render();
-	_texture2->Render();
+	_quad->Render();
+	_quad2->Render();
 }

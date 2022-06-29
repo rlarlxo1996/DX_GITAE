@@ -12,6 +12,8 @@ public:
 	Vector2 operator*(const float& value) const;
 
 	Vector2& operator+=(const Vector2& value);
+	Vector2& operator-=(const Vector2& value);
+	Vector2& operator*=(const float& value);
 
 	bool operator==(const Vector2& value) const;
 	bool operator!=(const Vector2& value) const;

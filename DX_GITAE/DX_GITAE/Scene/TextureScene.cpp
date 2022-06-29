@@ -3,7 +3,7 @@
 
 TextureScene::TextureScene()
 {
-	_texture = make_shared<Texture>(L"Resource/Dia.png");
+	_quad = make_shared<Quad>(L"Resource/Dia.png");
 }
 
 TextureScene::~TextureScene()
@@ -16,5 +16,5 @@ void TextureScene::Update()
 
 void TextureScene::Render()
 {
-	_texture->Render();
+	_quad->Render();
 }

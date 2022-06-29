@@ -26,3 +26,6 @@
 #define SAMPLER_STATE StateManager::GetInstance()->GetSampler()
 #define ALPHA_STATE StateManager::GetInstance()->GetAlpha()
 #define ADDITIVE_STATE StateManager::GetInstance()->GetAdditive()
+
+#define ADD_VS(k) ShaderManager::GetInstance()->AddVS(k)
+#define ADD_PS(k) ShaderManager::GetInstance()->AddPS(k)

@@ -19,7 +19,7 @@ private:
 
 	float _cameraAngle = { 0 }; // World È¸Àü
 
-	shared_ptr<Texture> _texture;
-	shared_ptr<Texture> _texture2;
+	shared_ptr<Quad> _quad;
+	shared_ptr<Quad> _quad2;
 };
 

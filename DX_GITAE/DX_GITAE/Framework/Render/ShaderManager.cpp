@@ -28,5 +28,15 @@ shared_ptr<VertexShader> ShaderManager::AddVS(wstring file)
 
 shared_ptr<PixelShader> ShaderManager::AddPS(wstring file)
 {
-	return shared_ptr<PixelShader>();
+	if (_shaders.count(file) > 0)
+	{
+		shared_ptr<PixelShader> ps = dynamic_pointer_cast<PixelShader>(_shaders[file]);
+		return ps;
+	}
+
+	shared_ptr<PixelShader> shader = make_shared<PixelShader>(file);
+
+	_shaders[file] = shader;
+
+	return shader;
 }

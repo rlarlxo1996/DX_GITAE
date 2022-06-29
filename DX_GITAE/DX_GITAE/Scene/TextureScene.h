@@ -10,6 +10,6 @@ public:
 	virtual void Render() override;
 
 private:
-	shared_ptr<Texture> _texture;
+	shared_ptr<Quad> _quad;
 };
 

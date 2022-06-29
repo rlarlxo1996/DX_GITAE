@@ -8,11 +8,11 @@ public:
 	void Update();
 	void Render();
 
-	shared_ptr<Transform> GetTransform() { return _texture->GetTransform(); }
-	void SetPlayer(shared_ptr<Transform> transform) { _texture->GetTransform()->SetParent(transform); }
+	shared_ptr<Transform> GetTransform() { return _quad->GetTransform(); }
+	void SetPlayer(shared_ptr<Transform> transform) { _quad->GetTransform()->SetParent(transform); }
 
 private:
-	shared_ptr<Texture> _texture;
+	shared_ptr<Quad> _quad;
 	shared_ptr<class Bullet> _bullet;
 };
 

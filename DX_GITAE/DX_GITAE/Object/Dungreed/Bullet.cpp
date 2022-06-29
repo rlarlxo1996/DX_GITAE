@@ -3,11 +3,11 @@
 
 Bullet::Bullet()
 {
-	_texture = make_shared<Texture>(L"Resource/Bullet.png");
-	_texture->GetTransform()->GetScale() = { 0.1f,0.1f };
+	_quad = make_shared<Quad>(L"Resource/Bullet.png");
+	_quad->GetTransform()->GetScale() = { 0.1f,0.1f };
 
-	_col = make_shared<CircleCollider>(90);
-	_col->SetParent(_texture->GetTransform());
+	_col = make_shared<CircleCollider>(_quad->GetSize()._x);
+	_col->SetParent(_quad->GetTransform());
 }
 
 Bullet::~Bullet()
@@ -28,9 +28,9 @@ void Bullet::Update()
 	}
 
 	_direction.Normalize();
-	_texture->GetTransform()->GetPos() += _direction * _speed * DELTA_TIME;
+	_quad->GetTransform()->GetPos() += _direction * _speed * DELTA_TIME;
 
-	_texture->Update();
+	_quad->Update();
 	_col->Update();
 }
 
@@ -39,12 +39,12 @@ void Bullet::Render()
 	if (_isActive == false)
 		return;
 
-	_texture->Render();
+	_quad->Render();
 	_col->Render();
 }
 
 void Bullet::SetDirection(const Vector2& direction)
 {
 	_direction = direction;
-	_texture->GetTransform()->GetAngle() = _direction.Angle();
+	_quad->GetTransform()->GetAngle() = _direction.Angle();
 }

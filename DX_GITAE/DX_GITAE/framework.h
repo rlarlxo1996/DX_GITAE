@@ -28,6 +28,7 @@
 
 #pragma comment(lib,"d3d11.lib")
 #pragma comment(lib,"d3dcompiler.lib")
+#pragma comment(lib, "dxguid.lib")
 
 using namespace DirectX;
 using namespace std;
@@ -62,6 +63,7 @@ using namespace std;
 #include "Framework/Render/ShaderManager.h"
 #include "Framework/Render/VertexBuffer.h"
 #include "Framework/Render/SRV.h"
+#include "Framework/Render/Texture.h"
 
 // State
 #include "Framework/State/SamplerState.h"
@@ -78,7 +80,9 @@ using namespace std;
 #include "Framework/Collider/RectCollider.h"
 
 // Object
-#include "Object/Texture.h"
+// Basic Object
+#include "Object/BasicObject/Quad.h"
+#include "Object/BasicObject/Sprite.h"
 #include "Object/Aim.h"
 
 // Dungreed

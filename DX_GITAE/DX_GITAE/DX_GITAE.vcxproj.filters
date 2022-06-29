@@ -77,9 +77,6 @@
     <ClInclude Include="Framework\Render\VertexShader.h">
       <Filter>Framework\Render</Filter>
     </ClInclude>
-    <ClInclude Include="Object\Texture.h">
-      <Filter>Object</Filter>
-    </ClInclude>
     <ClInclude Include="Scene\Scene.h">
       <Filter>Scene</Filter>
     </ClInclude>
@@ -110,6 +107,9 @@
     <ClInclude Include="Object\Dungreed\Monster.h" />
     <ClInclude Include="Framework\Render\ShaderManager.h" />
     <ClInclude Include="Framework\Render\Shader.h" />
+    <ClInclude Include="Object\BasicObject\Quad.h" />
+    <ClInclude Include="Framework\Render\Texture.h" />
+    <ClInclude Include="Object\BasicObject\Sprite.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -171,9 +171,6 @@
     <ClCompile Include="Framework\Render\VertexShader.cpp">
       <Filter>Framework\Render</Filter>
     </ClCompile>
-    <ClCompile Include="Object\Texture.cpp">
-      <Filter>Object</Filter>
-    </ClCompile>
     <ClCompile Include="Scene\Scene.cpp">
       <Filter>Scene</Filter>
     </ClCompile>
@@ -204,6 +201,9 @@
     <ClCompile Include="Object\Dungreed\Monster.cpp" />
     <ClCompile Include="Framework\Render\ShaderManager.cpp" />
     <ClCompile Include="Framework\Render\Shader.cpp" />
+    <ClCompile Include="Object\BasicObject\Quad.cpp" />
+    <ClCompile Include="Framework\Render\Texture.cpp" />
+    <ClCompile Include="Object\BasicObject\Sprite.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

@@ -3,13 +3,13 @@
 
 Player::Player()
 {
-	_texture = make_shared<Texture>(L"Resource/Player.png");
-	_texture->GetTransform()->GetScale() = { 0.7f, 0.7f };
-	_texture->GetTransform()->GetPos() = { 100,100 };
+	_quad = make_shared<Quad>(L"Resource/Player.png");
+	_quad->GetTransform()->GetScale() = { 0.7f, 0.7f };
+	_quad->GetTransform()->GetPos() = { 100,100 };
 
 	// Gun Setting
 	_gunParent = make_shared<Transform>();
-	_gunParent->SetParent(_texture->GetTransform());
+	_gunParent->SetParent(_quad->GetTransform());
 	_gunParent->GetPos()._x = 80.0f;
 
 	_gun = make_shared<Gun>();
@@ -24,8 +24,8 @@ Player::Player()
 		_bullets.emplace_back(bullet);
 	}
 
-	_col = make_shared<RectCollider>(Vector2(100, 100));
-	_col->SetParent(_texture->GetTransform());
+	_col = make_shared<RectCollider>(_quad->GetSize());
+	_col->SetParent(_quad->GetTransform());
 }
 
 Player::~Player()
@@ -38,7 +38,7 @@ void Player::Update()
 	SetGun();
 	Fire();
 
-	_texture->Update();
+	_quad->Update();
 	_gunParent->UpdateWorld();
 	_gun->Update();
 	_col->Update();
@@ -49,7 +49,7 @@ void Player::Update()
 
 void Player::Render()
 {
-	_texture->Render();
+	_quad->Render();
 	_gun->Render();
 	_col->Render();
 
@@ -61,19 +61,19 @@ void Player::Move()
 {
 	if (KEY_PRESS('W'))
 	{
-		_texture->GetTransform()->GetPos()._y += _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos()._y += _speed * DELTA_TIME;
 	}
 	if (KEY_PRESS('A'))
 	{
-		_texture->GetTransform()->GetPos()._x -= _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos()._x -= _speed * DELTA_TIME;
 	}
 	if (KEY_PRESS('S'))
 	{
-		_texture->GetTransform()->GetPos()._y -= _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos()._y -= _speed * DELTA_TIME;
 	}
 	if (KEY_PRESS('D'))
 	{
-		_texture->GetTransform()->GetPos()._x += _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos()._x += _speed * DELTA_TIME;
 	}
 }
 

@@ -52,9 +52,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     ImGui_ImplWin32_Init(hWnd);
     ImGui_ImplDX11_Init(DEVICE.Get(), DEVICE_CONTEXT.Get());
 
-    StateManager::Create();
     Timer::Create();
+    StateManager::Create();
     InputManager::Create();
+    ShaderManager::Create();
     shared_ptr<Program> program = make_shared<Program>();
 
     while (msg.message != WM_QUIT)
@@ -79,6 +80,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
 
     // 삭제
     StateManager::Delete();
+    ShaderManager::Delete();
     InputManager::Delete();
     Timer::Delete();
 

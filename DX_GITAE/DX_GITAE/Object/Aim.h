@@ -9,6 +9,6 @@ public:
 	void Render();
 
 private:
-	shared_ptr<Texture> _texture;
+	shared_ptr<Quad> _quad;
 };
 

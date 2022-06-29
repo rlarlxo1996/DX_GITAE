@@ -3,7 +3,8 @@
 
 Aim::Aim()
 {
-	_texture = make_shared<Texture>(L"Resource/Aim.png");
+	_quad = make_shared<Quad>(L"Resource/Aim.png");
+	_quad->GetTransform()->GetScale() *= 0.1f;
 }
 
 Aim::~Aim()
@@ -12,12 +13,12 @@ Aim::~Aim()
 
 void Aim::Update()
 {
-	_texture->GetTransform()->GetPos() = MOUSE_POS;
+	_quad->GetTransform()->GetPos() = MOUSE_POS;
 
-	_texture->Update();
+	_quad->Update();
 }
 
 void Aim::Render()
 {
-	_texture->Render();
+	_quad->Render();
 }

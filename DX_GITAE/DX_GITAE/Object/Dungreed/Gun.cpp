@@ -3,8 +3,8 @@
 
 Gun::Gun()
 {
-	_texture = make_shared<Texture>(L"Resource/Gun.png");
-	_texture->GetTransform()->GetScale() = { 0.3f, 0.3f };
+	_quad = make_shared<Quad>(L"Resource/Gun.png");
+	_quad->GetTransform()->GetScale() = { 0.3f, 0.3f };
 
 
 }
@@ -15,10 +15,10 @@ Gun::~Gun()
 
 void Gun::Update()
 {
-	_texture->Update();
+	_quad->Update();
 }
 
 void Gun::Render()
 {
-	_texture->Render();
+	_quad->Render();
 }

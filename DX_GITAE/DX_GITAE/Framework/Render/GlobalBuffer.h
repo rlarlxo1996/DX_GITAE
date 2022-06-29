@@ -1,5 +1,10 @@
 #pragma once
 
+inline void IASetPT(D3D_PRIMITIVE_TOPOLOGY type = D3D_PRIMITIVE_TOPOLOGY_TRIANGLELIST)
+{
+	DEVICE_CONTEXT->IASetPrimitiveTopology(type);
+}
+
 class MatrixBuffer : public ConstantBuffer
 {
 	struct Data
@@ -42,4 +47,22 @@ public:
 
 private:
 	Data _data;
+};
+
+class FrameBuffer : public ConstantBuffer
+{
+public:
+	struct Data
+	{
+		XMFLOAT2 _maxFrame;
+		XMFLOAT2 _curFrame;
+	}_data;
+
+	FrameBuffer()
+	: ConstantBuffer(&_data, sizeof(Data))
+	{
+		_data._maxFrame = { 1,1 };
+		_data._curFrame = { 1,1 };
+	}
+
 };

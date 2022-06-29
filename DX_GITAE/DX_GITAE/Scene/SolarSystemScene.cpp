@@ -3,9 +3,9 @@
 
 SolarSystemScene::SolarSystemScene()
 {
-	_sun = make_shared<Texture>(L"Resource/Sun.png");
-	_earth = make_shared<Texture>(L"Resource/Earth.png");
-	_moon = make_shared<Texture>(L"Resource/Moon.png");
+	_sun = make_shared<Quad>(L"Resource/Sun.png");
+	_earth = make_shared<Quad>(L"Resource/Earth.png");
+	_moon = make_shared<Quad>(L"Resource/Moon.png");
 
 	_sunOrbit = make_shared<Transform>();
 	_earthOrbit = make_shared<Transform>();

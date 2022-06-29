@@ -46,6 +46,22 @@ Vector2& Vector2::operator+=(const Vector2& value)
     return *this;
 }
 
+Vector2& Vector2::operator-=(const Vector2& value)
+{
+    _x -= value._x;
+    _y -= value._y;
+
+    return *this;
+}
+
+Vector2& Vector2::operator*=(const float& value)
+{
+    _x *= value;
+    _y *= value;
+
+    return *this;
+}
+
 bool Vector2::operator==(const Vector2& value) const
 {
     if (_x == value._x && _y == value._y)

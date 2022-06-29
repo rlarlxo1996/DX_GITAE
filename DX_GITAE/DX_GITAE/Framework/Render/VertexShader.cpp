@@ -84,7 +84,7 @@ void VertexShader::CreateInputLayout()
         }
 
         string temp = paramDesc.SemanticName;
-        if (temp == "Position")
+        if (temp == "POSITION")
             elementDesc.Format = DXGI_FORMAT_R32G32B32_FLOAT;
 
         int n = temp.find_first_of('_');
