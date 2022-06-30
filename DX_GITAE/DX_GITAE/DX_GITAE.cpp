@@ -192,8 +192,8 @@ LRESULT CALLBACK WndProc(HWND hWnd, UINT message, WPARAM wParam, LPARAM lParam)
 
     case WM_MOUSEMOVE:
     {
-        MOUSE_POS._x = static_cast<float>(LOWORD(lParam));
-        MOUSE_POS._y = WIN_HEIGHT - static_cast<float>(HIWORD(lParam));
+        MOUSE_POS.x = static_cast<float>(LOWORD(lParam));
+        MOUSE_POS.y = WIN_HEIGHT - static_cast<float>(HIWORD(lParam));
     }
 
     case WM_PAINT:

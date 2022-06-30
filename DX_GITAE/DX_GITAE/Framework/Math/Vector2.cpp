@@ -2,20 +2,17 @@
 #include "Vector2.h"
 
 Vector2::Vector2()
-: _x(0.0f)
-, _y(0.0f)
+: XMFLOAT2()
 {
 }
 
 Vector2::Vector2(float x, float y)
-: _x(x)
-, _y(y)
+: XMFLOAT2(x,y)
 {
 }
 
 Vector2::Vector2(int x, int y)
-: _x((float)x)
-, _y((float)y)
+: XMFLOAT2(float(x), float(y))
 {
 }
 
@@ -25,46 +22,46 @@ Vector2::~Vector2()
 
 Vector2 Vector2::operator+(const Vector2& value) const
 {
-    return Vector2(_x + value._x, _y+value._y);
+    return Vector2(x + value.x, y+value.y);
 }
 
 Vector2 Vector2::operator-(const Vector2& value) const
 {
-    return Vector2(_x - value._x, _y - value._y);
+    return Vector2(x - value.x, y - value.y);
 }
 
 Vector2 Vector2::operator*(const float& value) const
 {
-    return Vector2(_x * value, _y * value);
+    return Vector2(x * value, y * value);
 }
 
 Vector2& Vector2::operator+=(const Vector2& value)
 {
-    _x += value._x;
-    _y += value._y;
+    x += value.x;
+    y += value.y;
 
     return *this;
 }
 
 Vector2& Vector2::operator-=(const Vector2& value)
 {
-    _x -= value._x;
-    _y -= value._y;
+    x -= value.x;
+    y -= value.y;
 
     return *this;
 }
 
 Vector2& Vector2::operator*=(const float& value)
 {
-    _x *= value;
-    _y *= value;
+    x *= value;
+    y *= value;
 
     return *this;
 }
 
 bool Vector2::operator==(const Vector2& value) const
 {
-    if (_x == value._x && _y == value._y)
+    if (x == value.x && y == value.y)
         return true;
 
     return false;
@@ -77,16 +74,16 @@ bool Vector2::operator!=(const Vector2& value) const
 
 bool Vector2::operator<(const Vector2& value) const
 {
-    if (_y != value._y)
-        return _y < value._y;
+    if (y != value.y)
+        return y < value.y;
 
-    return _x < value._x;
+    return x < value.x;
 }
 
 Vector2& Vector2::operator=(const Vector2& value)
 {
-    _x = value._x;
-    _y = value._y;
+    x = value.x;
+    y = value.y;
 
     return *this;
 }
@@ -94,30 +91,30 @@ Vector2& Vector2::operator=(const Vector2& value)
 void Vector2::Normalize()
 {
     float length = Length();
-    _x = _x / length;
-    _y = _y / length;
+    x = x / length;
+    y = y / length;
 }
 
 float Vector2::Distance(const Vector2& value) const
 {
-    float x = value._x - _x;
-    float y = value._y - _y;
-    return sqrtf(x * x + y * y);
+    float tempX = value.x - x;
+    float tempY = value.y - y;
+    return sqrtf(tempX * tempX + tempY * tempY);
 }
 
 float Vector2::Length() const
 {
-    return sqrtf(_x * _x + _y * _y);
+    return sqrtf(x * x + y * y);
 }
 
 float Vector2::Dot(const Vector2& value)
 {
-    return _x* value._x + _y*value._y;
+    return x* value.x + y*value.y;
 }
 
 float Vector2::Cross(const Vector2& value)
 {
-    return _x * value._y - _y*value._x;
+    return x * value.y - y*value.x;
 }
 
 bool Vector2::IsBetween(const Vector2& value1, const Vector2& value2)
@@ -135,7 +132,7 @@ bool Vector2::IsBetween(const Vector2& value1, const Vector2& value2)
 
 int Vector2::Manhattan(const Vector2 value) const
 {
-    return (value._x - _x) + (value._y - _y);
+    return (value.x - x) + (value.y - y);
 }
 
 float Vector2::Angle(const Vector2& value)

@@ -5,15 +5,18 @@ public:
 	Quad(wstring file);
 	~Quad();
 
-	void Update();
+	virtual void Update();
 	virtual void Render();
 
 	virtual void CreateVertices();
 
 	shared_ptr<Transform> GetTransform() { return _transform; }
 	const Vector2& GetSize() { return _size; }
+	Vector2 GetHalfSize() { return _size * 0.5f; }
 
 protected:
+	Quad();
+
 	shared_ptr<Transform> _transform;
 
 	// Texture

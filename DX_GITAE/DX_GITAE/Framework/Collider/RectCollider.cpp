@@ -19,23 +19,23 @@ void RectCollider::CreateVertices()
 {
 	VertexPos v;
 	// 왼쪽 위
-	v.pos = { -_halfSize._x, _halfSize._y, 0 };
+	v.pos = { -_halfSize.x, _halfSize.y, 0 };
 	_vertices.push_back(v);
 
 	// 오른쪽 위
-	v.pos = { _halfSize._x, _halfSize._y, 0 };
+	v.pos = { _halfSize.x, _halfSize.y, 0 };
 	_vertices.push_back(v);
 
 	// 오른쪽 아래
-	v.pos = { _halfSize._x, -_halfSize._y, 0 };
+	v.pos = { _halfSize.x, -_halfSize.y, 0 };
 	_vertices.push_back(v);
 
 	// 왼쪽 아래
-	v.pos = { -_halfSize._x, -_halfSize._y, 0 };
+	v.pos = { -_halfSize.x, -_halfSize.y, 0 };
 	_vertices.push_back(v);
 
 	// 왼쪽 위
-	v.pos = { -_halfSize._x, _halfSize._y, 0 };
+	v.pos = { -_halfSize.x, _halfSize.y, 0 };
 	_vertices.push_back(v);
 
 	_vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexPos), _vertices.size());
@@ -180,9 +180,9 @@ bool RectCollider::IsAABB(shared_ptr<CircleCollider> circle)
 	float bottom = Bottom();
 	float radius = circle->GetRadius();
 
-	if (left - radius < circleCenter._x && right + radius > circleCenter._x)
+	if (left - radius < circleCenter.x && right + radius > circleCenter.x)
 	{
-		if (top + radius > circleCenter._y && bottom - radius < circleCenter._y)
+		if (top + radius > circleCenter.y && bottom - radius < circleCenter.y)
 			return true;
 	}
 
@@ -204,8 +204,8 @@ RectCollider::ObbDesc RectCollider::GetOBB()
 
 	obbDesc._position = GetPos();
 
-	obbDesc._length[0] = _halfSize._x * _transform->GetWorldScale()._x;
-	obbDesc._length[1] = _halfSize._y * _transform->GetWorldScale()._y;
+	obbDesc._length[0] = _halfSize.x * _transform->GetWorldScale().x;
+	obbDesc._length[1] = _halfSize.y * _transform->GetWorldScale().y;
 
 	XMFLOAT4X4 world;
 	XMStoreFloat4x4(&world, *(_transform->GetMatrix()));
@@ -221,9 +221,9 @@ RectCollider::ObbDesc RectCollider::GetOBB()
 
 bool RectCollider::IsCollision(const Vector2& pos)
 {
-	if (pos._x < Left() || pos._x > Right())
+	if (pos.x < Left() || pos.x > Right())
 		return false;
-	if (pos._y > Top() || pos._y < Bottom())
+	if (pos.y > Top() || pos.y < Bottom())
 		return false;
 	return true;
 }

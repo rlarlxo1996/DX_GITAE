@@ -42,8 +42,8 @@ void Texture::Set(UINT slot)
 Vector2 Texture::GetSize()
 {
     Vector2 v;
-    v._x = static_cast<float>(_image.GetMetadata().width);
-    v._y = static_cast<float>(_image.GetMetadata().height);
+    v.x = static_cast<float>(_image.GetMetadata().width);
+    v.y = static_cast<float>(_image.GetMetadata().height);
 
     return v;
 }

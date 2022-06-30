@@ -5,6 +5,7 @@
 #include "../Scene/SolarSystemScene.h"
 #include "../Scene/DungreedScene.h"
 #include "../Scene/CollisionScene.h"
+#include "../Scene/SpriteScene.h"
 
 Program::Program()
 {
@@ -16,7 +17,7 @@ Program::Program()
 	_projectionBuffer->Set(projectionM);
 	_projectionBuffer->Update();
 
-	_scene = make_shared<DungreedScene>();
+	_scene = make_shared<SpriteScene>();
 }
 
 Program::~Program()

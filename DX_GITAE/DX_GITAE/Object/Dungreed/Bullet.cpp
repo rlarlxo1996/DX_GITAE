@@ -6,7 +6,7 @@ Bullet::Bullet()
 	_quad = make_shared<Quad>(L"Resource/Bullet.png");
 	_quad->GetTransform()->GetScale() = { 0.1f,0.1f };
 
-	_col = make_shared<CircleCollider>(_quad->GetSize()._x);
+	_col = make_shared<CircleCollider>(_quad->GetSize().x);
 	_col->SetParent(_quad->GetTransform());
 }
 

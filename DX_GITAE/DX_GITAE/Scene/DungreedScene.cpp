@@ -45,6 +45,6 @@ void DungreedScene::Render()
 
 void DungreedScene::PostRender()
 {
-	ImGui::SliderFloat("PlayerPos X", &_player->GetTransform()->GetPos()._x, 0, 1280);
-	ImGui::SliderFloat("PlayerPos Y", &_player->GetTransform()->GetPos()._y, 0, 720);
+	ImGui::SliderFloat("PlayerPos X", &_player->GetTransform()->GetPos().x, 0, 1280);
+	ImGui::SliderFloat("PlayerPos Y", &_player->GetTransform()->GetPos().y, 0, 720);
 }

@@ -47,9 +47,9 @@ void WVPScene::Update()
 
 	// Texture
 	_quad->GetTransform()->GetAngle() += 0.001;
-	_quad->GetTransform()->GetPos()._x = 300.0f;
+	_quad->GetTransform()->GetPos().x = 300.0f;
 
-	_quad2->GetTransform()->GetPos()._x -= 0.01;
+	_quad2->GetTransform()->GetPos().x -= 0.01;
 
 	_quad->Update();
 	_quad2->Update();

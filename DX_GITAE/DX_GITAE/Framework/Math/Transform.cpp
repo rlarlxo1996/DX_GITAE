@@ -13,9 +13,9 @@ Transform::~Transform()
 void Transform::UpdateWorld()
 {
     // SRT Matrix ¼³Á¤
-    _scaleM = XMMatrixScaling(_scale._x, _scale._y, 0);
+    _scaleM = XMMatrixScaling(_scale.x, _scale.y, 0);
     _rotationM = XMMatrixRotationZ(_angle);
-    _translateM = XMMatrixTranslation(_pos._x, _pos._y, 0);
+    _translateM = XMMatrixTranslation(_pos.x, _pos.y, 0);
 
     _srtMatrix = _scaleM * _rotationM * _translateM;
 
@@ -46,8 +46,8 @@ Vector2 Transform::GetWorldScale()
     Vector2 result = _scale;
     if (_parent)
     {
-        result._x *= _parent->GetWorldScale()._x;
-        result._x *= _parent->GetWorldScale()._y;
+        result.x *= _parent->GetWorldScale().x;
+        result.x *= _parent->GetWorldScale().y;
     }
 
     return result;

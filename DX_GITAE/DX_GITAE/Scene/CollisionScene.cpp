@@ -42,11 +42,11 @@ void CollisionScene::Render()
 
 void CollisionScene::PostRender()
 {
-	ImGui::SliderFloat("rect1PosX", &_rectCollider1->GetPos()._x, 0, WIN_WIDTH);
-	ImGui::SliderFloat("rect1PosY", &_rectCollider1->GetPos()._y, 0, WIN_HEIGHT);
+	ImGui::SliderFloat("rect1PosX", &_rectCollider1->GetPos().x, 0, WIN_WIDTH);
+	ImGui::SliderFloat("rect1PosY", &_rectCollider1->GetPos().y, 0, WIN_HEIGHT);
 	ImGui::SliderFloat("rect1Angle", &_rectCollider1->GetAngle(), 0, 2 * PI);
 	//ImGui::SliderFloat("rect2Angle", &_rectCollider2->GetAngle(), 0, 2*PI);
 
-	ImGui::SliderFloat("circle1PosX", &_circleCollider1->GetPos()._x, 0, WIN_WIDTH);
-	ImGui::SliderFloat("circle1PosY", &_circleCollider1->GetPos()._y, 0, WIN_HEIGHT);
+	ImGui::SliderFloat("circle1PosX", &_circleCollider1->GetPos().x, 0, WIN_WIDTH);
+	ImGui::SliderFloat("circle1PosY", &_circleCollider1->GetPos().y, 0, WIN_HEIGHT);
 }

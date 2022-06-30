@@ -1,6 +1,10 @@
 #include "framework.h"
 #include "Quad.h"
 
+Quad::Quad()
+{
+}
+
 Quad::Quad(wstring file)
 {
     // Texture Setting
@@ -51,13 +55,13 @@ void Quad::CreateVertices()
     _vertices.reserve(4);
 
     // 왼쪽 위
-    _vertices.emplace_back(-halfSize._x, halfSize._y, 0, 0);
+    _vertices.emplace_back(-halfSize.x, halfSize.y, 0, 0);
     // 오른쪽 위
-    _vertices.emplace_back(halfSize._x, halfSize._y, 1, 0);
+    _vertices.emplace_back(halfSize.x, halfSize.y, 1, 0);
     // 오른쪽 아래
-    _vertices.emplace_back(halfSize._x, -halfSize._y, 1, 1);
+    _vertices.emplace_back(halfSize.x, -halfSize.y, 1, 1);
     // 왼쪽 아래
-    _vertices.emplace_back(-halfSize._x, -halfSize._y, 0, 1);
+    _vertices.emplace_back(-halfSize.x, -halfSize.y, 0, 1);
 
     _indices.push_back(0);
     _indices.push_back(1);

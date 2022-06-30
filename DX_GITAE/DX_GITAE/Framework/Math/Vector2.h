@@ -1,5 +1,5 @@
 #pragma once
-class Vector2
+class Vector2 : public XMFLOAT2
 {
 public:
 	Vector2();
@@ -33,11 +33,7 @@ public:
 	bool IsBetween(const Vector2& value1, const Vector2& value2);
 	int Manhattan(const Vector2 value) const;
 
-	float Angle() { return atan2(_y, _x); }
+	float Angle() { return atan2(y, x); }
 	float Angle(const Vector2& value);
-
-public:
-	float _x;
-	float _y;
 };
 

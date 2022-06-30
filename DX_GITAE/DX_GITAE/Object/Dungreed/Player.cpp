@@ -10,7 +10,7 @@ Player::Player()
 	// Gun Setting
 	_gunParent = make_shared<Transform>();
 	_gunParent->SetParent(_quad->GetTransform());
-	_gunParent->GetPos()._x = 80.0f;
+	_gunParent->GetPos().x = 80.0f;
 
 	_gun = make_shared<Gun>();
 	_gun->SetPlayer(_gunParent);
@@ -24,7 +24,7 @@ Player::Player()
 		_bullets.emplace_back(bullet);
 	}
 
-	_col = make_shared<RectCollider>(_quad->GetSize());
+	_col = make_shared<RectCollider>(_quad->GetHalfSize());
 	_col->SetParent(_quad->GetTransform());
 }
 
@@ -61,19 +61,19 @@ void Player::Move()
 {
 	if (KEY_PRESS('W'))
 	{
-		_quad->GetTransform()->GetPos()._y += _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos().y += _speed * DELTA_TIME;
 	}
 	if (KEY_PRESS('A'))
 	{
-		_quad->GetTransform()->GetPos()._x -= _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos().x -= _speed * DELTA_TIME;
 	}
 	if (KEY_PRESS('S'))
 	{
-		_quad->GetTransform()->GetPos()._y -= _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos().y -= _speed * DELTA_TIME;
 	}
 	if (KEY_PRESS('D'))
 	{
-		_quad->GetTransform()->GetPos()._x += _speed * DELTA_TIME;
+		_quad->GetTransform()->GetPos().x += _speed * DELTA_TIME;
 	}
 }
 

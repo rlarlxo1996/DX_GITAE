@@ -110,6 +110,7 @@
     <ClInclude Include="Object\BasicObject\Quad.h" />
     <ClInclude Include="Framework\Render\Texture.h" />
     <ClInclude Include="Object\BasicObject\Sprite.h" />
+    <ClInclude Include="Scene\SpriteScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -134,6 +135,7 @@
     <Image Include="Resource\Aim.png" />
     <Image Include="Resource\Bullet.png" />
     <Image Include="Resource\Monster.png" />
+    <Image Include="Resource\zelda.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />
@@ -204,6 +206,7 @@
     <ClCompile Include="Object\BasicObject\Quad.cpp" />
     <ClCompile Include="Framework\Render\Texture.cpp" />
     <ClCompile Include="Object\BasicObject\Sprite.cpp" />
+    <ClCompile Include="Scene\SpriteScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -220,5 +223,6 @@
     </FxCompile>
     <FxCompile Include="Shader\ColliderShader\ColliderVertexShader.hlsl" />
     <FxCompile Include="Shader\ColliderShader\ColliderPixelShader.hlsl" />
+    <FxCompile Include="Shader\SpriteShader.hlsl" />
   </ItemGroup>
 </Project>
