@@ -20,6 +20,7 @@
 #include <unordered_map>
 #include <algorithm>
 #include <string>
+#include <functional>
 
 #include <wrl/client.h>
 #include <d3d11.h>
@@ -78,6 +79,9 @@ using namespace std;
 #include "Framework/Collider/Collider.h"
 #include "Framework/Collider/CircleCollider.h"
 #include "Framework/Collider/RectCollider.h"
+
+// Animation
+#include "Framework/Animation/Action.h"
 
 // Object
 // Basic Object

@@ -33,7 +33,6 @@ void Collider::Render()
 
 	_vertexBuffer->IASetVertexBuffer(0);
 
-	_colorBuffer->Update();
 	_colorBuffer->SetPSBuffer(0);
 
 	IASetPT(D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP);

@@ -15,7 +15,6 @@ Program::Program()
 	XMMATRIX projectionM = XMMatrixOrthographicOffCenterLH(0, WIN_WIDTH, 0, WIN_HEIGHT, -1.0f, 1.0f);
 
 	_projectionBuffer->Set(projectionM);
-	_projectionBuffer->Update();
 
 	_scene = make_shared<SpriteScene>();
 }
@@ -26,8 +25,6 @@ Program::~Program()
 
 void Program::Update()
 {
-	_viewBuffer->Update();
-
 	_scene->Update();
 }
 

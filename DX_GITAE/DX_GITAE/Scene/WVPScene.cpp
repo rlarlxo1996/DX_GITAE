@@ -15,9 +15,6 @@ WVPScene::WVPScene()
 	XMMATRIX projectionM = XMMatrixOrthographicLH(WIN_WIDTH, WIN_HEIGHT, 0.0f, 1.0f);
 
 	_projectionBuffer->Set(projectionM);
-	_projectionBuffer->Update();
-	_viewBuffer->Update();
-	_worldBuffer->Update();
 }
 
 WVPScene::~WVPScene()
@@ -33,7 +30,6 @@ void WVPScene::Update()
 	XMMATRIX worldT = XMMatrixTranslation(_worldPos.x, _worldPos.y, 0);
 	XMMATRIX worldSRT = worldS * worldR * worldT;
 	_worldBuffer->Set(worldSRT);
-	_worldBuffer->Update();
 
 	// View
 	//_cameraPos.x = 0;
@@ -43,7 +39,6 @@ void WVPScene::Update()
 	XMMATRIX viewT = XMMatrixTranslation(_cameraPos.x, _cameraPos.y, 0);
 	XMMATRIX viewSRT = viewS * viewR * viewT;
 	_viewBuffer->Set(viewSRT);
-	_viewBuffer->Update();
 
 	// Texture
 	_quad->GetTransform()->GetAngle() += 0.001;

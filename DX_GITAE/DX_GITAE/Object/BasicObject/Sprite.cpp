@@ -59,3 +59,18 @@ void Sprite::CreateVertices()
     _indices.push_back(2);
     _indices.push_back(3);
 }
+
+void Sprite::SetAction(Action::Clip clip)
+{
+    // clip에 있는 정보
+    // startPos
+    // size
+
+    // frameBuffer
+    // maxFrame
+    // curFrame (0,4)~(9,4)
+    float x = (int)(clip._startPos.x / clip._size.x);
+    float y = 4;
+
+    _frameBuffer->_data._curFrame = { x,y };
+}

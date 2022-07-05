@@ -10,6 +10,8 @@ public:
 	virtual void CreateVertices() override;
 	void SetCurFrame(Vector2 frame) { _frameBuffer->_data._curFrame = frame; }
 
+	void SetAction(Action::Clip clip);
+	
 private:
 	shared_ptr<FrameBuffer> _frameBuffer;
 	Vector2 _maxFrame = { 1, 1 };

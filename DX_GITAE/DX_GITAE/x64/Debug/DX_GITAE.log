@@ -1,2 +1,29 @@
-﻿  SpriteScene.cpp
+﻿  Program.cpp
+  SpriteScene.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,float,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,int &&,float &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,float,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,int &&,float &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::_Emplace_back_with_unused_capacity<_Ty,float,float&,float&,std::shared_ptr<Texture>&>(_Ty &&,float &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\DX_GITAE\Scene\SpriteScene.cpp(15): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::emplace_back<int,float,float&,float&,std::shared_ptr<Texture>&>(int &&,float &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+  코드를 생성하고 있습니다...
   DX_GITAE.vcxproj -> C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\x64\Debug\DX_GITAE.exe
