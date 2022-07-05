@@ -112,6 +112,7 @@
     <ClInclude Include="Object\BasicObject\Sprite.h" />
     <ClInclude Include="Scene\SpriteScene.h" />
     <ClInclude Include="Framework\Animation\Action.h" />
+    <ClInclude Include="Object\Zelda\Zelda.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -209,6 +210,7 @@
     <ClCompile Include="Object\BasicObject\Sprite.cpp" />
     <ClCompile Include="Scene\SpriteScene.cpp" />
     <ClCompile Include="Framework\Animation\Action.cpp" />
+    <ClCompile Include="Object\Zelda\Zelda.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -226,5 +228,6 @@
     <FxCompile Include="Shader\ColliderShader\ColliderVertexShader.hlsl" />
     <FxCompile Include="Shader\ColliderShader\ColliderPixelShader.hlsl" />
     <FxCompile Include="Shader\SpriteShader.hlsl" />
+    <FxCompile Include="Shader\ActionShader.hlsl" />
   </ItemGroup>
 </Project>

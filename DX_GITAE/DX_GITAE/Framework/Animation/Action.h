@@ -24,7 +24,7 @@ public:
 		PINGPONG
 	};
 
-	Action(vector<Clip> clips, Type type = LOOP, float speed = 0.1f);
+	Action(vector<Clip> clips, string name = "", Type type = LOOP, float speed = 0.1f);
 	~Action();
 
 	void Update();
@@ -32,12 +32,15 @@ public:
 	void Play();
 	void Pause();
 	void Stop();
+	void Reset();
 
 	void SetEndEvent(CallBack event) { _endEvent = event; }
 
 	Clip GetCurClip() { return _clips[_curClipNum]; }
+	bool IsPlay() { return _isPlay; }
 
 private:
+	string _name;
 	vector<Clip> _clips;
 
 	Type _repeatType;

@@ -66,3 +66,25 @@ public:
 	}
 
 };
+
+class ActionBuffer : public ConstantBuffer
+{
+public:
+	struct Data
+	{
+		// 16바이트씩 끊어서 읽는다...-> 16바이트의 정수배로 정보를 줘야함
+		Vector2 _startPos;
+		Vector2 _maxSize;
+		Vector2 _size;
+		Vector2 padding;
+	}_data;
+
+	ActionBuffer()
+	: ConstantBuffer(&_data, sizeof(Data))
+	{
+		_data._startPos = { 0,0 };
+		_data._maxSize = { 0,0 };
+		_data._size = { 0,0 };
+		_data.padding = { 0,0 };
+	}
+};

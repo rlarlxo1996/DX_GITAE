@@ -87,6 +87,7 @@ using namespace std;
 // Basic Object
 #include "Object/BasicObject/Quad.h"
 #include "Object/BasicObject/Sprite.h"
+#include "Object/Zelda/Zelda.h"
 #include "Object/Aim.h"
 
 // Dungreed

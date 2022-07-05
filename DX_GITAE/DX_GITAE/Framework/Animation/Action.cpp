@@ -1,8 +1,9 @@
 #include "framework.h"
 #include "Action.h"
 
-Action::Action(vector<Clip> clips, Type type, float speed)
+Action::Action(vector<Clip> clips, string name, Type type, float speed)
 : _clips(clips)
+, _name(name)
 , _repeatType(type)
 , _speed(speed)
 {
@@ -79,4 +80,11 @@ void Action::Stop()
 
 	if (_endEvent)
 		_endEvent();
+}
+
+void Action::Reset()
+{
+	_isPlay = false;
+	_curClipNum = 0;
+	_time = 0.0f;
 }
