@@ -30,11 +30,16 @@ public:
 	void SetPosition(Vector2 pos) { _sprite->GetTransform()->GetPos() = pos; }
 	void SetAnimation(Zelda::State state);
 
+	void KeyBoardAnimation();
+	void KeyBoardMove();
+	void SetIDLE();
+
 private:
 	shared_ptr<Sprite> _sprite;
 	vector<shared_ptr<Action>> _actions;
 	shared_ptr<Collider> _collider;
 
-	float _speed = 150.0f;
+	Vector2 _pos = Vector2();
+	State _state = State::F_IDLE;
 };
 

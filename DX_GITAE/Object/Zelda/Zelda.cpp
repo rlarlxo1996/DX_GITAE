@@ -5,11 +5,14 @@ Zelda::Zelda()
 {
 	_sprite = make_shared<Sprite>(L"Resource/zelda.png", Vector2(10, 8));
 	SetPosition ({ WIN_WIDTH * 0.5f, WIN_HEIGHT * 0.5f });
+	_pos = { WIN_WIDTH * 0.5f, WIN_HEIGHT * 0.5f };
 
 	_collider = make_shared<RectCollider>(_sprite->GetFrameHalfSize());
 	_collider->SetParent(_sprite->GetTransform());
 
 	CreateActions();
+
+	SetAnimation(_state);
 }
 
 Zelda::~Zelda()
@@ -18,6 +21,8 @@ Zelda::~Zelda()
 
 void Zelda::Update()
 {
+	KeyBoardMove();
+
 	_sprite->Update();
 	_collider->Update();
 	
@@ -69,7 +74,7 @@ void Zelda::CreateActions()
 	// B_IDLE
 	{
 		clips.emplace_back(1200 * 0, h * 2, w, h, Texture::Add(L"Resource/zelda.png"));
-		shared_ptr<Action> action = make_shared<Action>(clips, "B_IDLE");
+		shared_ptr<Action> action = make_shared<Action>(clips, "B_IDLE" ,Action::LOOP, 0.3f);
 		action->Pause();
 		_actions.push_back(action);
 		clips.clear();
@@ -160,8 +165,99 @@ void Zelda::CreateActions()
 
 void Zelda::SetAnimation(Zelda::State state)
 {
-	for (auto& action : _actions)
-		action->Reset();
+	if (_actions[state]->IsPlay() &&
+		(_actions[state]->GetReapeatTyoe() == Action::LOOP || _actions[state]->GetReapeatTyoe() == Action::PINGPONG))
+		return;
 
+	for (auto& action : _actions)
+	{
+		if (action->IsPlay() && _state == state)
+		{
+			continue;
+		}
+
+		action->Reset();
+	}
+
+	_state = state;
 	_actions[static_cast<UINT>(state)]->Play();
+}
+
+void Zelda::KeyBoardAnimation()
+{
+	if (KEY_DOWN('w'))
+	{
+		SetAnimation(Zelda::State::B_RUN);
+	}
+
+	if (KEY_DOWN('S'))
+	{
+		SetAnimation(Zelda::State::F_RUN);
+	}
+
+	if (KEY_DOWN('A'))
+	{
+		SetAnimation(Zelda::State::L_RUN);
+	}
+
+	if (KEY_DOWN('D'))
+	{
+		SetAnimation(Zelda::State::R_RUN);
+	}
+}
+
+void Zelda::KeyBoardMove()
+{
+	SetPosition(_pos);
+
+	if (KEY_PRESS('W'))
+	{
+		_pos.y += 30.0f * DELTA_TIME;
+		SetAnimation(Zelda::State::B_RUN);
+		return;
+	}
+
+	if (KEY_PRESS('S'))
+	{
+		_pos.y -= 30.0f * DELTA_TIME;
+		SetAnimation(Zelda::State::F_RUN);
+		return;
+	}
+
+	if (KEY_PRESS('A'))
+	{
+		_pos.x -= 30.0f * DELTA_TIME;
+		SetAnimation(Zelda::State::L_RUN);
+		return;
+	}
+
+	if (KEY_PRESS('D'))
+	{
+		_pos.x += 30.0f * DELTA_TIME;
+		SetAnimation(Zelda::State::R_RUN);
+		return;
+	}
+
+	SetIDLE();
+}
+
+void Zelda::SetIDLE()
+{
+	switch (_state)
+	{
+	case Zelda::F_RUN:
+		SetAnimation(F_IDLE);
+		break;
+	case Zelda::L_RUN:
+		SetAnimation(L_IDLE);
+		break;
+	case Zelda::B_RUN:
+		SetAnimation(B_IDLE);
+		break;
+	case Zelda::R_RUN:
+		SetAnimation(R_IDLE);
+		break;
+	default:
+		break;
+	}
 }

@@ -37,6 +37,8 @@ public:
 	void SetEndEvent(CallBack event) { _endEvent = event; }
 
 	Clip GetCurClip() { return _clips[_curClipNum]; }
+	Action::Type GetReapeatTyoe() { return _repeatType; }
+
 	bool IsPlay() { return _isPlay; }
 
 private:

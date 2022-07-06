@@ -5,7 +5,7 @@ Quad::Quad()
 {
 }
 
-Quad::Quad(wstring file)
+Quad::Quad(wstring file, wstring vs, wstring ps)
 {
     // Texture Setting
     _texture= Texture::Add(file);
@@ -15,8 +15,8 @@ Quad::Quad(wstring file)
     _vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexUV), _vertices.size());
     _indexBuffer = make_shared<IndexBuffer>(_indices.data(), _indices.size());
 
-    _vertexShader = ADD_VS(L"Shader/TextureVertexShader.hlsl");
-    _pixelShader = ADD_PS(L"Shader/TexturePixelShader.hlsl");
+    _vertexShader = ADD_VS(vs);
+    _pixelShader = ADD_PS(ps);
 
     _transform = make_shared<Transform>();
 

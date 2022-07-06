@@ -6,6 +6,7 @@
 #include "../Scene/DungreedScene.h"
 #include "../Scene/CollisionScene.h"
 #include "../Scene/SpriteScene.h"
+#include "../Scene/FilterScene.h"
 
 Program::Program()
 {
@@ -16,7 +17,7 @@ Program::Program()
 
 	_projectionBuffer->Set(projectionM);
 
-	_scene = make_shared<SpriteScene>();
+	_scene = make_shared<FilterScene>();
 }
 
 Program::~Program()

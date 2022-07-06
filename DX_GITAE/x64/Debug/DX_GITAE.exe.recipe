@@ -2,30 +2,33 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\DX_GITAE.exe</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\DX_GITAE.exe</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles>
     <ContentFile>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\ActionShader.cso</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\ActionShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\ColliderPixelShader.cso</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\ColliderPixelShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\ColliderVertexShader.cso</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\ColliderVertexShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\SpriteShader.cso</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\FilterShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\TexturePixelShader.cso</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\SpriteShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\TextureVertexShader.cso</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\TexturePixelShader.cso</FullPath>
     </ContentFile>
     <ContentFile>
-      <FullPath>C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\x64\Debug\TutorialShader.cso</FullPath>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\TextureVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\TutorialShader.cso</FullPath>
     </ContentFile>
   </ContentFiles>
   <SatelliteDlls />

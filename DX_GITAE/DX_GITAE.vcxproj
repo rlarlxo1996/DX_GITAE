@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Scene\FilterScene.h" />
     <ClInclude Include="Framework\Animation\Action.h" />
     <ClInclude Include="Object\Dungreed\Monster.h" />
     <ClInclude Include="Framework\Collider\Collider.h" />
@@ -197,6 +198,7 @@
     <ClInclude Include="Object\Zelda\Zelda.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Scene\FilterScene.cpp" />
     <ClCompile Include="Framework\Animation\Action.cpp" />
     <ClCompile Include="Object\Dungreed\Monster.cpp" />
     <ClCompile Include="Framework\Collider\Collider.cpp" />
@@ -253,6 +255,7 @@
     <Image Include="Resource\Dia.png" />
     <Image Include="Resource\Earth.png" />
     <Image Include="Resource\Gun.png" />
+    <Image Include="Resource\IU.png" />
     <Image Include="Resource\Monster.png" />
     <Image Include="Resource\Moon.png" />
     <Image Include="Resource\Player.png" />
@@ -301,6 +304,20 @@
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">VS</EntryPointName>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+    </FxCompile>
+    <FxCompile Include="Shader\FilterShader\FilterShader.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Pixel</ShaderType>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">PS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PS</EntryPointName>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
     </FxCompile>
     <FxCompile Include="Shader\SpriteShader.hlsl">

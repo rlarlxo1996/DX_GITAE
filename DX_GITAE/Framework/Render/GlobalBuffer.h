@@ -88,3 +88,20 @@ public:
 		_data.padding = { 0,0 };
 	}
 };
+
+class FilterBuffer : public ConstantBuffer
+{
+public:
+	struct Data
+	{
+		int selected = 0;
+		int value1 = 0;
+		int value2 = 0;
+		int value3 = 0;
+	}_data;
+
+	FilterBuffer()
+	: ConstantBuffer(&_data, sizeof(Data))
+	{
+	}
+};
