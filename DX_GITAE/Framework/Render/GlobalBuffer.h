@@ -105,3 +105,18 @@ public:
 	{
 	}
 };
+
+class ImageSizeBuffer : public ConstantBuffer
+{
+public:
+	struct Data
+	{
+		XMFLOAT2 _size = { 0.0f,0.0f };
+		XMFLOAT2 padding = { 0.0f,0.0f };
+	}_data;
+
+	ImageSizeBuffer()
+	: ConstantBuffer(&_data, sizeof(Data))
+	{
+	}
+};

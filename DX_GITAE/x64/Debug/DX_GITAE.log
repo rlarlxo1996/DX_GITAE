@@ -1,5 +1,2 @@
-﻿C:\Users\user\Desktop\�����_GitHub\DX_GITAE\DX_GITAE\Shader\FilterShader\FilterShader.hlsl(38,16-28): warning X3556: integer divides may be much slower, try using uints if possible.
-C:\Users\user\Desktop\�����_GitHub\DX_GITAE\DX_GITAE\Shader\FilterShader\FilterShader.hlsl(39,16-28): warning X3556: integer divides may be much slower, try using uints if possible.
-  
-  compilation object save succeeded; see C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\FilterShader.cso
+﻿  FilterScene.cpp
   DX_GITAE.vcxproj -> C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\DX_GITAE.exe
