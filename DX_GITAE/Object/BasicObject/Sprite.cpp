@@ -73,7 +73,7 @@ Vector2 Sprite::GetFrameHalfSize()
     return src;
 }
 
-void Sprite::SetAction(Action::Clip clip)
+void Sprite::SetActionToFrameBuffer(Action::Clip clip)
 {
     // clip에 있는 정보
     // startPos

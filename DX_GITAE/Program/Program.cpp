@@ -7,6 +7,7 @@
 #include "../Scene/CollisionScene.h"
 #include "../Scene/SpriteScene.h"
 #include "../Scene/FilterScene.h"
+#include "../Scene/EffectScene.h"
 
 Program::Program()
 {
@@ -17,7 +18,7 @@ Program::Program()
 
 	_projectionBuffer->Set(projectionM);
 
-	_scene = make_shared<FilterScene>();
+	_scene = make_shared<EffectScene>();
 }
 
 Program::~Program()

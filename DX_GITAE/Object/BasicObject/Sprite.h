@@ -12,7 +12,7 @@ public:
 	Vector2 GetFrameHalfSize();
 
 	void SetCurFrame(Vector2 frame) { _frameBuffer->_data._curFrame = frame; }
-	void SetAction(Action::Clip clip);
+	void SetActionToFrameBuffer(Action::Clip clip);
 	void SetActionToActionBuffer(Action::Clip clip);
 
 private:

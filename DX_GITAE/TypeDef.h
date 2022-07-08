@@ -4,6 +4,8 @@
 #define WIN_WIDTH 1280
 #define WIN_HEIGHT 720
 
+#define CENTER Vector2(640, 360)
+
 #define PI 3.141592
 
 #define RED			XMFLOAT4(1,0,0,1)

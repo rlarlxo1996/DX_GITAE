@@ -74,6 +74,7 @@ using namespace std;
 // Utility
 #include "Framework/Utility/Timer.h"
 #include "Framework/Utility/InputManager.h"
+#include "Framework/Utility/Utility.h"
 
 // Collider
 #include "Framework/Collider/Collider.h"
@@ -87,6 +88,7 @@ using namespace std;
 // Basic Object
 #include "Object/BasicObject/Quad.h"
 #include "Object/BasicObject/Sprite.h"
+#include "Object/BasicObject/Effect.h"
 #include "Object/Zelda/Zelda.h"
 #include "Object/Aim.h"
 

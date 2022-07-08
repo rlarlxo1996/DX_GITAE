@@ -114,6 +114,9 @@
     <ClInclude Include="Framework\Animation\Action.h" />
     <ClInclude Include="Object\Zelda\Zelda.h" />
     <ClInclude Include="Scene\FilterScene.h" />
+    <ClInclude Include="Object\BasicObject\Effect.h" />
+    <ClInclude Include="Framework\Utility\Utility.h" />
+    <ClInclude Include="Scene\EffectScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -140,6 +143,16 @@
     <Image Include="Resource\Monster.png" />
     <Image Include="Resource\zelda.png" />
     <Image Include="Resource\IU.png" />
+    <Image Include="Resource\Effects\BlueExplosion.png" />
+    <Image Include="Resource\Effects\explosion.png" />
+    <Image Include="Resource\Effects\fire_8x2.png" />
+    <Image Include="Resource\Effects\GreenExplosion.png" />
+    <Image Include="Resource\Effects\hit_4x2.png" />
+    <Image Include="Resource\Effects\hit2_4x4.png" />
+    <Image Include="Resource\Effects\skill_6x2.png" />
+    <Image Include="Resource\Effects\skill_core_4x4.png" />
+    <Image Include="Resource\Effects\smoke_4x4.png" />
+    <Image Include="Resource\Effects\thunder_core_4x4.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />
@@ -214,6 +227,8 @@
     <ClCompile Include="Framework\Animation\Action.cpp" />
     <ClCompile Include="Object\Zelda\Zelda.cpp" />
     <ClCompile Include="Scene\FilterScene.cpp" />
+    <ClCompile Include="Object\BasicObject\Effect.cpp" />
+    <ClCompile Include="Scene\EffectScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

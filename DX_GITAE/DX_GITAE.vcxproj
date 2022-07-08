@@ -151,6 +151,9 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Scene\EffectScene.h" />
+    <ClInclude Include="Framework\Utility\Utility.h" />
+    <ClInclude Include="Object\BasicObject\Effect.h" />
     <ClInclude Include="Scene\FilterScene.h" />
     <ClInclude Include="Framework\Animation\Action.h" />
     <ClInclude Include="Object\Dungreed\Monster.h" />
@@ -198,6 +201,8 @@
     <ClInclude Include="Object\Zelda\Zelda.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Scene\EffectScene.cpp" />
+    <ClCompile Include="Object\BasicObject\Effect.cpp" />
     <ClCompile Include="Scene\FilterScene.cpp" />
     <ClCompile Include="Framework\Animation\Action.cpp" />
     <ClCompile Include="Object\Dungreed\Monster.cpp" />
@@ -254,6 +259,16 @@
     <Image Include="Resource\Bullet.png" />
     <Image Include="Resource\Dia.png" />
     <Image Include="Resource\Earth.png" />
+    <Image Include="Resource\Effects\BlueExplosion.png" />
+    <Image Include="Resource\Effects\explosion.png" />
+    <Image Include="Resource\Effects\fire_8x2.png" />
+    <Image Include="Resource\Effects\GreenExplosion.png" />
+    <Image Include="Resource\Effects\hit2_4x4.png" />
+    <Image Include="Resource\Effects\hit_4x2.png" />
+    <Image Include="Resource\Effects\skill_6x2.png" />
+    <Image Include="Resource\Effects\skill_core_4x4.png" />
+    <Image Include="Resource\Effects\smoke_4x4.png" />
+    <Image Include="Resource\Effects\thunder_core_4x4.png" />
     <Image Include="Resource\Gun.png" />
     <Image Include="Resource\IU.png" />
     <Image Include="Resource\Monster.png" />
