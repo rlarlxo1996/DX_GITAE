@@ -21,10 +21,18 @@ void SamplerState::CreateSampler()
     _desc.MinLOD = 0;
     _desc.MaxLOD = D3D11_FLOAT32_MAX;
 
-    DEVICE->CreateSamplerState(&_desc, _samplerState.GetAddressOf());
+    Changed();
 }
 
 void SamplerState::SetSamplerState(UINT slot)
 {
     DEVICE_CONTEXT->PSSetSamplers(0, 1, _samplerState.GetAddressOf());
+}
+
+void SamplerState::Changed()
+{
+    if (_samplerState != nullptr)
+        _samplerState->Release();
+
+    DEVICE->CreateSamplerState(&_desc, _samplerState.GetAddressOf());
 }

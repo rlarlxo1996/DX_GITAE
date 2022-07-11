@@ -18,7 +18,7 @@ Program::Program()
 
 	_projectionBuffer->Set(projectionM);
 
-	_scene = make_shared<EffectScene>();
+	_scene = make_shared<TextureScene>();
 }
 
 Program::~Program()
@@ -28,6 +28,7 @@ Program::~Program()
 void Program::Update()
 {
 	_scene->Update();
+	EffectManager::GetInstance()->Update();
 }
 
 void Program::Render()
@@ -47,6 +48,7 @@ void Program::Render()
 	_scene->PreRender();
 
 	_scene->Render();
+	EffectManager::GetInstance()->Render();
 
 	ImGui::Text("FPS : %d", Timer::GetInstance()->GetFPS());
 	_scene->PostRender();

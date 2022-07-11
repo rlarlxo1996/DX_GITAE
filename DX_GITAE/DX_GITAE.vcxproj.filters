@@ -117,6 +117,7 @@
     <ClInclude Include="Object\BasicObject\Effect.h" />
     <ClInclude Include="Framework\Utility\Utility.h" />
     <ClInclude Include="Scene\EffectScene.h" />
+    <ClInclude Include="Object\BasicObject\EffectManager.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -229,6 +230,7 @@
     <ClCompile Include="Scene\FilterScene.cpp" />
     <ClCompile Include="Object\BasicObject\Effect.cpp" />
     <ClCompile Include="Scene\EffectScene.cpp" />
+    <ClCompile Include="Object\BasicObject\EffectManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -248,5 +250,6 @@
     <FxCompile Include="Shader\SpriteShader.hlsl" />
     <FxCompile Include="Shader\ActionShader.hlsl" />
     <FxCompile Include="Shader\FilterShader\FilterShader.hlsl" />
+    <FxCompile Include="Shader\ReversePixelShader.hlsl" />
   </ItemGroup>
 </Project>

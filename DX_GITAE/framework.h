@@ -89,6 +89,7 @@ using namespace std;
 #include "Object/BasicObject/Quad.h"
 #include "Object/BasicObject/Sprite.h"
 #include "Object/BasicObject/Effect.h"
+#include "Object/BasicObject/EffectManager.h"
 #include "Object/Zelda/Zelda.h"
 #include "Object/Aim.h"
 

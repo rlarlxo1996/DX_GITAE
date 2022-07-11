@@ -31,12 +31,12 @@ void Effect::CreateAction(wstring file, Vector2 maxFrame, float speed, Action::T
 		}
 	}
 
-	string actionName = WstrToStr(file);
-	size_t t = actionName.find("Effects/");
-	actionName = actionName.substr(t + 8, actionName.length());
-	actionName = actionName.substr(0, actionName.length() - 4);
+	string effectName = WstrToStr(file);
+	size_t t = effectName.find("Effects/");
+	effectName = effectName.substr(t + 8, effectName.length());
+	effectName = effectName.substr(0, effectName.length() - 4);
 
-	_action = make_shared<Action>(clips, actionName, type, speed);
+	_action = make_shared<Action>(clips, effectName, type, speed);
 	_action->Play();
 	
 }
@@ -62,4 +62,3 @@ void Effect::Render()
 void Effect::PostRender()
 {
 }
-

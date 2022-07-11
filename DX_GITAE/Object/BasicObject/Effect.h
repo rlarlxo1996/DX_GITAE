@@ -11,8 +11,6 @@ public:
 
 	void CreateAction(wstring file, Vector2 maxFrame, float speed = 0.1f, Action::Type type = Action::Type::END);
 
-	void SetPosition(Vector2 pos) { _sprite->GetTransform()->GetPos() = pos; }
-
 	void Play(Vector2 pos)
 	{
 		_sprite->GetTransform()->GetPos() = pos;
