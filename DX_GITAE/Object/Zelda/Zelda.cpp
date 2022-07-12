@@ -185,7 +185,7 @@ void Zelda::SetAnimation(Zelda::State state)
 
 void Zelda::KeyBoardAnimation()
 {
-	if (KEY_DOWN('w'))
+	if (KEY_DOWN('W'))
 	{
 		SetAnimation(Zelda::State::B_RUN);
 	}

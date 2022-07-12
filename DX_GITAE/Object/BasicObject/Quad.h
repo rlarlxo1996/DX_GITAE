@@ -19,9 +19,6 @@ protected:
 
 	shared_ptr<Transform> _transform;
 
-	// Texture
-	shared_ptr<Texture> _texture;
-
 	// Mesh
 	vector<VertexUV>			_vertices;
 	vector<UINT>				_indices;
@@ -29,6 +26,8 @@ protected:
 	shared_ptr<IndexBuffer>		_indexBuffer;
 
 	// Material
+	// Texture
+	shared_ptr<Texture> _texture;
 	shared_ptr<VertexShader>	_vertexShader;
 	shared_ptr<PixelShader>		_pixelShader;
 

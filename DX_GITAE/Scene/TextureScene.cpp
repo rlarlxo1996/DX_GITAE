@@ -24,13 +24,14 @@ void TextureScene::Update()
 	if (KEY_DOWN('W'))
 	{
 		EffectManager::GetInstance()->Play("GreenExplosion", CENTER);
+		Camera::GetInstance()->ShakeStart(5.0f, 1.0f, 2.0f);
 	}
 }
 
 void TextureScene::Render()
 {
-	_quad->Render();
 	_isRightBuffer->SetPSBuffer(0);
+	_quad->Render();
 }
 
 void TextureScene::PostRender()

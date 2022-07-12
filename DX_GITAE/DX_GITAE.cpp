@@ -57,6 +57,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     InputManager::Create();
     ShaderManager::Create();
     EffectManager::Create();
+    Camera::Create();
+
+    srand(static_cast<UINT>(time(nullptr)));
+
     shared_ptr<Program> program = make_shared<Program>();
 
     while (msg.message != WM_QUIT)
@@ -85,6 +89,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     InputManager::Delete();
     Timer::Delete();
     EffectManager::Delete();
+    Camera::Delete();
 
     ImGui_ImplDX11_Shutdown();
     ImGui_ImplWin32_Shutdown();

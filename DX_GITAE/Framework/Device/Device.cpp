@@ -63,14 +63,7 @@ void Device::CreateBackBuffer()
 
     _deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
 
-    D3D11_VIEWPORT vp;
-    vp.Width = WIN_WIDTH;
-    vp.Height = WIN_HEIGHT;
-    vp.MinDepth = 0.0f;
-    vp.MaxDepth = 1.0f;
-    vp.TopLeftX = 0;
-    vp.TopLeftY = 0;
-    _deviceContext->RSSetViewports(1, &vp);
+
 }
 
 void Device::Clear()

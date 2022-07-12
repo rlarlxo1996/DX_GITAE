@@ -11,13 +11,6 @@
 
 Program::Program()
 {
-	_viewBuffer = make_shared<MatrixBuffer>();
-	_projectionBuffer = make_shared<MatrixBuffer>();
-
-	XMMATRIX projectionM = XMMatrixOrthographicOffCenterLH(0, WIN_WIDTH, 0, WIN_HEIGHT, -1.0f, 1.0f);
-
-	_projectionBuffer->Set(projectionM);
-
 	_scene = make_shared<TextureScene>();
 }
 
@@ -29,6 +22,7 @@ void Program::Update()
 {
 	_scene->Update();
 	EffectManager::GetInstance()->Update();
+	Camera::GetInstance()->Update();
 }
 
 void Program::Render()
@@ -39,9 +33,8 @@ void Program::Render()
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
-	_viewBuffer->SetVSBuffer(1);
-	_projectionBuffer->SetVSBuffer(2);
-
+	Camera::GetInstance()->SetProjectionBuffer(WIN_WIDTH, WIN_HEIGHT);
+	Camera::GetInstance()->SetViewPort(WIN_WIDTH, WIN_HEIGHT);
 
 	ALPHA_STATE->SetState();
 
@@ -52,6 +45,7 @@ void Program::Render()
 
 	ImGui::Text("FPS : %d", Timer::GetInstance()->GetFPS());
 	_scene->PostRender();
+	Camera::GetInstance()->PostRender();
 
 	ImGui::Render();
 	ImGui_ImplDX11_RenderDrawData(ImGui::GetDrawData());

@@ -14,6 +14,7 @@
 #include <memory.h>
 #include <memory>
 #include <tchar.h>
+#include <time.h>
 
 #include <vector>
 #include <map>
@@ -65,6 +66,9 @@ using namespace std;
 #include "Framework/Render/VertexBuffer.h"
 #include "Framework/Render/SRV.h"
 #include "Framework/Render/Texture.h"
+
+// Camera
+#include "Framework/Camera/Camera.h"
 
 // State
 #include "Framework/State/SamplerState.h"

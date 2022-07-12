@@ -14,6 +14,7 @@ public:
 	void Play(Vector2 pos)
 	{
 		_sprite->GetTransform()->GetPos() = pos;
+		_action->Play();
 		_isActive = true;
 	}
 	void End() { _isActive = false; }

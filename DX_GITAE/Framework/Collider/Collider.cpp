@@ -29,7 +29,7 @@ void Collider::Update()
 
 void Collider::Render()
 {
-	_transform->SetWorldBuffer(0);
+	_transform->SetBuffer(0);
 
 	_vertexBuffer->IASetVertexBuffer(0);
 

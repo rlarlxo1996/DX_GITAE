@@ -118,6 +118,7 @@
     <ClInclude Include="Framework\Utility\Utility.h" />
     <ClInclude Include="Scene\EffectScene.h" />
     <ClInclude Include="Object\BasicObject\EffectManager.h" />
+    <ClInclude Include="Framework\Camera\Camera.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -231,6 +232,7 @@
     <ClCompile Include="Object\BasicObject\Effect.cpp" />
     <ClCompile Include="Scene\EffectScene.cpp" />
     <ClCompile Include="Object\BasicObject\EffectManager.cpp" />
+    <ClCompile Include="Framework\Camera\Camera.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

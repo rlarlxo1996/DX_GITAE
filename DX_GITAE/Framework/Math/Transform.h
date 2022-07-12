@@ -8,7 +8,7 @@ public:
 	~Transform();
 
 	void UpdateWorld();
-	void SetWorldBuffer(UINT slot);
+	void SetBuffer(UINT slot);
 
 	XMMATRIX* GetMatrix() { return &_srtMatrix; }
 	XMMATRIX* GetSMatrix() { return &_scaleM; }

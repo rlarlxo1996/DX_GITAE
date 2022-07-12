@@ -33,7 +33,7 @@ void Quad::Update()
 
 void Quad::Render()
 {
-    _transform->SetWorldBuffer(0);
+    _transform->SetBuffer(0);
 
     _texture->Set(0);
 

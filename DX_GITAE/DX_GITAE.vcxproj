@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Camera\Camera.h" />
     <ClInclude Include="Object\BasicObject\EffectManager.h" />
     <ClInclude Include="Scene\EffectScene.h" />
     <ClInclude Include="Framework\Utility\Utility.h" />
@@ -202,6 +203,7 @@
     <ClInclude Include="Object\Zelda\Zelda.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Camera\Camera.cpp" />
     <ClCompile Include="Object\BasicObject\EffectManager.cpp" />
     <ClCompile Include="Scene\EffectScene.cpp" />
     <ClCompile Include="Object\BasicObject\Effect.cpp" />
