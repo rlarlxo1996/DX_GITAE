@@ -119,6 +119,10 @@
     <ClInclude Include="Scene\EffectScene.h" />
     <ClInclude Include="Object\BasicObject\EffectManager.h" />
     <ClInclude Include="Framework\Camera\Camera.h" />
+    <ClInclude Include="Scene\CameraScene.h" />
+    <ClInclude Include="Framework\Utility\MathUtility.h" />
+    <ClInclude Include="Object\PlaneShoot\PlaneShoot.h" />
+    <ClInclude Include="Scene\PlaneShootScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -155,6 +159,8 @@
     <Image Include="Resource\Effects\skill_core_4x4.png" />
     <Image Include="Resource\Effects\smoke_4x4.png" />
     <Image Include="Resource\Effects\thunder_core_4x4.png" />
+    <Image Include="Resource\Carina_Nebula.png" />
+    <Image Include="Resource\RPlane.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />
@@ -233,6 +239,10 @@
     <ClCompile Include="Scene\EffectScene.cpp" />
     <ClCompile Include="Object\BasicObject\EffectManager.cpp" />
     <ClCompile Include="Framework\Camera\Camera.cpp" />
+    <ClCompile Include="Scene\CameraScene.cpp" />
+    <ClCompile Include="Framework\Utility\MathUtility.cpp" />
+    <ClCompile Include="Object\PlaneShoot\PlaneShoot.cpp" />
+    <ClCompile Include="Scene\PlaneShootScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

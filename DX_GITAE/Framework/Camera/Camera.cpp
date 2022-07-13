@@ -33,7 +33,7 @@ void Camera::Update()
 void Camera::PostRender()
 {
 	ImGui::Text("Camera Info");
-	ImGui::Text("CamX : %0.1f, CamY : %0.1f", _transform->GetPos().x, _transform->GetPos().y);
+	ImGui::Text("CamX : %0.1f, CamY : %0.1f", -_transform->GetPos().x, -_transform->GetPos().y);
 }
 
 void Camera::ShakeStart(float magnitude, float duration, float reduceDamping)
@@ -59,7 +59,7 @@ void Camera::SetViewPort(UINT width, UINT height)
 
 void Camera::SetProjectionBuffer(UINT width, UINT height)
 {
-	XMMATRIX projectionM = XMMatrixOrthographicOffCenterLH(0, WIN_WIDTH, 0, WIN_HEIGHT, -1.0f, 1.0f);
+	XMMATRIX projectionM = XMMatrixOrthographicOffCenterLH(0, width, 0, height, -1.0f, 1.0f);
 
 	_projectionBuffer->Set(projectionM);
 
@@ -80,20 +80,8 @@ void Camera::Shake()
 		_duration = 0.0f;
 	}
 
-	Vector2 temp;
-
-	// 난수의 범위 -magnitude ~ magnitude (실수)
-	// 0 ~ 1.0f
-	// -1.0f ~ 1.0f
-	// -magnitude ~ magnitude
-	float zeroToOne = rand() / (float)RAND_MAX;
-	float temp2 = zeroToOne * 2 - 1.0f;
-
-	float zeroToOne2 = rand() / (float)RAND_MAX;
-	float temp3 = zeroToOne2 * 2 - 1.0f;
-
-	_transform->GetPos().x = _originPos.x + temp2 * _magnitude;
-	_transform->GetPos().y = _originPos.y + temp3 * _magnitude;
+	_transform->GetPos().x = _originPos.x + MathUtility::RandomFloat(-_magnitude, _magnitude);
+	_transform->GetPos().y = _originPos.y + MathUtility::RandomFloat(-_magnitude, _magnitude);
 
 	if (_duration <= 0.0f)
 		_transform->GetPos() = _originPos;
@@ -124,13 +112,13 @@ void Camera::FollowMode()
 	if (targetPos.x < _leftBottom.x)
 		targetPos.x = _leftBottom.x;
 
-	if (targetPos.x < _rightTop.x - WIN_WIDTH)
+	if (targetPos.x > _rightTop.x - WIN_WIDTH)
 		targetPos.x = _rightTop.x - WIN_WIDTH;
 
 	if (targetPos.y < _leftBottom.y)
 		targetPos.y = _leftBottom.y;
 
-	if (targetPos.y < _rightTop.y - WIN_HEIGHT)
+	if (targetPos.y > _rightTop.y - WIN_HEIGHT)
 		targetPos.y = _rightTop.y - WIN_HEIGHT;
 
 	_transform->GetPos() = LERP(_transform->GetPos(), targetPos * -1, DELTA_TIME * _speed);

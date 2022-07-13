@@ -26,11 +26,9 @@ public:
 
 	shared_ptr<Transform> GetTransform() { return _sprite->GetTransform(); }
 
-
 	void SetPosition(Vector2 pos) { _sprite->GetTransform()->GetPos() = pos; }
 	void SetAnimation(Zelda::State state);
 
-	void KeyBoardAnimation();
 	void KeyBoardMove();
 	void SetIDLE();
 

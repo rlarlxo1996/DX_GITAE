@@ -4,8 +4,7 @@
 Zelda::Zelda()
 {
 	_sprite = make_shared<Sprite>(L"Resource/zelda.png", Vector2(10, 8));
-	SetPosition ({ WIN_WIDTH * 0.5f, WIN_HEIGHT * 0.5f });
-	_pos = { WIN_WIDTH * 0.5f, WIN_HEIGHT * 0.5f };
+	//_pos = { WIN_WIDTH * 0.5f, WIN_HEIGHT * 0.5f };
 
 	_collider = make_shared<RectCollider>(_sprite->GetFrameHalfSize());
 	_collider->SetParent(_sprite->GetTransform());
@@ -183,57 +182,34 @@ void Zelda::SetAnimation(Zelda::State state)
 	_actions[static_cast<UINT>(state)]->Play();
 }
 
-void Zelda::KeyBoardAnimation()
-{
-	if (KEY_DOWN('W'))
-	{
-		SetAnimation(Zelda::State::B_RUN);
-	}
-
-	if (KEY_DOWN('S'))
-	{
-		SetAnimation(Zelda::State::F_RUN);
-	}
-
-	if (KEY_DOWN('A'))
-	{
-		SetAnimation(Zelda::State::L_RUN);
-	}
-
-	if (KEY_DOWN('D'))
-	{
-		SetAnimation(Zelda::State::R_RUN);
-	}
-}
-
 void Zelda::KeyBoardMove()
 {
 	SetPosition(_pos);
 
 	if (KEY_PRESS('W'))
 	{
-		_pos.y += 30.0f * DELTA_TIME;
+		_pos.y += 400.0f * DELTA_TIME;
 		SetAnimation(Zelda::State::B_RUN);
 		return;
 	}
 
 	if (KEY_PRESS('S'))
 	{
-		_pos.y -= 30.0f * DELTA_TIME;
+		_pos.y -= 400.0f * DELTA_TIME;
 		SetAnimation(Zelda::State::F_RUN);
 		return;
 	}
 
 	if (KEY_PRESS('A'))
 	{
-		_pos.x -= 30.0f * DELTA_TIME;
+		_pos.x -= 400.0f * DELTA_TIME;
 		SetAnimation(Zelda::State::L_RUN);
 		return;
 	}
 
 	if (KEY_PRESS('D'))
 	{
-		_pos.x += 30.0f * DELTA_TIME;
+		_pos.x += 400.0f * DELTA_TIME;
 		SetAnimation(Zelda::State::R_RUN);
 		return;
 	}

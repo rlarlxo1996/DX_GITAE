@@ -46,7 +46,7 @@ private:
 	float _speed = 200.0f;
 	
 	shared_ptr<Transform> _target;
-	Vector2 _offset = { 0.0f, 0.0f };
+	Vector2 _offset = CENTER;
 
 	Vector2 _leftBottom = { 0.0f, 0.0f };
 	Vector2 _rightTop = { 0.0f, 0.0f };

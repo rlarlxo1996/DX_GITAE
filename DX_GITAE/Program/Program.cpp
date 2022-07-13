@@ -8,10 +8,12 @@
 #include "../Scene/SpriteScene.h"
 #include "../Scene/FilterScene.h"
 #include "../Scene/EffectScene.h"
+#include "../Scene/CameraScene.h"
+#include "../Scene/PlaneShootScene.h"
 
 Program::Program()
 {
-	_scene = make_shared<TextureScene>();
+	_scene = make_shared<PlaneShootScene>();
 }
 
 Program::~Program()

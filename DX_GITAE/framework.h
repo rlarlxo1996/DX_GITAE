@@ -79,6 +79,7 @@ using namespace std;
 #include "Framework/Utility/Timer.h"
 #include "Framework/Utility/InputManager.h"
 #include "Framework/Utility/Utility.h"
+#include "Framework/Utility/MathUtility.h"
 
 // Collider
 #include "Framework/Collider/Collider.h"
@@ -102,6 +103,9 @@ using namespace std;
 #include "Object/Dungreed/Gun.h"
 #include "Object/Dungreed/Bullet.h"
 #include "Object/Dungreed/Monster.h"
+
+// PlaneShoot
+#include "Object/PlaneShoot/PlaneShoot.h"
 
 // Scene
 #include "Scene/Scene.h"

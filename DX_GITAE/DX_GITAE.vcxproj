@@ -151,6 +151,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Utility\MathUtility.h" />
+    <ClInclude Include="Object\PlaneShoot\PlaneShoot.h" />
+    <ClInclude Include="Scene\PlaneShootScene.h" />
+    <ClInclude Include="Scene\CameraScene.h" />
     <ClInclude Include="Framework\Camera\Camera.h" />
     <ClInclude Include="Object\BasicObject\EffectManager.h" />
     <ClInclude Include="Scene\EffectScene.h" />
@@ -203,6 +207,10 @@
     <ClInclude Include="Object\Zelda\Zelda.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Utility\MathUtility.cpp" />
+    <ClCompile Include="Object\PlaneShoot\PlaneShoot.cpp" />
+    <ClCompile Include="Scene\PlaneShootScene.cpp" />
+    <ClCompile Include="Scene\CameraScene.cpp" />
     <ClCompile Include="Framework\Camera\Camera.cpp" />
     <ClCompile Include="Object\BasicObject\EffectManager.cpp" />
     <ClCompile Include="Scene\EffectScene.cpp" />
@@ -261,6 +269,7 @@
     <Image Include="Resource\Aim.png" />
     <Image Include="Resource\BlackShadow.png" />
     <Image Include="Resource\Bullet.png" />
+    <Image Include="Resource\Carina_Nebula.png" />
     <Image Include="Resource\Dia.png" />
     <Image Include="Resource\Earth.png" />
     <Image Include="Resource\Effects\BlueExplosion.png" />
@@ -278,6 +287,7 @@
     <Image Include="Resource\Monster.png" />
     <Image Include="Resource\Moon.png" />
     <Image Include="Resource\Player.png" />
+    <Image Include="Resource\RPlane.png" />
     <Image Include="Resource\Sun.png" />
     <Image Include="Resource\zelda.png" />
     <Image Include="small.ico" />
