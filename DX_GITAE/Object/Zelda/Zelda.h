@@ -32,12 +32,12 @@ public:
 	void KeyBoardMove();
 	void SetIDLE();
 
+	Vector2 _pos = Vector2();
 private:
 	shared_ptr<Sprite> _sprite;
 	vector<shared_ptr<Action>> _actions;
 	shared_ptr<Collider> _collider;
 
-	Vector2 _pos = Vector2();
 	State _state = State::F_IDLE;
 };
 

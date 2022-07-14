@@ -123,6 +123,8 @@
     <ClInclude Include="Framework\Utility\MathUtility.h" />
     <ClInclude Include="Object\PlaneShoot\PlaneShoot.h" />
     <ClInclude Include="Scene\PlaneShootScene.h" />
+    <ClInclude Include="Framework\Utility\BinaryWriter.h" />
+    <ClInclude Include="Framework\Utility\BinaryReader.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -243,6 +245,8 @@
     <ClCompile Include="Framework\Utility\MathUtility.cpp" />
     <ClCompile Include="Object\PlaneShoot\PlaneShoot.cpp" />
     <ClCompile Include="Scene\PlaneShootScene.cpp" />
+    <ClCompile Include="Framework\Utility\BinaryWriter.cpp" />
+    <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

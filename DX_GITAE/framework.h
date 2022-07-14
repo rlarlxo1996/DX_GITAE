@@ -80,6 +80,8 @@ using namespace std;
 #include "Framework/Utility/InputManager.h"
 #include "Framework/Utility/Utility.h"
 #include "Framework/Utility/MathUtility.h"
+#include "Framework/Utility/BinaryWriter.h"
+#include "Framework/Utility/BinaryReader.h"
 
 // Collider
 #include "Framework/Collider/Collider.h"

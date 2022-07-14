@@ -1,4 +1,31 @@
-﻿  CameraScene.cpp
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\CameraScene.cpp(31,28): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+﻿  PlaneShoot.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(109,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(116,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(123,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(130,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::_Emplace_back_with_unused_capacity<_Ty,int,float&,float&,std::shared_ptr<Texture>&>(_Ty &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(55): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::emplace_back<float,int,float&,float&,std::shared_ptr<Texture>&>(float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
   DX_GITAE.vcxproj -> C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\DX_GITAE.exe

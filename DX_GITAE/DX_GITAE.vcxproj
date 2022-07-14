@@ -151,6 +151,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Utility\BinaryReader.h" />
+    <ClInclude Include="Framework\Utility\BinaryWriter.h" />
     <ClInclude Include="Framework\Utility\MathUtility.h" />
     <ClInclude Include="Object\PlaneShoot\PlaneShoot.h" />
     <ClInclude Include="Scene\PlaneShootScene.h" />
@@ -207,6 +209,8 @@
     <ClInclude Include="Object\Zelda\Zelda.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
+    <ClCompile Include="Framework\Utility\BinaryWriter.cpp" />
     <ClCompile Include="Framework\Utility\MathUtility.cpp" />
     <ClCompile Include="Object\PlaneShoot\PlaneShoot.cpp" />
     <ClCompile Include="Scene\PlaneShootScene.cpp" />
