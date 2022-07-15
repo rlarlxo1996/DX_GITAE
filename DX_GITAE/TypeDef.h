@@ -34,4 +34,6 @@
 
 #define LERP(s,e,t) s + (e - s) * t
 
+#define V(hr) assert(SUCCEEDED(hr))
+
 using CallBack = function<void()>;

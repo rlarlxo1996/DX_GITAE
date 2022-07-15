@@ -56,6 +56,7 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     StateManager::Create();
     InputManager::Create();
     ShaderManager::Create();
+    DirectWrite::Create();
     EffectManager::Create();
     Camera::Create();
 
@@ -87,9 +88,10 @@ int APIENTRY wWinMain(_In_ HINSTANCE hInstance,
     StateManager::Delete();
     ShaderManager::Delete();
     InputManager::Delete();
-    Timer::Delete();
+    DirectWrite::Delete();
     EffectManager::Delete();
     Camera::Delete();
+    Timer::Delete();
 
     ImGui_ImplDX11_Shutdown();
     ImGui_ImplWin32_Shutdown();

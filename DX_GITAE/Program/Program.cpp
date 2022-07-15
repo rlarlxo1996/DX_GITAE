@@ -13,7 +13,7 @@
 
 Program::Program()
 {
-	_scene = make_shared<PlaneShootScene>();
+	_scene = make_shared<CameraScene>();
 }
 
 Program::~Program()

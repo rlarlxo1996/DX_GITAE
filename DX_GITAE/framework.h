@@ -14,7 +14,6 @@
 #include <memory.h>
 #include <memory>
 #include <tchar.h>
-#include <time.h>
 
 #include <vector>
 #include <map>
@@ -22,6 +21,7 @@
 #include <algorithm>
 #include <string>
 #include <functional>
+#include <time.h>
 
 #include <wrl/client.h>
 #include <d3d11.h>
@@ -32,9 +32,6 @@
 #pragma comment(lib,"d3dcompiler.lib")
 #pragma comment(lib, "dxguid.lib")
 
-using namespace DirectX;
-using namespace std;
-
 // DirectXTeX
 #include "../DirectXTex/DirectXTex.h"
 
@@ -42,6 +39,16 @@ using namespace std;
 #include "../ImGui/imgui.h"
 #include "../ImGui/imgui_impl_dx11.h"
 #include "../ImGui/imgui_impl_win32.h"
+
+// DirectWrite
+#include <d2d1_2.h>
+#include <dwrite.h>
+
+#pragma comment(lib, "d2d1.lib")
+#pragma comment(lib, "dwrite.lib")
+
+using namespace DirectX;
+using namespace std;
 
 // Device
 #include "Framework/Device/Device.h"
@@ -82,6 +89,7 @@ using namespace std;
 #include "Framework/Utility/MathUtility.h"
 #include "Framework/Utility/BinaryWriter.h"
 #include "Framework/Utility/BinaryReader.h"
+#include "Framework/Utility/DirectWrite.h"
 
 // Collider
 #include "Framework/Collider/Collider.h"

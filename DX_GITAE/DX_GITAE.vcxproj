@@ -151,6 +151,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Utility\DirectWrite.h" />
     <ClInclude Include="Framework\Utility\BinaryReader.h" />
     <ClInclude Include="Framework\Utility\BinaryWriter.h" />
     <ClInclude Include="Framework\Utility\MathUtility.h" />
@@ -209,6 +210,7 @@
     <ClInclude Include="Object\Zelda\Zelda.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Utility\DirectWrite.cpp" />
     <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
     <ClCompile Include="Framework\Utility\BinaryWriter.cpp" />
     <ClCompile Include="Framework\Utility\MathUtility.cpp" />
