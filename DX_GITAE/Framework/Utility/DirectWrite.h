@@ -52,7 +52,7 @@ public:
 		if (_instance != nullptr)
 			delete _instance;
 	}
-	static DirectWrite* GetInstace()
+	static DirectWrite* GetInstance()
 	{
 		if (_instance != nullptr)
 			return _instance;
@@ -60,7 +60,7 @@ public:
 
 	ComPtr<ID2D1DeviceContext> GetDC() { return _deviceContext; }
 
-	void RenderText(wstring text, RECT rect, float size = 20.0f, wstring fontPath = L"»ﬁ∏’µ’±Ÿ«ÏµÂ∂Û¿Œ ∫∏≈Î",
+	void RenderText(wstring text, RECT rect, float size = 20.0f, wstring fontPath = L"HMFMPYUN",
 		XMFLOAT4 color = { 1,1,1,1 }
 		, DWRITE_FONT_WEIGHT weight = DWRITE_FONT_WEIGHT_NORMAL
 		, DWRITE_FONT_STYLE style = DWRITE_FONT_STYLE_NORMAL

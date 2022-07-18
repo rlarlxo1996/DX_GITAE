@@ -16,5 +16,6 @@ private:
 	shared_ptr<Quad> _backGround;
 	shared_ptr<Zelda> _zelda;
 	shared_ptr<Transform> _zeldaFollow;
+	shared_ptr<Button> _button;
 };
 

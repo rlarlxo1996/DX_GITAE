@@ -14,6 +14,11 @@ CameraScene::CameraScene()
 	Camera::GetInstance()->SetTarget(_zeldaFollow);
 	Camera::GetInstance()->SetLeftBottom({ -_backGround->GetHalfSize().x, -_backGround->GetHalfSize().y });
 	Camera::GetInstance()->SetRightTop({ _backGround->GetHalfSize().x, _backGround->GetHalfSize().y });
+
+	_button = make_shared<Button>();
+	_button->SetPosition(CENTER);
+	_button->SetScale(Vector2(0.1f, 0.1f));
+	_button->SetText("Button1");
 }
 
 CameraScene::~CameraScene()
@@ -30,6 +35,8 @@ void CameraScene::Update()
 
 	if (distance >= 10.0f)
 		_zeldaFollow->GetPos() = LERP(_zeldaFollow->GetPos(), _zelda->GetTransform()->GetPos(), DELTA_TIME * 5);
+
+	_button->Update();
 }
 
 void CameraScene::Render()
@@ -45,6 +52,8 @@ void CameraScene::PostRender()
 	{
 		Save();
 	}
+
+	_button->PostRender();
 }
 
 void CameraScene::Save()

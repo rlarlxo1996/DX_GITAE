@@ -35,5 +35,7 @@ public:
 
 	float Angle() { return atan2(y, x); }
 	float Angle(const Vector2& value);
+
+	static Vector2 TransformCoord(const Vector2& vector, const XMMATRIX& matrix);
 };
 

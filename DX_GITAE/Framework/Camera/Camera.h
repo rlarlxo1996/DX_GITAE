@@ -32,6 +32,10 @@ public:
 	void SetLeftBottom(Vector2 value) { _leftBottom = value; }
 	void SetRightTop(Vector2 value) { _rightTop = value; }
 
+	shared_ptr<Transform> GetMoveTransform() { return _moveTransform; }
+
+	Vector2 GetMouseWorldPos();
+
 private:
 	void Shake();
 	void FreeMode();
@@ -41,15 +45,16 @@ private:
 	~Camera();
 
 	shared_ptr<Transform> _transform;
+	shared_ptr<Transform> _moveTransform;
 	shared_ptr<MatrixBuffer> _projectionBuffer;
 
 	float _speed = 200.0f;
-	
+
 	shared_ptr<Transform> _target;
 	Vector2 _offset = CENTER;
 
-	Vector2 _leftBottom = { 0.0f, 0.0f };
-	Vector2 _rightTop = { 0.0f, 0.0f };
+	Vector2 _leftBottom = { 0.f,0.f };
+	Vector2 _rightTop = { 0.f,0.f };
 
 	float _duration = 0.0f;
 	float _reduceDamping = 0.0f;

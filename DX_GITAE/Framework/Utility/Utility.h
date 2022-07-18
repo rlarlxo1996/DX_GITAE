@@ -10,3 +10,16 @@ static string WstrToStr(wstring wStr)
 
 	return result;
 }
+
+static wstring StrToWstr(string str)
+{
+	wstring result;
+	result.reserve(str.length());
+
+	for (auto s : str)
+	{
+		result.push_back(s);
+	}
+
+	return result;
+}

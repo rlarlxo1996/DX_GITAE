@@ -4,7 +4,7 @@
 Device* Device::_instance = nullptr;
 
 Device::Device(HWND hWnd)
-: _hWnd(hWnd)
+    : _hWnd(hWnd)
 {
     CreateDeviceAndSwapChain();
     CreateBackBuffer();
@@ -42,7 +42,7 @@ void Device::CreateDeviceAndSwapChain()
         nullptr,
         D3D_DRIVER_TYPE_HARDWARE,
         0,
-        D3D11_CREATE_DEVICE_DEBUG,
+        D3D11_CREATE_DEVICE_DEBUG | D3D11_CREATE_DEVICE_BGRA_SUPPORT,
         featureLevels,
         featureSize,
         D3D11_SDK_VERSION,
@@ -62,8 +62,6 @@ void Device::CreateBackBuffer()
     _device->CreateRenderTargetView(backBuffer.Get(), nullptr, _renderTargetView.GetAddressOf());
 
     _deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
-
-
 }
 
 void Device::Clear()

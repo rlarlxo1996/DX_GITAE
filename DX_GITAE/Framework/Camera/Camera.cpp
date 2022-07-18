@@ -6,11 +6,10 @@ Camera* Camera::_instance = nullptr;
 Camera::Camera()
 {
 	_transform = make_shared<Transform>();
+	_moveTransform = make_shared<Transform>();
 	_projectionBuffer = make_shared<MatrixBuffer>();
 
 	SetProjectionBuffer(2);
-
-
 }
 
 Camera::~Camera()
@@ -27,13 +26,17 @@ void Camera::Update()
 	Shake();
 
 	_transform->UpdateWorld();
+	_moveTransform->UpdateWorld();
+	_moveTransform->GetPos().x = -_transform->GetPos().x;
+	_moveTransform->GetPos().y = -_transform->GetPos().y;
+
 	_transform->SetBuffer(1);
 }
 
 void Camera::PostRender()
 {
 	ImGui::Text("Camera Info");
-	ImGui::Text("CamX : %0.1f, CamY : %0.1f", -_transform->GetPos().x, -_transform->GetPos().y);
+	ImGui::Text("CamX : %0.1f, CamY : %0.1f", _moveTransform->GetPos().x, _moveTransform->GetPos().y);
 }
 
 void Camera::ShakeStart(float magnitude, float duration, float reduceDamping)
@@ -64,6 +67,16 @@ void Camera::SetProjectionBuffer(UINT width, UINT height)
 	_projectionBuffer->Set(projectionM);
 
 	_projectionBuffer->SetVSBuffer(2);
+}
+
+Vector2 Camera::GetMouseWorldPos()
+{
+	XMMATRIX temp = *_transform->GetMatrix();
+	XMMATRIX inverseView = XMMatrixInverse(nullptr, temp);
+
+	Vector2 result = Vector2::TransformCoord(MOUSE_POS, inverseView);
+
+	return result;
 }
 
 void Camera::Shake()
@@ -123,5 +136,3 @@ void Camera::FollowMode()
 
 	_transform->GetPos() = LERP(_transform->GetPos(), targetPos * -1, DELTA_TIME * _speed);
 }
-
-

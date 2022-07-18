@@ -126,6 +126,7 @@
     <ClInclude Include="Framework\Utility\BinaryWriter.h" />
     <ClInclude Include="Framework\Utility\BinaryReader.h" />
     <ClInclude Include="Framework\Utility\DirectWrite.h" />
+    <ClInclude Include="Object\UI\Button.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -164,6 +165,7 @@
     <Image Include="Resource\Effects\thunder_core_4x4.png" />
     <Image Include="Resource\Carina_Nebula.png" />
     <Image Include="Resource\RPlane.png" />
+    <Image Include="Resource\UI\Button.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />
@@ -249,6 +251,7 @@
     <ClCompile Include="Framework\Utility\BinaryWriter.cpp" />
     <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
     <ClCompile Include="Framework\Utility\DirectWrite.cpp" />
+    <ClCompile Include="Object\UI\Button.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

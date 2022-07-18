@@ -6,7 +6,7 @@ DirectWrite* DirectWrite::_instance = nullptr;
 DirectWrite::DirectWrite()
 {
 	assert(SUCCEEDED(DWriteCreateFactory(DWRITE_FACTORY_TYPE_SHARED,
-		__uuidof(IDWriteFactory), (IUnknown**)_factory.GetAddressOf())));
+		__uuidof(IDWriteFactory), (IUnknown**)_writeFactory.GetAddressOf())));
 
 	assert(SUCCEEDED(D2D1CreateFactory(D2D1_FACTORY_TYPE_MULTI_THREADED, _factory.GetAddressOf())));
 
