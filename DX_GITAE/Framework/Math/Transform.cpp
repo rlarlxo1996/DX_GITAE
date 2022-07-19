@@ -3,7 +3,7 @@
 
 Transform::Transform()
 {
-	_worldBuffer = make_shared<MatrixBuffer>();
+    _worldBuffer = make_shared<MatrixBuffer>();
 }
 
 Transform::~Transform()
@@ -13,7 +13,7 @@ Transform::~Transform()
 void Transform::UpdateWorld()
 {
     // SRT Matrix ¼³Á¤
-    _scaleM = XMMatrixScaling(_scale.x, _scale.y, 0);
+    _scaleM = XMMatrixScaling(_scale.x, _scale.y, 1);
     _rotationM = XMMatrixRotationZ(_angle);
     _translateM = XMMatrixTranslation(_pos.x, _pos.y, 0);
 
@@ -21,7 +21,7 @@ void Transform::UpdateWorld()
 
     if (_parent != nullptr)
     {
-        _srtMatrix *= (*_parent->GetMatrix());
+        _srtMatrix *= (_parent->GetMatrix());
     }
 
     _worldBuffer->Set(_srtMatrix);
@@ -46,7 +46,7 @@ Vector2 Transform::GetWorldScale()
     if (_parent)
     {
         result.x *= _parent->GetWorldScale().x;
-        result.x *= _parent->GetWorldScale().y;
+        result.y *= _parent->GetWorldScale().y;
     }
 
     return result;

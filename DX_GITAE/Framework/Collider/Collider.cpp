@@ -38,7 +38,6 @@ void Collider::Render()
 	IASetPT(D3D11_PRIMITIVE_TOPOLOGY_LINESTRIP);
 
 	_vertexShader->Set();
-
 	_pixelShader->Set();
 
 	DEVICE_CONTEXT->Draw(_vertices.size(), 0);
@@ -55,15 +54,16 @@ bool Collider::IsCollision(shared_ptr<Collider> col, bool isObb)
 		shared_ptr<CircleCollider> circle = dynamic_pointer_cast<CircleCollider>(col);
 		return IsCollision(circle, isObb);
 	}
-		break;
+	break;
 	case Collider::Type::RECT:
 	{
 		shared_ptr<RectCollider> rect = dynamic_pointer_cast<RectCollider>(col);
 		return IsCollision(rect, isObb);
 	}
-		break;
+	break;
 	default:
 		break;
 	}
-    return false;
+
+	return false;
 }

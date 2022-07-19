@@ -10,11 +10,6 @@ public:
 	void UpdateWorld();
 	void SetBuffer(UINT slot);
 
-	XMMATRIX* GetMatrix() { return &_srtMatrix; }
-	XMMATRIX* GetSMatrix() { return &_scaleM; }
-	XMMATRIX* GetRMatrix() { return &_rotationM; }
-	XMMATRIX* GetTMatrix() { return &_translateM; }
-
 	Vector2& GetScale() { return _scale; }
 	float& GetAngle() { return _angle; }
 	Vector2& GetPos() { return _pos; }
@@ -22,6 +17,11 @@ public:
 	Vector2 GetWorldScale();
 
 	void SetParent(shared_ptr<Transform> transform) { _parent = transform; }
+
+	const XMMATRIX& GetMatrix() { return _srtMatrix; }
+	XMMATRIX* GetSMatrix() { return &_scaleM; }
+	XMMATRIX* GetRMatrix() { return &_rotationM; }
+	XMMATRIX* GetTMatrix() { return &_translateM; }
 
 private:
 	Vector2 _scale = { 1.0f,1.0f };

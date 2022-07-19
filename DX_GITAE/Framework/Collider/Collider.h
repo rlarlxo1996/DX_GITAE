@@ -1,4 +1,5 @@
 #pragma once
+
 class RectCollider;
 class CircleCollider;
 
@@ -32,7 +33,7 @@ public:
 	bool IsCollision(shared_ptr<Collider> col, bool isObb = false);
 
 	virtual bool IsCollision(const Vector2& pos) abstract;
-	virtual bool IsCollision(shared_ptr <CircleCollider> other, bool isObb = false) abstract;
+	virtual bool IsCollision(shared_ptr<CircleCollider> other, bool isObb = false) abstract;
 	virtual bool IsCollision(shared_ptr<class RectCollider> rect, bool isObb = false) abstract;
 
 	void SetParent(shared_ptr<Transform> parent) { _transform->SetParent(parent); }

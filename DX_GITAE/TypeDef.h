@@ -23,7 +23,9 @@
 #define KEY_DOWN(k) InputManager::GetInstance()->Down(k)
 #define KEY_UP(k) InputManager::GetInstance()->Up(k)
 #define KEY_PRESS(k) InputManager::GetInstance()->Press(k)
+
 #define MOUSE_POS InputManager::GetInstance()->GetMousePos()
+#define MOUSE_WORLD_POS Camera::GetInstance()->GetMouseWorldPos()
 
 #define SAMPLER_STATE StateManager::GetInstance()->GetSampler()
 #define ALPHA_STATE StateManager::GetInstance()->GetAlpha()
@@ -37,3 +39,4 @@
 #define V(hr) assert(SUCCEEDED(hr))
 
 using CallBack = function<void()>;
+using CallBackParam = function<void(int)>;

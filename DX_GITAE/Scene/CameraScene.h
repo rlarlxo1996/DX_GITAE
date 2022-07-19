@@ -10,6 +10,9 @@ public:
 	virtual void PostRender() override;
 
 	void Save();
+	void Test(int t);
+
+
 	void Load();
 
 private:
@@ -17,5 +20,7 @@ private:
 	shared_ptr<Zelda> _zelda;
 	shared_ptr<Transform> _zeldaFollow;
 	shared_ptr<Button> _button;
+
+	int test = 0;
 };
 

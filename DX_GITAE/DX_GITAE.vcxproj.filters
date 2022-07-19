@@ -77,30 +77,16 @@
     <ClInclude Include="Framework\Render\VertexShader.h">
       <Filter>Framework\Render</Filter>
     </ClInclude>
-    <ClInclude Include="Scene\Scene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\SolarSystemScene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\TextureScene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
-    <ClInclude Include="Scene\WVPScene.h">
-      <Filter>Scene</Filter>
-    </ClInclude>
     <ClInclude Include="Program\Program.h">
       <Filter>Program</Filter>
     </ClInclude>
     <ClInclude Include="Framework\State\BlendState.h" />
     <ClInclude Include="Framework\State\StateManager.h" />
     <ClInclude Include="Framework\Math\Transform.h" />
-    <ClInclude Include="Scene\DungreedScene.h" />
     <ClInclude Include="Object\Dungreed\Player.h" />
     <ClInclude Include="Object\Dungreed\Gun.h" />
     <ClInclude Include="Object\Aim.h" />
     <ClInclude Include="Object\Dungreed\Bullet.h" />
-    <ClInclude Include="Scene\CollisionScene.h" />
     <ClInclude Include="Framework\Collider\RectCollider.h" />
     <ClInclude Include="Framework\Collider\CircleCollider.h" />
     <ClInclude Include="Framework\Collider\Collider.h" />
@@ -110,23 +96,29 @@
     <ClInclude Include="Object\BasicObject\Quad.h" />
     <ClInclude Include="Framework\Render\Texture.h" />
     <ClInclude Include="Object\BasicObject\Sprite.h" />
-    <ClInclude Include="Scene\SpriteScene.h" />
     <ClInclude Include="Framework\Animation\Action.h" />
     <ClInclude Include="Object\Zelda\Zelda.h" />
-    <ClInclude Include="Scene\FilterScene.h" />
     <ClInclude Include="Object\BasicObject\Effect.h" />
     <ClInclude Include="Framework\Utility\Utility.h" />
-    <ClInclude Include="Scene\EffectScene.h" />
     <ClInclude Include="Object\BasicObject\EffectManager.h" />
     <ClInclude Include="Framework\Camera\Camera.h" />
-    <ClInclude Include="Scene\CameraScene.h" />
     <ClInclude Include="Framework\Utility\MathUtility.h" />
     <ClInclude Include="Object\PlaneShoot\PlaneShoot.h" />
-    <ClInclude Include="Scene\PlaneShootScene.h" />
     <ClInclude Include="Framework\Utility\BinaryWriter.h" />
     <ClInclude Include="Framework\Utility\BinaryReader.h" />
     <ClInclude Include="Framework\Utility\DirectWrite.h" />
     <ClInclude Include="Object\UI\Button.h" />
+    <ClInclude Include="Scene\CameraScene.h" />
+    <ClInclude Include="Scene\CollisionScene.h" />
+    <ClInclude Include="Scene\DungreedScene.h" />
+    <ClInclude Include="Scene\EffectScene.h" />
+    <ClInclude Include="Scene\FilterScene.h" />
+    <ClInclude Include="Scene\PlaneShootScene.h" />
+    <ClInclude Include="Scene\Scene.h" />
+    <ClInclude Include="Scene\SolarSystemScene.h" />
+    <ClInclude Include="Scene\SpriteScene.h" />
+    <ClInclude Include="Scene\TextureScene.h" />
+    <ClInclude Include="Scene\WVPScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -203,30 +195,16 @@
     <ClCompile Include="Framework\Render\VertexShader.cpp">
       <Filter>Framework\Render</Filter>
     </ClCompile>
-    <ClCompile Include="Scene\Scene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\SolarSystemScene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\TextureScene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
-    <ClCompile Include="Scene\WVPScene.cpp">
-      <Filter>Scene</Filter>
-    </ClCompile>
     <ClCompile Include="Program\Program.cpp">
       <Filter>Program</Filter>
     </ClCompile>
     <ClCompile Include="Framework\State\BlendState.cpp" />
     <ClCompile Include="Framework\State\StateManager.cpp" />
     <ClCompile Include="Framework\Math\Transform.cpp" />
-    <ClCompile Include="Scene\DungreedScene.cpp" />
     <ClCompile Include="Object\Dungreed\Player.cpp" />
     <ClCompile Include="Object\Dungreed\Gun.cpp" />
     <ClCompile Include="Object\Aim.cpp" />
     <ClCompile Include="Object\Dungreed\Bullet.cpp" />
-    <ClCompile Include="Scene\CollisionScene.cpp" />
     <ClCompile Include="Framework\Collider\RectCollider.cpp" />
     <ClCompile Include="Framework\Collider\CircleCollider.cpp" />
     <ClCompile Include="Framework\Collider\Collider.cpp" />
@@ -236,22 +214,28 @@
     <ClCompile Include="Object\BasicObject\Quad.cpp" />
     <ClCompile Include="Framework\Render\Texture.cpp" />
     <ClCompile Include="Object\BasicObject\Sprite.cpp" />
-    <ClCompile Include="Scene\SpriteScene.cpp" />
     <ClCompile Include="Framework\Animation\Action.cpp" />
     <ClCompile Include="Object\Zelda\Zelda.cpp" />
-    <ClCompile Include="Scene\FilterScene.cpp" />
     <ClCompile Include="Object\BasicObject\Effect.cpp" />
-    <ClCompile Include="Scene\EffectScene.cpp" />
     <ClCompile Include="Object\BasicObject\EffectManager.cpp" />
     <ClCompile Include="Framework\Camera\Camera.cpp" />
-    <ClCompile Include="Scene\CameraScene.cpp" />
     <ClCompile Include="Framework\Utility\MathUtility.cpp" />
     <ClCompile Include="Object\PlaneShoot\PlaneShoot.cpp" />
-    <ClCompile Include="Scene\PlaneShootScene.cpp" />
     <ClCompile Include="Framework\Utility\BinaryWriter.cpp" />
     <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
     <ClCompile Include="Framework\Utility\DirectWrite.cpp" />
     <ClCompile Include="Object\UI\Button.cpp" />
+    <ClCompile Include="Scene\CameraScene.cpp" />
+    <ClCompile Include="Scene\CollisionScene.cpp" />
+    <ClCompile Include="Scene\DungreedScene.cpp" />
+    <ClCompile Include="Scene\EffectScene.cpp" />
+    <ClCompile Include="Scene\FilterScene.cpp" />
+    <ClCompile Include="Scene\PlaneShootScene.cpp" />
+    <ClCompile Include="Scene\Scene.cpp" />
+    <ClCompile Include="Scene\SolarSystemScene.cpp" />
+    <ClCompile Include="Scene\SpriteScene.cpp" />
+    <ClCompile Include="Scene\TextureScene.cpp" />
+    <ClCompile Include="Scene\WVPScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -272,5 +256,6 @@
     <FxCompile Include="Shader\ActionShader.hlsl" />
     <FxCompile Include="Shader\FilterShader\FilterShader.hlsl" />
     <FxCompile Include="Shader\ReversePixelShader.hlsl" />
+    <FxCompile Include="Shader\ButtonPixelShader.hlsl" />
   </ItemGroup>
 </Project>

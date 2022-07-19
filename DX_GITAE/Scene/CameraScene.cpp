@@ -16,9 +16,12 @@ CameraScene::CameraScene()
 	Camera::GetInstance()->SetRightTop({ _backGround->GetHalfSize().x, _backGround->GetHalfSize().y });
 
 	_button = make_shared<Button>();
-	_button->SetPosition(CENTER);
+	_button->SetPosition({ CENTER.x, CENTER.y - 100 });
 	_button->SetScale(Vector2(0.1f, 0.1f));
-	_button->SetText("Button1");
+	_button->SetText("Save");
+
+	_button->SetEvent(std::bind(&CameraScene::Save, this));
+	_button->SetEventParam(std::bind(&CameraScene::Test, this, placeholders::_1));
 }
 
 CameraScene::~CameraScene()
@@ -84,4 +87,9 @@ void CameraScene::Load()
 	_zelda->GetTransform()->GetPos().y = posDataes[1];
 
 	_zelda->_pos = { posDataes[0], posDataes[1] };
+}
+
+void CameraScene::Test(int t)
+{
+	test = t;
 }

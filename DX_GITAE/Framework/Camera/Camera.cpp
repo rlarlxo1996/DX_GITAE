@@ -71,12 +71,9 @@ void Camera::SetProjectionBuffer(UINT width, UINT height)
 
 Vector2 Camera::GetMouseWorldPos()
 {
-	XMMATRIX temp = *_transform->GetMatrix();
-	XMMATRIX inverseView = XMMatrixInverse(nullptr, temp);
+	XMMATRIX inverseView = DirectX::XMMatrixInverse(nullptr, _transform->GetMatrix());
 
-	Vector2 result = Vector2::TransformCoord(MOUSE_POS, inverseView);
-
-	return result;
+	return Vector2::TransformCoord(MOUSE_POS, inverseView);
 }
 
 void Camera::Shake()
