@@ -119,6 +119,11 @@
     <ClInclude Include="Scene\SpriteScene.h" />
     <ClInclude Include="Scene\TextureScene.h" />
     <ClInclude Include="Scene\WVPScene.h" />
+    <ClInclude Include="Object\PlaneShoot\MainBullet.h" />
+    <ClInclude Include="Object\PlaneShoot\Aimer.h" />
+    <ClInclude Include="Object\Dataes\ItemManager.h" />
+    <ClInclude Include="Scene\XMLScene.h" />
+    <ClInclude Include="Framework\Utility\tinyxml2.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -236,6 +241,11 @@
     <ClCompile Include="Scene\SpriteScene.cpp" />
     <ClCompile Include="Scene\TextureScene.cpp" />
     <ClCompile Include="Scene\WVPScene.cpp" />
+    <ClCompile Include="Object\PlaneShoot\MainBullet.cpp" />
+    <ClCompile Include="Object\PlaneShoot\Aimer.cpp" />
+    <ClCompile Include="Object\Dataes\ItemManager.cpp" />
+    <ClCompile Include="Scene\XMLScene.cpp" />
+    <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -257,5 +267,8 @@
     <FxCompile Include="Shader\FilterShader\FilterShader.hlsl" />
     <FxCompile Include="Shader\ReversePixelShader.hlsl" />
     <FxCompile Include="Shader\ButtonPixelShader.hlsl" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Resource\XML\ItemData.xml" />
   </ItemGroup>
 </Project>

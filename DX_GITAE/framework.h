@@ -90,6 +90,7 @@ using namespace std;
 #include "Framework/Utility/BinaryWriter.h"
 #include "Framework/Utility/BinaryReader.h"
 #include "Framework/Utility/DirectWrite.h"
+#include "Framework/Utility/tinyxml2.h"
 
 // Collider
 #include "Framework/Collider/Collider.h"
@@ -109,6 +110,9 @@ using namespace std;
 #include "Object/Aim.h"
 #include "object/UI/Button.h"
 
+// DataSet
+#include "Object/Dataes/ItemManager.h"
+
 // Dungreed
 #include "Object/Dungreed/Player.h"
 #include "Object/Dungreed/Gun.h"
@@ -117,6 +121,7 @@ using namespace std;
 
 // PlaneShoot
 #include "Object/PlaneShoot/PlaneShoot.h"
+#include "Object/PlaneShoot/MainBullet.h"
 
 // Scene
 #include "Scene/Scene.h"

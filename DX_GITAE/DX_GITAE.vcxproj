@@ -151,6 +151,10 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Utility\tinyxml2.h" />
+    <ClInclude Include="Object\Dataes\ItemManager.h" />
+    <ClInclude Include="Object\PlaneShoot\Aimer.h" />
+    <ClInclude Include="Object\PlaneShoot\MainBullet.h" />
     <ClInclude Include="Object\UI\Button.h" />
     <ClInclude Include="Framework\Utility\DirectWrite.h" />
     <ClInclude Include="Framework\Utility\BinaryReader.h" />
@@ -209,8 +213,13 @@
     <ClInclude Include="Framework\Render\Texture.h" />
     <ClInclude Include="TypeDef.h" />
     <ClInclude Include="Object\Zelda\Zelda.h" />
+    <ClInclude Include="Scene\XMLScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
+    <ClCompile Include="Object\Dataes\ItemManager.cpp" />
+    <ClCompile Include="Object\PlaneShoot\Aimer.cpp" />
+    <ClCompile Include="Object\PlaneShoot\MainBullet.cpp" />
     <ClCompile Include="Object\UI\Button.cpp" />
     <ClCompile Include="Framework\Utility\DirectWrite.cpp" />
     <ClCompile Include="Framework\Utility\BinaryReader.cpp" />
@@ -268,6 +277,7 @@
     <ClCompile Include="Scene\SpriteScene.cpp" />
     <ClCompile Include="Scene\TextureScene.cpp" />
     <ClCompile Include="Scene\WVPScene.cpp" />
+    <ClCompile Include="Scene\XMLScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -450,6 +460,9 @@
     <ProjectReference Include="..\ImGui\ImGui.vcxproj">
       <Project>{21784c08-def6-476a-aad4-07c873ddbca0}</Project>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="Resource\XML\ItemData.xml" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

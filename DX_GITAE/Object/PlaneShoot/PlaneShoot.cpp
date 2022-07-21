@@ -4,13 +4,29 @@
 PlaneShoot::PlaneShoot()
 {
 	_sprite = make_shared<Sprite>(L"Resource/RPlane.png", Vector2(5, 5));
-	_pos = { WIN_WIDTH * 0.5f, WIN_HEIGHT * 0.5f };
+	_sprite->GetTransform()->GetScale() = { 0.5f,0.5f };
+
+	// Gun Setting
+	_gunParent = make_shared<Transform>();
+	_gunParent->SetParent(_sprite->GetTransform());
+	_gunParent->GetPos().x = 80.0f;
+
+	_gun = make_shared<Gun>();
+	_gun->SetPlayer(_gunParent);
 
 	_collider = make_shared<RectCollider>(_sprite->GetFrameHalfSize());
 	_collider->SetParent(_sprite->GetTransform());
 
-	CreateActions();
+	// Bullets
+	for (int i = 0; i < _poolCount; i++)
+	{
+		shared_ptr<MainBullet> bullet = make_shared<MainBullet>();
+		bullet->_isActive = false;
 
+		_bullets.emplace_back(bullet);
+	}
+
+	CreateActions();
 	SetAnimation(_state);
 }
 
@@ -21,9 +37,13 @@ PlaneShoot::~PlaneShoot()
 void PlaneShoot::Update()
 {
 	KeyBoardMove();
+	SetGun();
+	Fire();
 
 	_sprite->Update();
 	_collider->Update();
+	_gunParent->UpdateWorld();
+	_gun->Update();
 
 	for (auto& action : _actions)
 	{
@@ -31,11 +51,18 @@ void PlaneShoot::Update()
 		if (action->IsPlay())
 			_sprite->SetActionToActionBuffer(action->GetCurClip());
 	}
+
+	for (auto& bullet : _bullets)
+		bullet->Update();
 }
 
 void PlaneShoot::Render()
 {
 	_sprite->Render();
+	_gun->Render();
+
+	for (auto& bullet : _bullets)
+		bullet->Render();
 }
 
 void PlaneShoot::PostRender()
@@ -106,33 +133,67 @@ void PlaneShoot::KeyBoardMove()
 
 	if (KEY_PRESS('W'))
 	{
-		_pos.y += 400.0f * DELTA_TIME;
+		_pos.y += _speed * DELTA_TIME;
 		SetAnimation(PlaneShoot::State::F_IDLE);
 		return;
 	}
 
 	if (KEY_PRESS('S'))
 	{
-		_pos.y -= 400.0f * DELTA_TIME;
+		_pos.y -= _speed * DELTA_TIME;
 		SetAnimation(PlaneShoot::State::F_IDLE);
 		return;
 	}
 
 	if (KEY_PRESS('A'))
 	{
-		_pos.x -= 400.0f * DELTA_TIME;
+		_pos.x -= _speed * DELTA_TIME;
 		SetAnimation(PlaneShoot::State::L_MOVE);
 		return;
 	}
 
 	if (KEY_PRESS('D'))
 	{
-		_pos.x += 400.0f * DELTA_TIME;
+		_pos.x += _speed * DELTA_TIME;
 		SetAnimation(PlaneShoot::State::R_MOVE);
 		return;
 	}
 
 	SetIDLE();
+}
+
+void PlaneShoot::Fire()
+{
+	if (KEY_DOWN(VK_LBUTTON))
+	{
+		vector<shared_ptr<MainBullet>>::iterator iter = _bullets.begin();
+
+		iter = std::find_if(_bullets.begin(), _bullets.end(), [](const shared_ptr<MainBullet> bullet) -> bool
+			{
+				if (bullet->_isActive == false)
+					return true;
+
+				return false;
+			});
+
+		if (iter == _bullets.end())
+			return;
+
+		shared_ptr<MainBullet> bullet = *iter;
+		bullet->_isActive = true;
+		bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
+		Vector2 dir = MOUSE_POS - _gunParent->GetWorldPos();
+		dir.Normalize();
+		bullet->SetDirection(dir);
+	}
+}
+
+void PlaneShoot::SetGun()
+{
+	// Gun Angle
+	Vector2 dir = MOUSE_POS - _gunParent->GetWorldPos();
+	dir.Normalize();
+	_gun->GetTransform()->GetAngle() = dir.Angle();
 }
 
 void PlaneShoot::SetIDLE()

@@ -9,11 +9,12 @@
 #include "../Scene/FilterScene.h"
 #include "../Scene/EffectScene.h"
 #include "../Scene/CameraScene.h"
+#include "../Scene/XMLScene.h"
 #include "../Scene/PlaneShootScene.h"
 
 Program::Program()
 {
-	_scene = make_shared<CameraScene>();
+	_scene = make_shared<XMLScene>();
 }
 
 Program::~Program()

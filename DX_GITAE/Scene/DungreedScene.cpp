@@ -4,6 +4,7 @@
 DungreedScene::DungreedScene()
 {
 	_player = make_shared<Player>();
+
 	_monster = make_shared<Monster>();
 	_monster->GetTransform()->GetPos() = Vector2(WIN_WIDTH, WIN_HEIGHT) * 0.7f;
 

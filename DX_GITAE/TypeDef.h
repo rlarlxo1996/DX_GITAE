@@ -40,3 +40,13 @@
 
 using CallBack = function<void()>;
 using CallBackParam = function<void(int)>;
+
+struct ItemData
+{
+	string name;
+	int price;
+	int value;
+	int type;
+	int attackInfo;
+
+};

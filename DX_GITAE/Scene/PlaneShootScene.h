@@ -11,5 +11,9 @@ public:
 
 private:
 	shared_ptr<PlaneShoot> _planeShoot;
+	shared_ptr<Transform> _planeFollow;
+	shared_ptr<Quad> _worldMap;
+
+	shared_ptr<Aim> _aim;
 };
 
