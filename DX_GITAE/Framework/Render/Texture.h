@@ -3,6 +3,7 @@ class Texture
 {
 public:
     static shared_ptr<Texture>& Add(wstring file);
+    static shared_ptr<Texture>& Add(wstring file, Microsoft::WRL::ComPtr<ID3D11ShaderResourceView> srv);
     void Set(UINT slot);
     Vector2 GetSize();
 

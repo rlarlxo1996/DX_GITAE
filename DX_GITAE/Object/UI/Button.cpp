@@ -7,8 +7,6 @@ Button::Button()
 	_collider = make_shared<RectCollider>(_quad->GetHalfSize());
 	_collider->SetParent(_quad->GetTransform());
 
-	_quad->GetTransform()->SetParent(Camera::GetInstance()->GetMoveTransform());
-
 	_buttonBuffer = make_shared<ButtonBuffer>();
 	_buttonBuffer->_data._state = 0;
 	_buttonBuffer->_data._hover = 0.1f;
@@ -24,7 +22,7 @@ void Button::Update()
 	_quad->Update();
 	_collider->Update();
 
-	if (_collider->IsCollision(MOUSE_WORLD_POS))
+	if (_collider->IsCollision(MOUSE_POS))
 	{
 		_collider->SetColorRed();
 		_state = Button::State::HOVER;
@@ -61,9 +59,8 @@ void Button::PostRender()
 	{
 		Vector2 offset;
 
-		float sizeX = _quad->GetHalfSize().x * _quad->GetTransform()->GetScale().x;
-		float sizeY = _quad->GetHalfSize().y * _quad->GetTransform()->GetScale().y;
-
+		float sizeX = _quad->GetHalfSize().x;
+		float sizeY = _quad->GetHalfSize().y;
 		offset.x = sizeX * 0.5f;
 		offset.y = sizeY * 0.5f;
 

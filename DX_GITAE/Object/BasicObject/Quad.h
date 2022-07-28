@@ -3,6 +3,7 @@ class Quad
 {
 public:
 	Quad(wstring file, wstring vs = L"Shader/TextureVertexShader.hlsl", wstring ps = L"Shader/TexturePixelShader.hlsl");
+	Quad(wstring file, Vector2 size, wstring vs = L"Shader/TextureVertexShader.hlsl", wstring ps = L"Shader/TexturePixelShader.hlsl");
 	~Quad();
 
 	virtual void Update();
@@ -11,8 +12,13 @@ public:
 	virtual void CreateVertices();
 
 	shared_ptr<Transform> GetTransform() { return _transform; }
-	const Vector2& GetSize() { return _size; }
-	Vector2 GetHalfSize() { return _size * 0.5f; }
+	Vector2 GetSize();
+	Vector2 GetHalfSize();
+
+	void SetTexture(shared_ptr<Texture> texture) { _texture = texture; }
+
+	Vector2 LeftBottom();
+	Vector2 RightTop();
 
 protected:
 	Quad();
@@ -20,8 +26,8 @@ protected:
 	shared_ptr<Transform> _transform;
 
 	// Mesh
-	vector<VertexUV>			_vertices;
-	vector<UINT>				_indices;
+	vector<VertexUV> _vertices;
+	vector<UINT> _indices;
 	shared_ptr<VertexBuffer>	_vertexBuffer;
 	shared_ptr<IndexBuffer>		_indexBuffer;
 

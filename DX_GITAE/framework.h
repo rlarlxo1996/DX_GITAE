@@ -73,6 +73,7 @@ using namespace std;
 #include "Framework/Render/VertexBuffer.h"
 #include "Framework/Render/SRV.h"
 #include "Framework/Render/Texture.h"
+#include "Framework/Render/RenderTarget.h"
 
 // Camera
 #include "Framework/Camera/Camera.h"
@@ -109,6 +110,7 @@ using namespace std;
 #include "Object/Zelda/Zelda.h"
 #include "Object/Aim.h"
 #include "object/UI/Button.h"
+#include "Object/UI/MiniMap.h"
 
 // DataSet
 #include "Object/Dataes/ItemManager.h"

@@ -36,6 +36,7 @@ public:
 	void Clear();
 	void Present();
 
+	void SetRTV();
 private:
 	static Device* _instance;
 

@@ -4,6 +4,8 @@
 PlaneShootScene::PlaneShootScene()
 {
 	_worldMap = make_shared<Quad>(L"Resource/Carina_Nebula.png");
+	//_worldMap->GetTransform()->GetPos().x += _worldMap->GetHalfSize().x;
+	//_worldMap->GetTransform()->GetPos().y += _worldMap->GetHalfSize().y;
 
 	_planeShoot = make_shared<PlaneShoot>();
 

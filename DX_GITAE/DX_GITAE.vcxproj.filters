@@ -124,6 +124,8 @@
     <ClInclude Include="Object\Dataes\ItemManager.h" />
     <ClInclude Include="Scene\XMLScene.h" />
     <ClInclude Include="Framework\Utility\tinyxml2.h" />
+    <ClInclude Include="Framework\Render\RenderTarget.h" />
+    <ClInclude Include="Object\UI\MiniMap.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -246,6 +248,8 @@
     <ClCompile Include="Object\Dataes\ItemManager.cpp" />
     <ClCompile Include="Scene\XMLScene.cpp" />
     <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
+    <ClCompile Include="Framework\Render\RenderTarget.cpp" />
+    <ClCompile Include="Object\UI\MiniMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

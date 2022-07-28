@@ -14,7 +14,7 @@
 
 Program::Program()
 {
-	_scene = make_shared<XMLScene>();
+	_scene = make_shared<PlaneShootScene>();
 }
 
 Program::~Program()
@@ -30,18 +30,21 @@ void Program::Update()
 
 void Program::Render()
 {
+	Camera::GetInstance()->SetProjectionBuffer(WIN_WIDTH, WIN_HEIGHT);
+	Camera::GetInstance()->SetCameraWorldBuffer();
+
+	_scene->PreRender();
+
+	Device::GetInstance()->SetRTV();
 	Device::GetInstance()->Clear();
 
 	ImGui_ImplDX11_NewFrame();
 	ImGui_ImplWin32_NewFrame();
 	ImGui::NewFrame();
 
-	Camera::GetInstance()->SetProjectionBuffer(WIN_WIDTH, WIN_HEIGHT);
 	Camera::GetInstance()->SetViewPort(WIN_WIDTH, WIN_HEIGHT);
 
 	ALPHA_STATE->SetState();
-
-	_scene->PreRender();
 
 	_scene->Render();
 	EffectManager::GetInstance()->Render();
@@ -52,6 +55,7 @@ void Program::Render()
 	DirectWrite::GetInstance()->GetDC()->BeginDraw();
 	DirectWrite::GetInstance()->RenderText(fps, rect);
 
+	Camera::GetInstance()->SetUiCameraBuffer();
 	_scene->PostRender();
 	Camera::GetInstance()->PostRender();
 

@@ -6,21 +6,19 @@ public:
 	virtual ~CameraScene();
 
 	virtual void Update() override;
+	virtual void PreRender() override;
 	virtual void Render() override;
 	virtual void PostRender() override;
 
 	void Save();
-	void Test(int t);
-
 
 	void Load();
 
 private:
 	shared_ptr<Quad> _backGround;
 	shared_ptr<Zelda> _zelda;
-	shared_ptr<Transform> _zeldaFollow;
+	shared_ptr<Transform> _zeladFollow;
 	shared_ptr<Button> _button;
 
-	int test = 0;
+	shared_ptr<MiniMap> _miniMap;
 };
-

@@ -152,6 +152,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Framework\Utility\tinyxml2.h" />
+    <ClInclude Include="Object\UI\MiniMap.h" />
     <ClInclude Include="Object\Dataes\ItemManager.h" />
     <ClInclude Include="Object\PlaneShoot\Aimer.h" />
     <ClInclude Include="Object\PlaneShoot\MainBullet.h" />
@@ -192,6 +193,7 @@
     <ClInclude Include="Framework\Utility\InputManager.h" />
     <ClInclude Include="Framework\Utility\Timer.h" />
     <ClInclude Include="Program\Program.h" />
+    <ClInclude Include="Framework\Render\RenderTarget.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="Framework\State\StateManager.h" />
     <ClInclude Include="Framework\Render\ShaderManager.h" />
@@ -217,6 +219,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
+    <ClCompile Include="Object\UI\MiniMap.cpp" />
     <ClCompile Include="Object\Dataes\ItemManager.cpp" />
     <ClCompile Include="Object\PlaneShoot\Aimer.cpp" />
     <ClCompile Include="Object\PlaneShoot\MainBullet.cpp" />
@@ -266,6 +269,7 @@
     <ClCompile Include="Framework\Render\Texture.cpp" />
     <ClCompile Include="Object\BasicObject\Sprite.cpp" />
     <ClCompile Include="Object\Zelda\Zelda.cpp" />
+    <ClCompile Include="Framework\Render\RenderTarget.cpp" />
     <ClCompile Include="Scene\CameraScene.cpp" />
     <ClCompile Include="Scene\CollisionScene.cpp" />
     <ClCompile Include="Scene\DungreedScene.cpp" />
