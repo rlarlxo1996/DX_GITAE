@@ -14,7 +14,9 @@ struct PixelInput
 // 1프레임당 호출 횟수 : 1280 x 720 만큼 호출
 float4 PS(PixelInput input) : SV_TARGET
 {
-	float2 uv = input.uv + (input.curFrame / input.maxFrame);
+	float2 spriteUV;
+	spriteUV.x = input.uv.x / input.maxFrame.x + input.curFrame.x / input.maxFrame.x;
+	spriteUV.y = input.uv.y / input.maxFrame.y + input.curFrame.y / input.maxFrame.y;
 
-	return map.Sample(samp, uv);
+	return map.Sample(samp, spriteUV);
 }

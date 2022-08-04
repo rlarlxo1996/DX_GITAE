@@ -11,7 +11,7 @@ InstancingScene::InstancingScene()
 	{
 		Transform temp;
 		temp.GetPos() = { MathUtility::RandomFloat(0,WIN_WIDTH), MathUtility::RandomFloat(0,WIN_HEIGHT) };
-		temp.GetScale() *= MathUtility::RandomFloat(0, 1);
+		temp.GetScale() *= MathUtility::RandomFloat(0, 0.3f);
 		
 		temp.UpdateWorld();
 
