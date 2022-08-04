@@ -11,7 +11,7 @@ InstancingScene::InstancingScene()
 	{
 		Transform temp;
 		temp.GetPos() = { MathUtility::RandomFloat(0,WIN_WIDTH), MathUtility::RandomFloat(0,WIN_HEIGHT) };
-		temp.GetScale() *= MathUtility::RandomFloat(0, 0.3f);
+		temp.GetScale() *= MathUtility::RandomFloat(0, 0.1f);
 		
 		temp.UpdateWorld();
 
@@ -20,7 +20,7 @@ InstancingScene::InstancingScene()
 		instanceData.curFrame = { MathUtility::RandomFloat(0,10), MathUtility::RandomFloat(0,8) };
 	}
 
-	_instancingBuffer = make_shared<VertexBuffer>(_instanceDataes.data(), sizeof(XMMATRIX), 450);
+	_instancingBuffer = make_shared<VertexBuffer>(_instanceDataes.data(), sizeof(InstanceData), 450);
 }
 
 InstancingScene::~InstancingScene()
