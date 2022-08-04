@@ -11,10 +11,11 @@
 #include "../Scene/CameraScene.h"
 #include "../Scene/XMLScene.h"
 #include "../Scene/PlaneShootScene.h"
+#include "../Scene/InstancingScene.h"
 
 Program::Program()
 {
-	_scene = make_shared<PlaneShootScene>();
+	_scene = make_shared<InstancingScene>();
 }
 
 Program::~Program()

@@ -64,6 +64,21 @@ void Quad::Render()
 
 }
 
+void Quad::SetRender()
+{
+    _transform->SetBuffer(0);
+
+    _texture->Set(0);
+
+    _vertexBuffer->IASetVertexBuffer(0);
+    _indexBuffer->IASetIndexBuffer();
+
+    IASetPT();
+
+    _vertexShader->Set();
+    _pixelShader->Set();
+}
+
 void Quad::CreateVertices()
 {
     Vector2 halfSize = _size * 0.5f;
