@@ -37,6 +37,7 @@ void Player::Update()
 	Move();
 	SetGun();
 	Fire();
+	Jump();
 
 	_quad->Update();
 	_gunParent->UpdateWorld();
@@ -74,6 +75,15 @@ void Player::Move()
 	if (KEY_PRESS('D'))
 	{
 		_quad->GetTransform()->GetPos().x += _speed * DELTA_TIME;
+	}
+	if (KEY_PRESS(VK_SPACE) && (_state == GROUND || _state == JUMPING_CHARGE))
+	{
+		_jumpPower += 1000.0f * DELTA_TIME;
+		_state = JUMPING_CHARGE;
+	}
+	if (KEY_UP(VK_SPACE) && _state == JUMPING_CHARGE)
+	{
+		_state = JUMPING;
 	}
 }
 
@@ -122,5 +132,24 @@ void Player::Fire()
 		Vector2 dir = MOUSE_POS - _gunParent->GetWorldPos();
 		dir.Normalize();
 		bullet->SetDirection(dir);
+	}
+}
+
+void Player::Jump()
+{
+	if (_state != JUMPING)
+		return;
+
+	Vector2 temp;
+	temp.y += _jumpPower * DELTA_TIME;
+
+	_quad->GetTransform()->GetPos() += temp;
+	_jumpPower -= _gravity * DELTA_TIME;
+
+	// Ground Á¶°Ç
+	if (_quad->GetTransform()->GetPos().y < 0)
+	{
+		_state = GROUND;
+		_jumpPower = 150.0f;
 	}
 }

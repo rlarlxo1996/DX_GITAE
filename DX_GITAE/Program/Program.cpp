@@ -15,7 +15,7 @@
 
 Program::Program()
 {
-	_scene = make_shared<InstancingScene>();
+	_scene = make_shared<DungreedScene>();
 }
 
 Program::~Program()

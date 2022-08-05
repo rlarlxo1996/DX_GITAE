@@ -2,6 +2,14 @@
 class Player
 {
 public:
+	enum State
+	{
+		GROUND,
+		JUMPING,
+		ATTACK,
+		JUMPING_CHARGE
+	};
+
 	Player();
 	~Player();
 
@@ -11,6 +19,7 @@ public:
 	void Move();
 	void SetGun();
 	void Fire();
+	void Jump();
 
 	shared_ptr<Transform> GetTransform() { return _quad->GetTransform(); }
 	vector<shared_ptr<class Bullet>>& GetBullet() { return _bullets; }
@@ -27,5 +36,9 @@ private:
 	UINT _poolCount = 30;
 
 	float _speed = 150.0f;
+
+	float _jumpPower = 300.0f;
+	float _gravity = 150.0f;
+	State _state = GROUND;
 };
 
