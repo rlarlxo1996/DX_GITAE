@@ -4,7 +4,7 @@
 Monster::Monster()
 {
 	_quad = make_shared<Quad>(L"Resource/Monster.png");
-	_quad->GetTransform()->GetScale() = { 0.7f, 0.7f };
+	_quad->GetTransform()->GetScale() = { 0.8f, 0.8f };
 
 	_col = make_shared<RectCollider>(_quad->GetHalfSize());
 	_col->SetParent(_quad->GetTransform());
