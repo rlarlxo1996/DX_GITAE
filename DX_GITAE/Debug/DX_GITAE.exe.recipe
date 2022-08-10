@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project>
+  <ProjectOutputs>
+    <ProjectOutput>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\DX_GITAE.exe</FullPath>
+    </ProjectOutput>
+  </ProjectOutputs>
+  <ContentFiles>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\ActionShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\ButtonPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\ColliderPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\ColliderVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\FilterShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\InstancingPixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\InstancingVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\ReversePixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\SpriteShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\TexturePixelShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\TextureVertexShader.cso</FullPath>
+    </ContentFile>
+    <ContentFile>
+      <FullPath>C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\Debug\TutorialShader.cso</FullPath>
+    </ContentFile>
+  </ContentFiles>
+  <SatelliteDlls />
+  <NonRecipeFileRefs />
+</Project>

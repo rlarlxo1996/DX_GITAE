@@ -11,6 +11,8 @@ public:
 	shared_ptr<Transform> GetTransform() { return _quad->GetTransform(); }
 	shared_ptr<Collider> GetCollider() { return _col; }
 
+	bool _isActive = true;
+	int _hp = 5;
 private:
 	shared_ptr<Quad> _quad;
 	shared_ptr<Collider> _col;

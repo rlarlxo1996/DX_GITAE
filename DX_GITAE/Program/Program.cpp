@@ -15,7 +15,7 @@
 
 Program::Program()
 {
-	_scene = make_shared<DungreedScene>();
+	_scene = make_shared<TextureScene>();
 }
 
 Program::~Program()
@@ -27,6 +27,7 @@ void Program::Update()
 	_scene->Update();
 	EffectManager::GetInstance()->Update();
 	Camera::GetInstance()->Update();
+	Audio::GetInstance()->Update();
 }
 
 void Program::Render()

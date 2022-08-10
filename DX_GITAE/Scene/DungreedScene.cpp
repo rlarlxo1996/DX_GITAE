@@ -27,6 +27,12 @@ void DungreedScene::Update()
 	{
 		if (bullet->GetCollider()->IsCollision(_monster->GetCollider()))
 		{
+			bullet->_isActive = false;
+			_monster->_hp--;
+			if (_monster->_hp == 0)
+			{
+				_monster->_isActive = false;
+			}
 			_monster->GetCollider()->SetColorRed();
 			break;
 		}

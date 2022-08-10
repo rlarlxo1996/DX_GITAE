@@ -127,6 +127,7 @@
     <ClInclude Include="Framework\Render\RenderTarget.h" />
     <ClInclude Include="Object\UI\MiniMap.h" />
     <ClInclude Include="Scene\InstancingScene.h" />
+    <ClInclude Include="Framework\Utility\Audio.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -252,6 +253,7 @@
     <ClCompile Include="Framework\Render\RenderTarget.cpp" />
     <ClCompile Include="Object\UI\MiniMap.cpp" />
     <ClCompile Include="Scene\InstancingScene.cpp" />
+    <ClCompile Include="Framework\Utility\Audio.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />
@@ -278,5 +280,10 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resource\XML\ItemData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resource\Sound\attack.wav" />
+    <Media Include="Resource\Sound\drumloop.wav" />
+    <Media Include="Resource\Sound\jump.wav" />
   </ItemGroup>
 </Project>

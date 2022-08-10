@@ -126,6 +126,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -142,6 +143,7 @@
       <ConformanceMode>true</ConformanceMode>
       <PrecompiledHeader>Use</PrecompiledHeader>
       <PrecompiledHeaderFile>framework.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>./</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -151,6 +153,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="Framework\Utility\Audio.h" />
     <ClInclude Include="Framework\Utility\tinyxml2.h" />
     <ClInclude Include="Scene\InstancingScene.h" />
     <ClInclude Include="Object\UI\MiniMap.h" />
@@ -219,6 +222,7 @@
     <ClInclude Include="Scene\XMLScene.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Framework\Utility\Audio.cpp" />
     <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
     <ClCompile Include="Scene\InstancingScene.cpp" />
     <ClCompile Include="Object\UI\MiniMap.cpp" />
@@ -397,6 +401,10 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">PS</EntryPointName>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">PS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">PS</EntryPointName>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
     </FxCompile>
     <FxCompile Include="Shader\InstancingVertexShader.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Vertex</ShaderType>
@@ -407,6 +415,10 @@
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">5.0</ShaderModel>
       <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">VS</EntryPointName>
       <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|x64'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">5.0</ShaderModel>
+      <ShaderModel Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">5.0</ShaderModel>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">VS</EntryPointName>
+      <EntryPointName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">VS</EntryPointName>
     </FxCompile>
     <FxCompile Include="Shader\ReversePixelShader.hlsl">
       <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Pixel</ShaderType>
@@ -489,6 +501,11 @@
   </ItemGroup>
   <ItemGroup>
     <Xml Include="Resource\XML\ItemData.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Media Include="Resource\Sound\attack.wav" />
+    <Media Include="Resource\Sound\drumloop.wav" />
+    <Media Include="Resource\Sound\jump.wav" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

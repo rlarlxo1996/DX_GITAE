@@ -11,6 +11,11 @@ TextureScene::TextureScene()
 	_isRightBuffer->_data.selected = 1;
 
 	EffectManager::GetInstance()->Add(L"Resource/Effects/GreenExplosion.png", Vector2(4, 4));
+
+	SOUND->Add("bgm", "Resource/Sound/drumloop.wav", true);
+	SOUND->Play("bgm");
+
+	SOUND->Add("jump", "Resource/Sound/jump.wav");
 }
 
 TextureScene::~TextureScene()
@@ -23,6 +28,7 @@ void TextureScene::Update()
 
 	if (KEY_DOWN('W'))
 	{
+		SOUND->Play("jump");
 		EffectManager::GetInstance()->Play("GreenExplosion", CENTER);
 		Camera::GetInstance()->ShakeStart(5.0f, 1.0f, 2.0f);
 	}
