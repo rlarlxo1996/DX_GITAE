@@ -1,21 +1,10 @@
 #include "framework.h"
 #include "Program.h"
-#include "../Scene/TextureScene.h"
-#include "../Scene/WVPScene.h"
-#include "../Scene/SolarSystemScene.h"
-#include "../Scene/DungreedScene.h"
-#include "../Scene/CollisionScene.h"
-#include "../Scene/SpriteScene.h"
-#include "../Scene/FilterScene.h"
-#include "../Scene/EffectScene.h"
-#include "../Scene/CameraScene.h"
-#include "../Scene/XMLScene.h"
-#include "../Scene/PlaneShootScene.h"
-#include "../Scene/InstancingScene.h"
+
 
 Program::Program()
 {
-	_scene = make_shared<TextureScene>();
+	SCENE->SetCurSence("Instancing");
 }
 
 Program::~Program()
@@ -24,7 +13,7 @@ Program::~Program()
 
 void Program::Update()
 {
-	_scene->Update();
+	SCENE->Update();
 	EffectManager::GetInstance()->Update();
 	Camera::GetInstance()->Update();
 	Audio::GetInstance()->Update();
@@ -35,7 +24,7 @@ void Program::Render()
 	Camera::GetInstance()->SetProjectionBuffer(WIN_WIDTH, WIN_HEIGHT);
 	Camera::GetInstance()->SetCameraWorldBuffer();
 
-	_scene->PreRender();
+	SCENE->PreRender();
 
 	Device::GetInstance()->SetRTV();
 	Device::GetInstance()->Clear();
@@ -48,7 +37,7 @@ void Program::Render()
 
 	ALPHA_STATE->SetState();
 
-	_scene->Render();
+	SCENE->Render();
 	EffectManager::GetInstance()->Render();
 
 	wstring fps = L"FPS : " + to_wstring((int)Timer::GetInstance()->GetFPS());
@@ -58,7 +47,7 @@ void Program::Render()
 	DirectWrite::GetInstance()->RenderText(fps, rect);
 
 	Camera::GetInstance()->SetUiCameraBuffer();
-	_scene->PostRender();
+	SCENE->PostRender();
 	Camera::GetInstance()->PostRender();
 
 	ImGui::Render();

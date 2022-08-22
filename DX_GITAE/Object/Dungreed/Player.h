@@ -13,6 +13,8 @@ public:
 	Player();
 	~Player();
 
+	void Init();
+
 	void Update();
 	void Render();
 

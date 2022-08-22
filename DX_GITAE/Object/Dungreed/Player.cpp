@@ -32,6 +32,14 @@ Player::~Player()
 {
 }
 
+void Player::Init()
+{
+	_quad->GetTransform()->GetPos() = { 0.0f,0.0f };
+
+	for (auto& bullet : _bullets)
+		bullet->_isActive = false;
+}
+
 void Player::Update()
 {
 	Move();
@@ -99,39 +107,39 @@ void Player::Fire()
 {
 	if (KEY_DOWN(VK_LBUTTON))
 	{
-		//for (auto& bullet : _bullets)
-		//{
-		//	if (bullet->_isActive == false)
-		//	{
-		//		bullet->_isActive = true;
-		//		bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
-		//		Vector2 dir = MOUSE_POS - _gunParent->GetWorldPos();
-		//		dir.Normalize();
-		//		bullet->SetDirection(dir);
-		//		break;
-		//	}
-		//}
+		for (auto& bullet : _bullets)
+		{
+			if (bullet->_isActive == false)
+			{
+				bullet->_isActive = true;
+				bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
+				Vector2 dir = MOUSE_POS - _gunParent->GetWorldPos();
+				dir.Normalize();
+				bullet->SetDirection(dir);
+				break;
+			}
+		}
 
 		// ¶÷´Ù
-		vector<shared_ptr<Bullet>>::iterator iter = _bullets.begin();
+		//vector<shared_ptr<Bullet>>::iterator iter = _bullets.begin();
 
-		iter = std::find_if(_bullets.begin(), _bullets.end(), [](const shared_ptr<Bullet> bullet) -> bool
-			{
-				if (bullet->_isActive == false)
-					return true;
+		//iter = std::find_if(_bullets.begin(), _bullets.end(), [](const shared_ptr<Bullet> bullet) -> bool
+		//	{
+		//		if (bullet->_isActive == false)
+		//			return true;
 
-				return false;
-			});
+		//		return false;
+		//	});
 
-		if (iter == _bullets.end())
-			return;
+		//if (iter == _bullets.end())
+		//	return;
 
-		shared_ptr<Bullet> bullet = *iter;
-		bullet->_isActive = true;
-		bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
-		Vector2 dir = MOUSE_POS - _gunParent->GetWorldPos();
-		dir.Normalize();
-		bullet->SetDirection(dir);
+		//shared_ptr<Bullet> bullet = *iter;
+		//bullet->_isActive = true;
+		//bullet->GetTransform()->GetPos() = _gunParent->GetWorldPos();
+		//Vector2 dir = MOUSE_POS - _gunParent->GetWorldPos();
+		//dir.Normalize();
+		//bullet->SetDirection(dir);
 	}
 }
 

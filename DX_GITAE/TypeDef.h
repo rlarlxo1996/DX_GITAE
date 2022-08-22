@@ -36,6 +36,8 @@
 
 #define SOUND Audio::GetInstance()
 
+#define SCENE SceneManager::GetInstance()
+
 #define LERP(s,e,t) s + (e - s) * t
 
 #define V(hr) assert(SUCCEEDED(hr))
@@ -51,4 +53,22 @@ struct ItemData
 	int type;
 	int attackInfo;
 
+};
+
+enum Itemtype
+{
+	NONE,
+	POTION,
+	WEAPON,
+	ARMOR
+};
+
+struct ItemInfo
+{
+	string			_name;
+	Itemtype		_type = NONE;
+	float			_price = 0.0f;
+	float			_attack = 0.0f;
+	float			_defense = 0.0f;
+	float			_heal = 0.0f;
 };

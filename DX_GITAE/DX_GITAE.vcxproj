@@ -155,7 +155,11 @@
   <ItemGroup>
     <ClInclude Include="Framework\Utility\Audio.h" />
     <ClInclude Include="Framework\Utility\tinyxml2.h" />
-    <ClInclude Include="Scene\InstancingScene.h" />
+    <ClInclude Include="Object\Item\ItemIcon.h" />
+    <ClInclude Include="Object\UI\Inventory.h" />
+    <ClInclude Include="Object\Item\Item.h" />
+    <ClInclude Include="Scene\SceneManager.h" />
+    <ClInclude Include="Scene\Basic_Scene\InstancingScene.h" />
     <ClInclude Include="Object\UI\MiniMap.h" />
     <ClInclude Include="Object\Dataes\ItemManager.h" />
     <ClInclude Include="Object\PlaneShoot\Aimer.h" />
@@ -203,28 +207,32 @@
     <ClInclude Include="Framework\Render\ShaderManager.h" />
     <ClInclude Include="Framework\Render\Shader.h" />
     <ClInclude Include="Object\BasicObject\Sprite.h" />
-    <ClInclude Include="Scene\CameraScene.h" />
-    <ClInclude Include="Scene\CollisionScene.h" />
-    <ClInclude Include="Scene\DungreedScene.h" />
-    <ClInclude Include="Scene\EffectScene.h" />
-    <ClInclude Include="Scene\FilterScene.h" />
-    <ClInclude Include="Scene\PlaneShootScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\CameraScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\CollisionScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\DungreedScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\EffectScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\FilterScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\PlaneShootScene.h" />
     <ClInclude Include="Scene\Scene.h" />
-    <ClInclude Include="Scene\SolarSystemScene.h" />
-    <ClInclude Include="Scene\SpriteScene.h" />
-    <ClInclude Include="Scene\TextureScene.h" />
-    <ClInclude Include="Scene\WVPScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\SolarSystemScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\SpriteScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\TextureScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\WVPScene.h" />
     <ClInclude Include="targetver.h" />
     <ClInclude Include="Framework\Math\Transform.h" />
     <ClInclude Include="Framework\Render\Texture.h" />
     <ClInclude Include="TypeDef.h" />
     <ClInclude Include="Object\Zelda\Zelda.h" />
-    <ClInclude Include="Scene\XMLScene.h" />
+    <ClInclude Include="Scene\Basic_Scene\XMLScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Framework\Utility\Audio.cpp" />
     <ClCompile Include="Framework\Utility\tinyxml2.cpp" />
-    <ClCompile Include="Scene\InstancingScene.cpp" />
+    <ClCompile Include="Object\Item\ItemIcon.cpp" />
+    <ClCompile Include="Object\UI\Inventory.cpp" />
+    <ClCompile Include="Object\Item\Item.cpp" />
+    <ClCompile Include="Scene\SceneManager.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\InstancingScene.cpp" />
     <ClCompile Include="Object\UI\MiniMap.cpp" />
     <ClCompile Include="Object\Dataes\ItemManager.cpp" />
     <ClCompile Include="Object\PlaneShoot\Aimer.cpp" />
@@ -276,18 +284,18 @@
     <ClCompile Include="Object\BasicObject\Sprite.cpp" />
     <ClCompile Include="Object\Zelda\Zelda.cpp" />
     <ClCompile Include="Framework\Render\RenderTarget.cpp" />
-    <ClCompile Include="Scene\CameraScene.cpp" />
-    <ClCompile Include="Scene\CollisionScene.cpp" />
-    <ClCompile Include="Scene\DungreedScene.cpp" />
-    <ClCompile Include="Scene\EffectScene.cpp" />
-    <ClCompile Include="Scene\FilterScene.cpp" />
-    <ClCompile Include="Scene\PlaneShootScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\CameraScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\CollisionScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\DungreedScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\EffectScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\FilterScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\PlaneShootScene.cpp" />
     <ClCompile Include="Scene\Scene.cpp" />
-    <ClCompile Include="Scene\SolarSystemScene.cpp" />
-    <ClCompile Include="Scene\SpriteScene.cpp" />
-    <ClCompile Include="Scene\TextureScene.cpp" />
-    <ClCompile Include="Scene\WVPScene.cpp" />
-    <ClCompile Include="Scene\XMLScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\SolarSystemScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\SpriteScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\TextureScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\WVPScene.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\XMLScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

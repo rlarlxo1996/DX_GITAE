@@ -10,6 +10,10 @@ DungreedScene::DungreedScene()
 
 	_aim = make_shared<Aim>();
 
+	_button = make_shared<Button>();
+	_button->SetPosition(CENTER);
+	_button->SetScale(Vector2(0.1f, 0.1f));
+	_button->SetEvent(std::bind(&DungreedScene::NextScene, this));
 }
 
 DungreedScene::~DungreedScene()
@@ -41,6 +45,9 @@ void DungreedScene::Update()
 			_monster->GetCollider()->SetColorGreen();
 		}
 	}
+
+	// UI
+	_button->Update();
 }
 
 void DungreedScene::Render()
@@ -52,6 +59,19 @@ void DungreedScene::Render()
 
 void DungreedScene::PostRender()
 {
+	//UI
+	_button->PostRender();
+
 	ImGui::SliderFloat("PlayerPos X", &_player->GetTransform()->GetPos().x, 0, 1280);
 	ImGui::SliderFloat("PlayerPos Y", &_player->GetTransform()->GetPos().y, 0, 720);
+}
+
+void DungreedScene::Init()
+{
+	_player->Init();
+}
+
+void DungreedScene::NextScene()
+{
+	SCENE->SetCurSence("Zelda");
 }

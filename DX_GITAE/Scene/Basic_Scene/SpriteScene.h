@@ -9,7 +9,11 @@ public:
 	virtual void Render() override;
 	virtual void PostRender() override;
 
+	void PrevScene();
+
 private:
 	shared_ptr<Zelda> _zelda;
+
+	shared_ptr<Button> _button;
 };
 

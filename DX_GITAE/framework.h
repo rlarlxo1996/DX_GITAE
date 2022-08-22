@@ -116,6 +116,8 @@ using namespace std;
 #include "Object/Aim.h"
 #include "object/UI/Button.h"
 #include "Object/UI/MiniMap.h"
+#include "Object/Item/Item.h"
+#include "Object/UI/Inventory.h"
 
 // DataSet
 #include "Object/Dataes/ItemManager.h"
@@ -132,6 +134,7 @@ using namespace std;
 
 // Scene
 #include "Scene/Scene.h"
+#include "Scene/SceneManager.h"
 
 // Program
 #include "Program/Program.h"
