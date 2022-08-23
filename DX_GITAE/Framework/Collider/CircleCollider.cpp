@@ -28,7 +28,7 @@ void CircleCollider::CreateVertices()
 		_vertices.push_back(v);
 	}
 	_vertexBuffer = make_shared<VertexBuffer>(_vertices.data(), sizeof(VertexPos), _vertices.size());
-	
+
 	Collider::CreateData();
 }
 

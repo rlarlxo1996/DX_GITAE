@@ -3,7 +3,6 @@
 
 Action::Action(vector<Clip> clips, string name, Type type, float speed)
 : _clips(clips)
-
 , _repeatType(type)
 , _speed(speed)
 , _name(name)
