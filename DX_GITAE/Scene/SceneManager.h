@@ -35,6 +35,6 @@ private:
 
 	unordered_map<string, shared_ptr<Scene>> _sceneTable;
 
-	weak_ptr<Scene>  _curScene;
+	weak_ptr<Scene> _curScene;
 };
 

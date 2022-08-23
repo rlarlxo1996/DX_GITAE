@@ -8,7 +8,7 @@ ItemIcon::ItemIcon()
 	// µµ¿Â¬Ô±‚
 	CreateIcons();
 
-	_instancingBuffer = make_shared<VertexBuffer>(_instanceDataes.data(), sizeof(InstanceData), _poolCount * 5);
+	_instancingBuffer = make_shared<VertexBuffer>(_instanceDataes.data(), sizeof(InstanceData), _poolCount * _itemCount);
 }
 
 ItemIcon::~ItemIcon()
@@ -99,6 +99,12 @@ void ItemIcon::CreateIcons()
 			{
 				ins_data.curFrame = { 4,0 };
 				itemName = "Potion";
+			}
+			break;
+			case 5:
+			{
+				ins_data.curFrame = { 10,4 };
+				itemName = "NONE";
 			}
 			break;
 			default:

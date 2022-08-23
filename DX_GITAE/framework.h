@@ -114,10 +114,10 @@ using namespace std;
 #include "Object/BasicObject/EffectManager.h"
 #include "Object/Zelda/Zelda.h"
 #include "Object/Aim.h"
+
+// UI
 #include "object/UI/Button.h"
 #include "Object/UI/MiniMap.h"
-#include "Object/Dungreed/Item.h"
-#include "Object/Dungreed/ItemIcon.h"
 #include "Object/UI/Inventory.h"
 
 // DataSet
@@ -128,6 +128,8 @@ using namespace std;
 #include "Object/Dungreed/Gun.h"
 #include "Object/Dungreed/Bullet.h"
 #include "Object/Dungreed/Monster.h"
+#include "Object/Dungreed/Item.h"
+#include "Object/Dungreed/ItemIcon.h"
 
 // PlaneShoot
 #include "Object/PlaneShoot/PlaneShoot.h"

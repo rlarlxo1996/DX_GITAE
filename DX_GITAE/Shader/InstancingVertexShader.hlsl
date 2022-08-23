@@ -1,4 +1,3 @@
-
 cbuffer View : register(b1)
 {
 	matrix view;
