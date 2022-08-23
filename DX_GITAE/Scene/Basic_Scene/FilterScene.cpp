@@ -12,7 +12,7 @@ FilterScene::FilterScene()
 	_filterBuffer->_data.value2 = 4;
 
 	_imageSizeBuffer = make_shared<ImageSizeBuffer>();
-	_imageSizeBuffer->_data._size = _quad->GetSize();
+	_imageSizeBuffer->_data.size = _quad->GetSize();
 
 	_sun = make_shared<Quad>(L"Resource/Sun.png", L"Shader/TextureVertexShader.hlsl", L"Shader/FilterShader/FilterShader.hlsl");
 	_sun->GetTransform()->GetPos() = { WIN_WIDTH * 0.1f, WIN_HEIGHT * 0.5f };

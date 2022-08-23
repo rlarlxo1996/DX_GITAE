@@ -1,1 +1,0 @@
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DirectXTex\Bin\Desktop_2019_Win10\Win32\Debug\DirectXTex.lib

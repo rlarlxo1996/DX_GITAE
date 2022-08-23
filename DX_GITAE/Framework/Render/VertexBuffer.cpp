@@ -21,8 +21,8 @@ void VertexBuffer::CreateBuffer(void* data)
     D3D11_BUFFER_DESC bd = {};
     bd.Usage = D3D11_USAGE_DYNAMIC;
     bd.ByteWidth = _stride * _count;
-    bd.BindFlags = D3D11_BIND_CONSTANT_BUFFER;
     bd.BindFlags = D3D11_BIND_VERTEX_BUFFER;
+	bd.CPUAccessFlags = D3D10_CPU_ACCESS_WRITE;
     bd.MiscFlags = 0;
     bd.StructureByteStride = 0;
 
@@ -36,6 +36,7 @@ void VertexBuffer::CreateBuffer(void* data)
 
 void VertexBuffer::IASetVertexBuffer(int slot)
 {
+    Update();
     DEVICE_CONTEXT->IASetVertexBuffers(slot, 1, _vertexBuffer.GetAddressOf(), &_stride, &_offset);
 }
 

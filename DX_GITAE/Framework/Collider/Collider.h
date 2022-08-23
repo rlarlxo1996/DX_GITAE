@@ -38,6 +38,7 @@ public:
 
 	void SetParent(shared_ptr<Transform> parent) { _transform->SetParent(parent); }
 
+	bool _isActive = true;
 protected:
 	vector<VertexPos> _vertices;
 

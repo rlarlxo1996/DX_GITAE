@@ -40,7 +40,7 @@ public:
 		_data._color = { 1,1,1,1 };
 	}
 
-	void SetColor(const XMFLOAT4 color)
+	void SetColor(const XMFLOAT4& color)
 	{
 		_data._color = color;
 	}
@@ -72,7 +72,7 @@ class ActionBuffer : public ConstantBuffer
 public:
 	struct Data
 	{
-		// 16바이트씩 끊어서 읽는다...-> 16바이트의 정수배로 정보를 줘야함
+		// 16바이트씩 끊어서 읽는다.. => 16바이트의 정수배로 정보를 줘야함.
 		Vector2 _startPos;
 		Vector2 _maxSize;
 		Vector2 _size;
@@ -111,7 +111,7 @@ class ImageSizeBuffer : public ConstantBuffer
 public:
 	struct Data
 	{
-		XMFLOAT2 _size = { 0.0f,0.0f };
+		XMFLOAT2 size = { 0.0f,0.0f };
 		XMFLOAT2 padding = { 0.0f,0.0f };
 	}_data;
 
@@ -134,6 +134,23 @@ public:
 	}_data;
 
 	ButtonBuffer()
+		: ConstantBuffer(&_data, sizeof(Data))
+	{
+	}
+};
+
+class IsRightBuffer : public ConstantBuffer
+{
+public:
+	struct Data
+	{
+		int isRight = 0;
+		int padding1 = 0;
+		int padding2 = 0;
+		int padding3 = 0;
+	}_data;
+
+	IsRightBuffer()
 		: ConstantBuffer(&_data, sizeof(Data))
 	{
 	}

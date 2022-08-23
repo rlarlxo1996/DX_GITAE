@@ -8,7 +8,7 @@ Camera::Camera()
 	_transform = make_shared<Transform>();
 	_moveTransform = make_shared<Transform>();
 	_projectionBuffer = make_shared<MatrixBuffer>();
-	_uiCameraBuffer = make_shared< MatrixBuffer>();
+	_uiCameraBuffer = make_shared<MatrixBuffer>();
 
 	SetProjectionBuffer(2);
 }

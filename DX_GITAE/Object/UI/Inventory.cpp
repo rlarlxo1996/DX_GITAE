@@ -15,7 +15,7 @@ Inventory::Inventory(Vector2 size)
 
 	_icon = make_shared<ItemIcon>();
 	_icon->SetIcon("Potion", CENTER);
-	_icon->SetIcon("Sword", { CENTER.x + 50, CENTER.y });
+	_icon->SetIcon("Sword", { CENTER.x + 75, CENTER.y });
 
 	_slotOffset.x = 75.0f;
 	_slotOffset.y = 100.0f;

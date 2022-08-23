@@ -18,7 +18,7 @@ RenderTarget::RenderTarget(float width, float height)
 
 		DEVICE->CreateTexture2D(&desc, nullptr, _rtvTexture.GetAddressOf());
 	}
-	
+
 	{ // Create SRV
 		D3D11_SHADER_RESOURCE_VIEW_DESC desc = {};
 		desc.Format = DXGI_FORMAT_R32G32B32A32_FLOAT;

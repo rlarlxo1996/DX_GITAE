@@ -4,7 +4,7 @@
 Device* Device::_instance = nullptr;
 
 Device::Device(HWND hWnd)
-    : _hWnd(hWnd)
+: _hWnd(hWnd)
 {
     CreateDeviceAndSwapChain();
     CreateBackBuffer();
@@ -64,6 +64,10 @@ void Device::CreateBackBuffer()
     _deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
 }
 
+void Device::SetRTV()
+{
+    _deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
+}
 void Device::Clear()
 {
     FLOAT myColorR = 0.0f / 255.0f;
@@ -77,9 +81,4 @@ void Device::Clear()
 void Device::Present()
 {
     _swapChain->Present(0, 0);
-}
-
-void Device::SetRTV()
-{
-    _deviceContext->OMSetRenderTargets(1, _renderTargetView.GetAddressOf(), nullptr);
 }

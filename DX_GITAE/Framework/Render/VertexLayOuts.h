@@ -3,9 +3,8 @@
 struct VertexPos
 {
     VertexPos()
-        : pos(0,0,0)
+    : pos(0,0,0)
     {
-
     }
 
     DirectX::XMFLOAT3 pos;
@@ -18,7 +17,6 @@ struct VertexUV
     : pos(x,y,0)
     , uv(u,v)
     {
-
     }
 
     DirectX::XMFLOAT3 pos = { 0,0,0 };

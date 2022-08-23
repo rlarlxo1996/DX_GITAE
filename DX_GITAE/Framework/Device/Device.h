@@ -33,10 +33,10 @@ public:
 	Microsoft::WRL::ComPtr<ID3D11DeviceContext> GetDeviceContext() { return _deviceContext; }
 	Microsoft::WRL::ComPtr< IDXGISwapChain> GetSwapChain() { return _swapChain; }
 
+	void SetRTV();
 	void Clear();
 	void Present();
 
-	void SetRTV();
 private:
 	static Device* _instance;
 
