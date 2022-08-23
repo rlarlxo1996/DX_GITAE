@@ -129,9 +129,10 @@
     <ClInclude Include="Scene\Basic_Scene\InstancingScene.h" />
     <ClInclude Include="Framework\Utility\Audio.h" />
     <ClInclude Include="Scene\SceneManager.h" />
-    <ClInclude Include="Object\Item\Item.h" />
+    <ClInclude Include="Object\Dungreed\Item.h" />
     <ClInclude Include="Object\UI\Inventory.h" />
-    <ClInclude Include="Object\Item\ItemIcon.h" />
+    <ClInclude Include="Object\Dungreed\ItemIcon.h" />
+    <ClInclude Include="Scene\Basic_Scene\InventoryScene.h" />
   </ItemGroup>
   <ItemGroup>
     <Image Include="DX_GITAE.ico" />
@@ -171,6 +172,7 @@
     <Image Include="Resource\Carina_Nebula.png" />
     <Image Include="Resource\RPlane.png" />
     <Image Include="Resource\UI\Button.png" />
+    <Image Include="Resource\Item_11x5.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />
@@ -259,9 +261,10 @@
     <ClCompile Include="Scene\Basic_Scene\InstancingScene.cpp" />
     <ClCompile Include="Framework\Utility\Audio.cpp" />
     <ClCompile Include="Scene\SceneManager.cpp" />
-    <ClCompile Include="Object\Item\Item.cpp" />
+    <ClCompile Include="Object\Dungreed\Item.cpp" />
     <ClCompile Include="Object\UI\Inventory.cpp" />
-    <ClCompile Include="Object\Item\ItemIcon.cpp" />
+    <ClCompile Include="Object\Dungreed\ItemIcon.cpp" />
+    <ClCompile Include="Scene\Basic_Scene\InventoryScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="DX_GITAE.rc" />

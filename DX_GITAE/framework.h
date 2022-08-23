@@ -116,7 +116,8 @@ using namespace std;
 #include "Object/Aim.h"
 #include "object/UI/Button.h"
 #include "Object/UI/MiniMap.h"
-#include "Object/Item/Item.h"
+#include "Object/Dungreed/Item.h"
+#include "Object/Dungreed/ItemIcon.h"
 #include "Object/UI/Inventory.h"
 
 // DataSet

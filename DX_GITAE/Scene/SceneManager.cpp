@@ -13,6 +13,7 @@
 #include "../Scene/Basic_Scene/XMLScene.h"
 #include "../Scene/Basic_Scene/PlaneShootScene.h"
 #include "../Scene/Basic_Scene/InstancingScene.h"
+#include "../Scene/Basic_Scene/InventoryScene.h"
 
 SceneManager* SceneManager::_instance = nullptr;
 
@@ -21,8 +22,9 @@ SceneManager::SceneManager()
 	_sceneTable["Dungreed"] = make_shared<DungreedScene>();
 	_sceneTable["Zelda"] = make_shared<SpriteScene>();
 	_sceneTable["Instancing"] = make_shared<InstancingScene>();
+	_sceneTable["Inventory"] = make_shared<InventoryScene>();
 
-	SetCurSence("Instancing");
+	SetCurSence("Inventory");
 }
 
 SceneManager::~SceneManager()

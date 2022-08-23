@@ -1,25 +1,2 @@
-﻿  InstancingScene.cpp
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\InstancingScene.cpp(40,41): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\InstancingScene.cpp(41,41): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(151,1): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,InstancingScene::InstanceData*,unsigned __int64,int>(_Ty &,InstancingScene::InstanceData *&&,unsigned __int64 &&,int &&) noexcept(false)'에 대한 참조를 확인하세요.
-          with
-          [
-              _Ty=VertexBuffer
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<InstancingScene::InstanceData*,unsigned __int64,int>(InstancingScene::InstanceData *&&,unsigned __int64 &&,int &&)'에 대한 참조를 확인하세요.
-          with
-          [
-              _Ty=VertexBuffer
-          ]
-C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<InstancingScene::InstanceData*,unsigned __int64,int>(InstancingScene::InstanceData *&&,unsigned __int64 &&,int &&)'에 대한 참조를 확인하세요.
-          with
-          [
-              _Ty=VertexBuffer
-          ]
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\InstancingScene.cpp(28): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<VertexBuffer> std::make_shared<VertexBuffer,_Ty*,size_t,int>(_Ty *&&,size_t &&,int &&)'에 대한 참조를 확인하세요.
-          with
-          [
-              _Ty=InstancingScene::InstanceData
-          ]
+﻿  Inventory.cpp
   DX_GITAE.vcxproj -> C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\DX_GITAE.exe
