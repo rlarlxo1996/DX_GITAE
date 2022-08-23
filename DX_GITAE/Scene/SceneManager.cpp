@@ -21,6 +21,8 @@ SceneManager::SceneManager()
 	_sceneTable["Dungreed"] = make_shared<DungreedScene>();
 	_sceneTable["Zelda"] = make_shared<SpriteScene>();
 	_sceneTable["Instancing"] = make_shared<InstancingScene>();
+
+	SetCurSence("Instancing");
 }
 
 SceneManager::~SceneManager()

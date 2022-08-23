@@ -4,7 +4,7 @@
 
 Program::Program()
 {
-	SCENE->SetCurSence("Instancing");
+	
 }
 
 Program::~Program()

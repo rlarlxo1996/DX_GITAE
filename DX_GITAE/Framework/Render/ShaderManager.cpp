@@ -20,7 +20,6 @@ shared_ptr<VertexShader> ShaderManager::AddVS(wstring file)
 	}
 
 	shared_ptr<VertexShader> shader = make_shared<VertexShader>(file);
-
 	_shaders[file] = shader;
 
 	return shader;
@@ -35,7 +34,6 @@ shared_ptr<PixelShader> ShaderManager::AddPS(wstring file)
 	}
 
 	shared_ptr<PixelShader> shader = make_shared<PixelShader>(file);
-
 	_shaders[file] = shader;
 
 	return shader;
