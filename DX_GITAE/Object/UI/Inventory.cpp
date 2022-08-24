@@ -1,6 +1,5 @@
 #include "framework.h"
 #include "Inventory.h"
-#include "Object/Dungreed/Item.h" // Data
 #include "Object/Dungreed/ItemIcon.h" // Data의 정보를 이용해서 그릴 것
 
 Inventory::Inventory(Vector2 size)
@@ -11,11 +10,9 @@ Inventory::Inventory(Vector2 size)
 	_backGround = make_shared<Quad>(L"Inventory_Pannel", size);
 	shared_ptr<Texture> texture = Texture::Add(L"Inventory_texture", _rtv->GetSRV());
 	_backGround->SetTexture(texture);
-	_backGround->GetTransform()->GetPos() = CENTER;
+	_backGround->GetTransform()->GetPos() = Vector2(CENTER.x + 300.0f, CENTER.y);
 
 	_icon = make_shared<ItemIcon>();
-	_icon->SetIcon("Potion", CENTER);
-	_icon->SetIcon("Sword", { CENTER.x + 75, CENTER.y });
 
 	_slotOffset.x = 75.0f;
 	_slotOffset.y = 100.0f;
@@ -23,6 +20,15 @@ Inventory::Inventory(Vector2 size)
 	_slotXY = { 3,3 };
 
 	CreateSlotGroup();
+
+	_itemDataes.resize(_slotCount);
+
+	for (int i = 0; i < _slotCount; i++)
+	{
+		_icon->SetIcon(_itemDataes[i].name, _slotGroup[i]->GetTransform()->GetPos());
+	}
+
+	_bsBuffer = make_shared<BgOrSlotBuffer>();
 }
 
 Inventory::~Inventory()
@@ -43,6 +49,9 @@ void Inventory::SetRTV()
 void Inventory::PostRender()
 {
 	_backGround->Render();
+
+	_bsBuffer->_data.bgOrSlot = 1;
+	_bsBuffer->SetPSBuffer(0);
 
 	for (auto& slot : _slotGroup)
 	{
@@ -74,4 +83,25 @@ void Inventory::CreateSlotGroup()
 			_slotGroup[x + y * _slotXY.y]->GetTransform()->UpdateWorld();
 		}
 	}
+}
+
+void Inventory::AddItem(const ItemData& data)
+{
+	int slotIndex = 0;
+
+	for (auto& item : _itemDataes)
+	{
+		if (item.name == "NONE")
+		{
+			item = data;
+			break;
+		}
+
+		slotIndex++;
+	}
+
+	if (slotIndex >= _slotCount)
+		return;
+	
+	_icon->SetIcon(data.name, _slotGroup[slotIndex]->GetTransform()->GetPos());
 }

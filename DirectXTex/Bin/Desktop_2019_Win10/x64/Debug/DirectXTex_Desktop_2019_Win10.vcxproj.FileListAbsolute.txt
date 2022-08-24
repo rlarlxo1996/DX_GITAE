@@ -1,2 +1,3 @@
 C:\Users\rlarl\Desktop\프로그래밍\DX_수업\DX_6Class-Inventory\DX_6Class-Inventory\DirectXTex\Bin\Desktop_2019_Win10\x64\Debug\DirectXTex.lib
 C:\Users\rlarl\Desktop\DX_수업\DX_GITAE\DirectXTex\Bin\Desktop_2019_Win10\x64\Debug\DirectXTex.lib
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DirectXTex\Bin\Desktop_2019_Win10\x64\Debug\DirectXTex.lib

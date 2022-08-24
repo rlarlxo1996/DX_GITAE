@@ -30,10 +30,14 @@ void ItemIcon::Render()
 
 void ItemIcon::SetIcon(string name, Vector2 pos)
 {
-	if (_iconTable.count(name) == 0)
+	string itemName = name;
+	itemName.substr(0, itemName.find('_'));
+
+	if (_iconTable.count(itemName) == 0)
 		return;
 
-	for (auto& icon : _iconTable[name])
+
+	for (auto& icon : _iconTable[itemName])
 	{
 		if (icon.isActive == false)
 		{

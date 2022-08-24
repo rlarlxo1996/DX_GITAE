@@ -97,6 +97,7 @@ using namespace std;
 #include "Framework/Utility/DirectWrite.h"
 #include "Framework/Utility/tinyxml2.h"
 #include "Framework/Utility/Audio.h"
+#include "Framework/Utility/DataManager.h"
 
 // Collider
 #include "Framework/Collider/Collider.h"
@@ -119,6 +120,7 @@ using namespace std;
 #include "object/UI/Button.h"
 #include "Object/UI/MiniMap.h"
 #include "Object/UI/Inventory.h"
+#include "Object/UI/Store.h"
 
 // DataSet
 #include "Object/Dataes/ItemManager.h"
@@ -128,7 +130,6 @@ using namespace std;
 #include "Object/Dungreed/Gun.h"
 #include "Object/Dungreed/Bullet.h"
 #include "Object/Dungreed/Monster.h"
-#include "Object/Dungreed/Item.h"
 #include "Object/Dungreed/ItemIcon.h"
 
 // PlaneShoot

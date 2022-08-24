@@ -155,3 +155,20 @@ public:
 	{
 	}
 };
+
+class BgOrSlotBuffer : public ConstantBuffer
+{
+public:
+	struct Data
+	{
+		int bgOrSlot = 0;
+		int padding1 = 0;
+		int padding2 = 0;
+		int padding3 = 0;
+	}_data;
+
+	BgOrSlotBuffer()
+		: ConstantBuffer(&_data, sizeof(Data))
+	{
+	}
+};

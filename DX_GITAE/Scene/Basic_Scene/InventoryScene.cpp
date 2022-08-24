@@ -4,6 +4,8 @@
 InventoryScene::InventoryScene()
 {
 	_inventory = make_shared<Inventory>(Vector2(300,400));
+
+	_inventory->AddItem(DATA->GetItemManager()->GetItemData("Sword_1"));
 }
 
 InventoryScene::~InventoryScene()

@@ -36,6 +36,8 @@
 
 #define SOUND Audio::GetInstance()
 
+#define DATA DataManager::GetInstance()
+
 #define SCENE SceneManager::GetInstance()
 
 #define LERP(s,e,t) s + (e - s) * t
@@ -47,28 +49,10 @@ using CallBackParam = function<void(int)>;
 
 struct ItemData
 {
-	string name;
-	int price;
-	int value;
-	int type;
-	int attackInfo;
+	string name = "NONE";
+	int price = 0;
+	int value = 0;
+	int type = 0;
+	int attackInfo = 0;
 
-};
-
-enum Itemtype
-{
-	NONE,
-	POTION,
-	WEAPON,
-	ARMOR
-};
-
-struct ItemInfo
-{
-	string			_name;
-	Itemtype		_type = NONE;
-	float			_price = 0.0f;
-	float			_attack = 0.0f;
-	float			_defense = 0.0f;
-	float			_heal = 0.0f;
 };
