@@ -5,19 +5,15 @@
 Inventory::Inventory(Vector2 size)
 : _size(size)
 {
-	_rtv = make_shared<RenderTarget>(size.x, size.y);
-
-	_backGround = make_shared<Quad>(L"Inventory_Pannel", size);
-	shared_ptr<Texture> texture = Texture::Add(L"Inventory_texture", _rtv->GetSRV());
-	_backGround->SetTexture(texture);
+	_backGround = make_shared<Quad>(L"Resource/UI/InventoryPanel.png");
 	_backGround->GetTransform()->GetPos() = Vector2(CENTER.x + 300.0f, CENTER.y);
 
 	_icon = make_shared<ItemIcon>();
 
-	_slotOffset.x = 75.0f;
-	_slotOffset.y = 100.0f;
+	_slotOffset.x = 135.0f;
+	_slotOffset.y = 120.0f;
 
-	_slotXY = { 3,3 };
+	_slotXY = { 3, 3 };
 
 	CreateSlotGroup();
 
@@ -41,11 +37,6 @@ void Inventory::Update()
 	_icon->Update();
 }
 
-void Inventory::SetRTV()
-{
-	_rtv->Set();
-}
-
 void Inventory::PostRender()
 {
 	_backGround->Render();
@@ -59,18 +50,23 @@ void Inventory::PostRender()
 	}
 
 	_icon->Render();
+
+	RECT rect;
+	{
+		rect.left = _backGround->GetTransform()->GetPos().x - 100.0f;
+		rect.right = _backGround->GetTransform()->GetPos().x + 50.0f;
+		rect.top = _backGround->RightTop().y - 90.0f;
+		rect.bottom = _backGround->RightTop().y - 50.0f;
+	}
+	TEXT->RenderText(L"Money: " + to_wstring(DATA->GetMoney()), rect);
 }
 
 void Inventory::CreateSlotGroup()
 {
 	for (int i = 0; i < _slotCount; i++)
 	{
-		shared_ptr<Quad> slot = make_shared<Quad>(L"Inventory_slot", Vector2(50.0f, 50.0f),
-			L"Shader/TextureVertexShader.hlsl",
-			L"Shader/SlotPixelShader.hlsl");
+		shared_ptr<Quad> slot = make_shared<Quad>(L"Resource/UI/SlotBtn.png");
 
-		slot->GetTransform()->GetPos() = CENTER;
-		slot->Update();
 		_slotGroup.push_back(slot);
 	}
 
@@ -85,7 +81,7 @@ void Inventory::CreateSlotGroup()
 	}
 }
 
-void Inventory::AddItem(const ItemData& data)
+bool Inventory::AddItem(const ItemData& data)
 {
 	int slotIndex = 0;
 
@@ -101,7 +97,8 @@ void Inventory::AddItem(const ItemData& data)
 	}
 
 	if (slotIndex >= _slotCount)
-		return;
-	
+		return false;
+
 	_icon->SetIcon(data.name, _slotGroup[slotIndex]->GetTransform()->GetPos());
+	return true;
 }

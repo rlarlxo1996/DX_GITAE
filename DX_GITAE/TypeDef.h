@@ -38,6 +38,8 @@
 
 #define DATA DataManager::GetInstance()
 
+#define TEXT DirectWrite::GetInstance()
+
 #define SCENE SceneManager::GetInstance()
 
 #define LERP(s,e,t) s + (e - s) * t

@@ -34,6 +34,6 @@ private:
 	shared_ptr<VertexBuffer> _instancingBuffer;
 
 	int _poolCount = 30;
-	int _itemCount = 5;
+	int _itemCount = 6;
 };
 

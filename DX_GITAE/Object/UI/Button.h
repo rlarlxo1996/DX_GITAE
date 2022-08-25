@@ -9,7 +9,7 @@ public:
 		CLICK
 	};
 
-	Button();
+	Button(wstring file = L"Resource/UI/Button.png");
 	~Button();
 
 	void Update();
@@ -18,6 +18,7 @@ public:
 	void SetPosition(Vector2 pos);
 	void SetScale(Vector2 scale);
 	void SetText(string text);
+	Vector2 GetPos() { return _quad->GetTransform()->GetPos(); }
 
 	void SetEvent(CallBack callBack) { _callBack = callBack; }
 	void SetEventParam(CallBackParam callBack)

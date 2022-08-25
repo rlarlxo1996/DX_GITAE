@@ -1,5 +1,426 @@
-﻿  Inventory.cpp
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(81,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(82,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
-C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(83,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+﻿  framework.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\TypeDef.h(41,1): warning C4005: 'TEXT': 매크로 재정의
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\um\winnt.h(611): message : 'TEXT'의 이전 정의를 참조하십시오.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\Utility.h(9,20): warning C4244: '인수': '_Elem'에서 'const _Elem'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Elem=wchar_t
+          ]
+          and
+          [
+              _Elem=char
+          ]
+  DX_GITAE.cpp
+  Action.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Animation\Action.cpp(21,21): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Camera.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(53,13): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(54,14): warning C4244: '=': 'UINT'에서 'FLOAT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(64,70): warning C4244: '인수': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(64,60): warning C4244: '인수': 'UINT'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(83,25): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(84,43): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(104,49): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(107,49): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(110,49): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(113,49): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.cpp(133,25): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CircleCollider.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Collider\CircleCollider.cpp(21,27): warning C4305: '초기화 중': 'double'에서 'float'(으)로 잘립니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(151,1): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,VertexPos*,unsigned __int64,unsigned __int64>(_Ty &,VertexPos *&&,unsigned __int64 &&,unsigned __int64 &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexPos*,unsigned __int64,unsigned __int64>(VertexPos *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexPos*,unsigned __int64,unsigned __int64>(VertexPos *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Collider\CircleCollider.cpp(30): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<VertexBuffer> std::make_shared<VertexBuffer,_Ty*,size_t,unsigned __int64>(_Ty *&&,size_t &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexPos
+          ]
+  Collider.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Collider\Collider.cpp(47,42): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  RectCollider.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(151,1): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,VertexPos*,unsigned __int64,unsigned __int64>(_Ty &,VertexPos *&&,unsigned __int64 &&,unsigned __int64 &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexPos*,unsigned __int64,unsigned __int64>(VertexPos *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexPos*,unsigned __int64,unsigned __int64>(VertexPos *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Collider\RectCollider.cpp(40): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<VertexBuffer> std::make_shared<VertexBuffer,_Ty*,size_t,unsigned __int64>(_Ty *&&,size_t &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexPos
+          ]
+  Device.cpp
+  Transform.cpp
+  Vector2.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Math\Vector2.cpp(135,26): warning C4244: 'return': 'float'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  ConstantBuffer.cpp
+  IndexBuffer.cpp
+  PixelShader.cpp
+  RenderTarget.cpp
+  SRV.cpp
+  Shader.cpp
+  ShaderManager.cpp
+  Texture.cpp
+  VertexBuffer.cpp
+  VertexShader.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Render\VertexShader.cpp(90,40): warning C4267: '초기화 중': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Render\VertexShader.cpp(106,36): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  BlendState.cpp
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  SamplerState.cpp
+  StateManager.cpp
+  Audio.cpp
+  BinaryReader.cpp
+  BinaryWriter.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\BinaryWriter.cpp(32,18): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\BinaryWriter.cpp(35,56): warning C4267: '인수': 'size_t'에서 'DWORD'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  DataManager.cpp
+  DirectWrite.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\DirectWrite.cpp(99,111): warning C4267: '인수': 'size_t'에서 'UINT32'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  InputManager.cpp
+  MathUtility.cpp
+  Timer.cpp
+  tinyxml2.cpp
+  Aim.cpp
+  Effect.cpp
+  EffectManager.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\EffectManager.cpp(25,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Quad.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\Quad.cpp(63,54): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::_Emplace_back_with_unused_capacity<_Ty,float&,int,int>(_Ty &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\Quad.cpp(92): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::emplace_back<float,float&,int,int>(float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(151,1): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,VertexUV*,unsigned __int64,unsigned __int64>(_Ty &,VertexUV *&&,unsigned __int64 &&,unsigned __int64 &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexUV*,unsigned __int64,unsigned __int64>(VertexUV *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexUV*,unsigned __int64,unsigned __int64>(VertexUV *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\Quad.cpp(15): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<VertexBuffer> std::make_shared<VertexBuffer,_Ty*,size_t,unsigned __int64>(_Ty *&&,size_t &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexUV
+          ]
+  Sprite.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\Sprite.cpp(85,13): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\Sprite.cpp(86,13): warning C4244: '초기화 중': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,float&,int,int>(_Alloc &,_Objty *const ,float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<VertexUV>,
+              _Ty=VertexUV,
+              _Objty=VertexUV
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::_Emplace_back_with_unused_capacity<_Ty,float&,int,int>(_Ty &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\Sprite.cpp(53): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<VertexUV,std::allocator<VertexUV>>::emplace_back<float,float&,int,int>(float &&,float &,int &&,int &&)'에 대한 참조를 확인하세요.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(151,1): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,VertexUV*,unsigned __int64,unsigned __int64>(_Ty &,VertexUV *&&,unsigned __int64 &&,unsigned __int64 &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexUV*,unsigned __int64,unsigned __int64>(VertexUV *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<VertexUV*,unsigned __int64,unsigned __int64>(VertexUV *&&,unsigned __int64 &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\Sprite.cpp(19): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<VertexBuffer> std::make_shared<VertexBuffer,_Ty*,size_t,unsigned __int64>(_Ty *&&,size_t &&,unsigned __int64 &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexUV
+          ]
+  ItemManager.cpp
+  Bullet.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Bullet.cpp(22,24): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Bullet.cpp(31,59): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Gun.cpp
+  ItemIcon.cpp
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(151,1): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,ItemIcon::InstanceData*,unsigned __int64,int>(_Ty &,ItemIcon::InstanceData *&&,unsigned __int64 &&,int &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<ItemIcon::InstanceData*,unsigned __int64,int>(ItemIcon::InstanceData *&&,unsigned __int64 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<ItemIcon::InstanceData*,unsigned __int64,int>(ItemIcon::InstanceData *&&,unsigned __int64 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\ItemIcon.cpp(11): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<VertexBuffer> std::make_shared<VertexBuffer,_Ty*,size_t,int>(_Ty *&&,size_t &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=ItemIcon::InstanceData
+          ]
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
+  Monster.cpp
+  Player.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(19,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(73,59): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(77,59): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(81,59): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(85,59): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(89,37): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(152,35): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Dungreed\Player.cpp(155,37): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Aimer.cpp
+  MainBullet.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\MainBullet.cpp(22,24): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\MainBullet.cpp(31,59): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  PlaneShoot.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(21,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(136,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(143,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(150,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(157,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,float,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::_Emplace_back_with_unused_capacity<_Ty,int,float&,float&,std::shared_ptr<Texture>&>(_Ty &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=float
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\PlaneShoot\PlaneShoot.cpp(82): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::emplace_back<float,int,float&,float&,std::shared_ptr<Texture>&>(float &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+  Button.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Button.cpp(68,36): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Button.cpp(69,50): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Button.cpp(70,37): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Button.cpp(71,53): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Inventory.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(56,55): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(57,56): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(58,40): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(59,43): warning C4244: '=': 'float'에서 'LONG'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(77,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(78,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Inventory.cpp(79,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  MiniMap.cpp
+  Store.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Store.cpp(70,33): warning C4267: '=': 'size_t'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Store.cpp(89,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Store.cpp(90,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\UI\Store.cpp(91,17): warning C4244: '인수': 'float'에서 'const unsigned __int64'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  Zelda.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Zelda\Zelda.cpp(191,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Zelda\Zelda.cpp(198,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Zelda\Zelda.cpp(205,32): warning C4244: '-=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Zelda\Zelda.cpp(212,32): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xmemory(714,68): warning C4244: '인수': '_Ty'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(721): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,int &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(726): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Default_allocator_traits<_Alloc>::construct<_Ty,int,int,float&,float&,std::shared_ptr<Texture>&>(_Alloc &,_Objty *const ,int &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Alloc=std::allocator<Action::Clip>,
+              _Ty=Action::Clip,
+              _Objty=Action::Clip
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\vector(739): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::_Emplace_back_with_unused_capacity<_Ty,_Ty,float&,float&,std::shared_ptr<Texture>&>(_Ty &&,_Ty &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=int
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\Zelda\Zelda.cpp(55): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::vector<Action::Clip,std::allocator<Action::Clip>>::emplace_back<int,int,float&,float&,std::shared_ptr<Texture>&>(int &&,int &&,float &,float &,std::shared_ptr<Texture> &)'에 대한 참조를 확인하세요.
+  Program.cpp
+  CameraScene.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\CameraScene.cpp(47,28): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\CameraScene.cpp(79,30): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\CameraScene.cpp(80,64): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  CollisionScene.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\CollisionScene.cpp(47,73): warning C4305: '인수': 'double'에서 'float'(으)로 잘립니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(158,77): warning C4244: '인수': '_Ty'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Ty=int
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,int>(_Ty &,int &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int>(int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<int>(int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=CircleCollider
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\CollisionScene.cpp(11): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<CircleCollider> std::make_shared<CircleCollider,int>(int &&)'에 대한 참조를 확인하세요.
+  DungreedScene.cpp
+  EffectScene.cpp
+  FilterScene.cpp
+  InstancingScene.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\InstancingScene.cpp(40,41): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\InstancingScene.cpp(41,41): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\xutility(151,1): warning C4267: '인수': 'size_t'에서 'UINT'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2021): message : 컴파일되는 함수 템플릿 인스턴스화 'void std::_Construct_in_place<_Ty,InstancingScene::InstanceData*,unsigned __int64,int>(_Ty &,InstancingScene::InstanceData *&&,unsigned __int64 &&,int &&) noexcept(false)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2747): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<InstancingScene::InstanceData*,unsigned __int64,int>(InstancingScene::InstanceData *&&,unsigned __int64 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133\include\memory(2748): message : 컴파일되는 함수 템플릿 인스턴스화 'std::_Ref_count_obj2<_Ty>::_Ref_count_obj2<InstancingScene::InstanceData*,unsigned __int64,int>(InstancingScene::InstanceData *&&,unsigned __int64 &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=VertexBuffer
+          ]
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\InstancingScene.cpp(28): message : 컴파일되는 함수 템플릿 인스턴스화 'std::shared_ptr<VertexBuffer> std::make_shared<VertexBuffer,_Ty*,size_t,int>(_Ty *&&,size_t &&,int &&)'에 대한 참조를 확인하세요.
+          with
+          [
+              _Ty=InstancingScene::InstanceData
+          ]
+  InventoryScene.cpp
+  PlaneShootScene.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\PlaneShootScene.cpp(36,28): warning C4244: '인수': 'double'에서 'const float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  SolarSystemScene.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\SolarSystemScene.cpp(21,45): warning C4305: '*=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\SolarSystemScene.cpp(22,45): warning C4305: '*=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\SolarSystemScene.cpp(42,55): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\SolarSystemScene.cpp(43,57): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\SolarSystemScene.cpp(44,56): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\SolarSystemScene.cpp(46,42): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\SolarSystemScene.cpp(47,44): warning C4244: '+=': 'double'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+  코드를 생성하고 있습니다...
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\DataManager.h(23): warning C4715: 'DataManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\EffectManager.h(21): warning C4715: 'EffectManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\SceneManager.h(21): warning C4715: 'SceneManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\SceneManager.h(21): warning C4715: 'SceneManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\EffectManager.h(21): warning C4715: 'EffectManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\DirectWrite.h(59): warning C4715: 'DirectWrite::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\DataManager.h(23): warning C4715: 'DataManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\DataManager.h(23): warning C4715: 'DataManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\DirectWrite.h(59): warning C4715: 'DirectWrite::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Utility\DirectWrite.h(59): warning C4715: 'DirectWrite::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+  컴파일하고 있습니다...
+  SpriteScene.cpp
+  TextureScene.cpp
+  WVPScene.cpp
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\WVPScene.cpp(44,44): warning C4305: '+=': 'double'에서 'float'(으)로 잘립니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\Basic_Scene\WVPScene.cpp(47,44): warning C4305: '-=': 'double'에서 'float'(으)로 잘립니다.
+  XMLScene.cpp
+  Scene.cpp
+  SceneManager.cpp
+  코드를 생성하고 있습니다...
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Object\BasicObject\EffectManager.h(21): warning C4715: 'EffectManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Framework\Camera\Camera.h(21): warning C4715: 'Camera::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
+C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\DX_GITAE\Scene\SceneManager.h(21): warning C4715: 'SceneManager::GetInstance': 모든 제어 경로에서 값을 반환하지는 않습니다.
   DX_GITAE.vcxproj -> C:\Users\user\Desktop\김기태_GitHub\DX_GITAE\x64\Debug\DX_GITAE.exe

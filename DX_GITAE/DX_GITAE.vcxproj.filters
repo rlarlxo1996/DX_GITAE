@@ -174,6 +174,9 @@
     <Image Include="Resource\RPlane.png" />
     <Image Include="Resource\UI\Button.png" />
     <Image Include="Resource\Item_11x5.png" />
+    <Image Include="Resource\UI\BuyBtn.png" />
+    <Image Include="Resource\UI\SlotBtn.png" />
+    <Image Include="Resource\UI\InventoryPanel.png" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="DX_GITAE.cpp" />

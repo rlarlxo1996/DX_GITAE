@@ -25,17 +25,16 @@ void ItemIcon::Render()
 
 	_quad->SetRender();
 
-	DEVICE_CONTEXT->DrawIndexedInstanced(6, _poolCount * 5, 0, 0, 0);
+	DEVICE_CONTEXT->DrawIndexedInstanced(6, _poolCount * _itemCount, 0, 0, 0);
 }
 
 void ItemIcon::SetIcon(string name, Vector2 pos)
 {
 	string itemName = name;
-	itemName.substr(0, itemName.find('_'));
+	itemName = itemName.substr(0, itemName.find('_'));
 
 	if (_iconTable.count(itemName) == 0)
 		return;
-
 
 	for (auto& icon : _iconTable[itemName])
 	{
@@ -53,8 +52,8 @@ void ItemIcon::SetIcon(string name, Vector2 pos)
 
 void ItemIcon::CreateIcons()
 {
-	_instanceDataes.reserve(_poolCount * 5);
-	for (int i = 0; i < 5; i++)
+	_instanceDataes.reserve(_poolCount * _itemCount);
+	for (int i = 0; i < _itemCount; i++)
 	{
 		for (int j = 0; j < _poolCount; j++)
 		{

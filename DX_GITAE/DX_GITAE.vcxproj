@@ -331,6 +331,9 @@
     <Image Include="Resource\RPlane.png" />
     <Image Include="Resource\Sun.png" />
     <Image Include="Resource\UI\Button.png" />
+    <Image Include="Resource\UI\BuyBtn.png" />
+    <Image Include="Resource\UI\InventoryPanel.png" />
+    <Image Include="Resource\UI\SlotBtn.png" />
     <Image Include="Resource\zelda.png" />
     <Image Include="small.ico" />
   </ItemGroup>

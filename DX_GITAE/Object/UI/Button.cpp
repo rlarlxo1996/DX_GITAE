@@ -1,9 +1,9 @@
 #include "framework.h"
 #include "Button.h"
 
-Button::Button()
+Button::Button(wstring file)
 {
-	_quad = make_shared<Quad>(L"Resource/UI/Button.png", L"Shader/TextureVertexShader.hlsl", L"Shader/ButtonPixelShader.hlsl");
+	_quad = make_shared<Quad>(file, L"Shader/TextureVertexShader.hlsl", L"Shader/ButtonPixelShader.hlsl");
 	_collider = make_shared<RectCollider>(_quad->GetHalfSize());
 	_collider->SetParent(_quad->GetTransform());
 
@@ -53,6 +53,7 @@ void Button::Update()
 
 void Button::PostRender()
 {
+	_buttonBuffer->SetPSBuffer(1);
 	_quad->Render();
 	_collider->Render();
 
@@ -74,10 +75,6 @@ void Button::PostRender()
 	}
 
 	Vector2 temp = Camera::GetInstance()->GetMouseWorldPos();
-	ImGui::SliderFloat("MouseX", &temp.x, -2000, 3000);
-	ImGui::SliderFloat("MouseY", &temp.y, -2000, 3000);
-
-	_buttonBuffer->SetPSBuffer(1);
 }
 
 void Button::SetPosition(Vector2 pos)
